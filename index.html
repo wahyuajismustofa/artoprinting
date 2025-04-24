@@ -282,10 +282,11 @@ main {
       color: var(--warna-bg-primer);
     }
     .produk-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* 2 kolom */
-      gap: 15px;
-	  margin:10px;
+	display: flex;
+	gap: 15px;
+	margin: 10px;
+	flex-direction: column;
+	flex-wrap: nowrap;
     }
 
     .produk-item {
@@ -297,12 +298,15 @@ main {
 
     .produk-item img {
       width: 100%;
-      height: 150px;
       object-fit: cover;
     }
 
     .produk-info {
-      padding: 10px;
+      display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     }
 
     .produk-nama {
@@ -316,12 +320,6 @@ main {
       font-size: 0.8em;
       color: var(--warna-teks-sekunder);
       margin-top: 5px;
-    }
-
-    @media (max-width: 320px) {
-      .produk-container {
-        grid-template-columns: 1fr; /* jadi 1 kolom di layar kecil */
-      }
     }
 
 .produk-filter-button {
@@ -511,19 +509,36 @@ main {
 </div>
 </div>
 	<div class="container scroll-x hide-scrollbar flex-row flex-align-center">
-	<div class="produk-filter-button active" id="filter-produk1">Unggulan</div>
-	<div class="produk-filter-button" id="filter-produk2">Kertas</div>
-	<div class="produk-filter-button" id="filter-produk3">Undangan</div>
-	<div class="produk-filter-button" id="filter-produk4">Banner</div>
-	<div class="produk-filter-button" id="filter-produk5">Kaos</div>
-	<div class="produk-filter-button" id="filter-produk6">Mug</div>
-	<div class="produk-filter-button" id="filter-produk7">Kalender</div>
+	<div class="produk-filter-button active" id="filter-produk1">Ready</div>
+	<div class="produk-filter-button" id="filter-produk2">Avis</div>
+	<div class="produk-filter-button" id="filter-produk3">Byar</div>
+	<div class="produk-filter-button" id="filter-produk4">Cantik</div>
+	<div class="produk-filter-button" id="filter-produk5">Fadhil</div>
+	<div class="produk-filter-button" id="filter-produk6">Falah</div>
+	<div class="produk-filter-button" id="filter-produk7">Hc</div>
+	<div class="produk-filter-button" id="filter-produk2">Hepi</div>
+	<div class="produk-filter-button" id="filter-produk3">Jago</div>
+	<div class="produk-filter-button" id="filter-produk4">Lintang</div>
+	<div class="produk-filter-button" id="filter-produk5">Maliq</div>
+	<div class="produk-filter-button" id="filter-produk6">Rizki</div>
+	<div class="produk-filter-button" id="filter-produk7">Salma</div>	
 	</div>
     <div class="container flex-wrap flex-align-center flex-justify-center">
       <div class="produk-container" id="produk-container"></div>
     </div>
-
   </main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll("img");
+    images.forEach(img => {
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", "lazy");
+      }
+    });
+  });
+</script>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -568,7 +583,8 @@ function loadProduk(){
 			const filter = activeFilter ? activeFilter.textContent.trim() : '';
 
 			// Filter data berdasarkan kategori
-			const filteredData = filter ? data.filter(produk => produk.kategori === filter) : data;
+			const filteredData = filter ? data.filter(produk => produk.kategori === filter || produk.status1 === filter) : data;
+
 
 			filteredData.forEach(produk => {
 			  const produkItem = document.createElement('div');
@@ -577,12 +593,15 @@ function loadProduk(){
           produkItem.innerHTML = `
             <img src="${produk.url_gambar}" alt="${produk.nama}">
             <div class="produk-info">
-              <div class="produk-nama">${produk.nama}</div>
-              <div class="produk-harga">Mulai dari<br>Rp. ${produk.harga}</div>
+              <div class="produk-nama"><h3>${produk.nama}</h3></div>
+              <div class="produk-status"><h4>${produk.status2}</h4></div>
+			  <div class="produk-harga"><h5>Mulai dari Rp. ${produk.harga}</h5></div>
+			  <div class="produk-beli container floating-box flex-row flex-align-center flex-justify-center" style="background-color:var(--warna-bg-primer);color:var(--warna-bg-sekunder)"><h6>Pesan ${produk.nama}</h6></div>
             </div>
           `;
 
-          produkItem.onclick = function() {
+          const beliProduk = produkItem.querySelector('.produk-beli');
+			beliProduk.onclick = function () {
             const namaProduk = produk.nama;
             const pesan = `Halo, saya ingin memesan ${encodeURIComponent(namaProduk)}.`;
             const nomorWa = '6285161517176'; // Ganti nomor WA
