@@ -32,9 +32,9 @@
       margin-left: auto;
       margin-right: auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      font-size: 1em;
+      font-size: 16px;
       overflow-x: hidden;
-	  font-family: 'Open Sans', sans-serif;
+	  font-family: 'Montserrat', sans-serif;
     }
 	
 
@@ -48,7 +48,7 @@
         max-width: var(--max-lebar);
         margin: 0 auto;
         background-color: var(--warna-bg-sekunder);
-        color: var(--warna-bg-sekunder);
+        color: var(--warna-bg-primer);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -115,6 +115,9 @@ background-color: #333333;
 .flex-justify-center {
   justify-content: center;
 }
+.flex-justify-space-evenly {
+justify-content: space-evenly;
+}
 .floating-box{
     display: flex;
     width: 100%;
@@ -130,43 +133,10 @@ background-color: #333333;
     margin: 10px;
     border-radius: 20px;
 }
-    #menu-primer {
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 25px;
-        height: 18px;
-        cursor: pointer;
-    }
-
-    #menu-primer div {
-        background-color: var(--warna-bg-primer);
-        height: 3px;
-        border-radius: 2px;
-    }
-
     .logo {
         font-size: 1.5em;
         font-weight: bold;
 	color: var(--warna-bg-primer);
-    }
-    /* Menu Primer (Burger) */
-    #menu-primer {
-      display: block;
-      cursor: pointer;
-      z-index: 3;
-    }
-
-    #menu-primer div {
-      width: 25px;
-      height: 3px;
-      background-color: var(--warna-bg-primer);
-      margin: 5px 0;
-      transition: 0.3s;
     }
 
     /* Side Menu */
@@ -211,19 +181,19 @@ background-color: #333333;
     }
 
 	h1 {
-	  font-size: 2.5em;
+	  font-size: 1.75em;
 	  
 	}
 
     h2 {
-      font-size: 2em;
+      font-size: 1.5em;
     }
 
     h3 {
-      font-size: 1.5em;
+      font-size: 1.25em;
     }
     h4 {
-      font-size: 1.25em;
+      font-size: 1.125em;
     }
     h5 {
       font-size: 1em;
@@ -263,10 +233,24 @@ main {
       border: none;
       padding: 10px 20px;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 10px;
       font-size: 1em;
       transition: background-color 0.3s ease;
     }
+    button.whatsapp {
+      background-color: var(--warna-bg-sekunder);
+      color: var(--warna-teks-whatsapp);
+      border: 1px solid var(--warna-teks-whatsapp);
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    button.whatsapp:hover {
+      background-color: var(--warna-teks-whatsapp);
+      color: var(--warna-bg-sekunder);
+    }	
     .button {
       background-color: var(--warna-bg-primer);
       color: var(--warna-bg-sekunder);
@@ -287,6 +271,7 @@ main {
 	margin: 10px;
 	flex-direction: column;
 	flex-wrap: nowrap;
+	min-height:50vh;
     }
 
     .produk-item {
@@ -330,9 +315,19 @@ main {
     border-radius: 15px;
     color: var(--warna-teks-primer);
 }
-.produk-filter-button.active {
-    background-color: var(--warna-bg-primer);
-    color: var(--warna-bg-sekunder);
+.produk-filter-button.active{
+    color: var(--warna-bg-primer);
+    background-color: var(--warna-bg-sekunder);
+	border:1px solid var(--warna-bg-primer);
+}
+.produk-beli{
+	white-space: nowrap;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+	color: var(--warna-bg-primer);
+    background-color: var(--warna-bg-sekunder);
+	border:1px solid var(--warna-bg-primer);
 }	
 .icon {
   display: inline-block;
@@ -382,6 +377,7 @@ main {
   border-radius: 10px;
   text-align: center;
   width: 70%;
+  max-width: var(--max-lebar);
   height: auto;
 }
 
@@ -483,13 +479,11 @@ main {
 
   <main id="main">
   <header>
-    <div id="menu-primer">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="logo">ArtoPrinting</div>
+	<div class="container flex-row flex-align-center flex-justify-center">
+	<div class="logo"><h1>ArtoPrinting</h1></div>
+	</div>
   </header>
+
 <div class="container" style="padding-top:50px">
  <img src="https://i.imgur.com/8iA5U6N.jpeg" alt="Banner">
 </div>
@@ -507,6 +501,16 @@ main {
 </div>
 </div>
 </div>
+<div class="container  flex-row flex-justify-space-evenly">
+<Button class="whatsapp">Hubungi Kami</Button>
+<Button>Cek Antrian</Button>
+</div>
+<br><br>
+<div class="container">
+<h1>Katalog</h1><br>
+<p>Temukan undangan cetak eksklusif untuk membuat momen spesialmu lebih berkesan. Pilih tema favoritmu dan pesan sekarang untuk desain unik berkualitas tinggi!
+
+</p>
 </div>
 	<div class="container scroll-x hide-scrollbar flex-row flex-align-center">
 	<div class="produk-filter-button active" id="filter-produk1">Ready</div>
@@ -527,7 +531,23 @@ main {
       <div class="produk-container" id="produk-container"></div>
     </div>
   </main>
+<footer style="padding:20px;min-height:20vh;background-color: var(--warna-bg-primer);color:var(--warna-bg-sekunder);">
+<div class="container" style="text-align:center;">
+<h3>IKUTI KAMI</h3><br>
+<img src="https://ik.imagekit.io/mustofa/web/img/icon-fb.png" class="icon-medium"></img>
+<img src="https://ik.imagekit.io/mustofa/web/img/icon-ig.png" class="icon-medium"></img><br>
+</div>
+<div class="container flex-row">
+<div class="container-50p"><h3>KONTAK</h3>
+<ul style="list-style-type: none;padding:0px">
+<li><h6>Miftahul <a>+628XXX</a><h6></li>
+<li><h6>Fina <a>+628XXX</a></h6></li>
+</ul>
+</div>
+<div class="container-50p"><h3>ALAMAT</h3></div>
+</div>
 
+</footer>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll("img");
@@ -542,36 +562,6 @@ main {
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Menu Slide
-  const menuPrimer = document.getElementById("menu-primer");
-  const menuSlide = document.getElementById("menu-slide");
-  const tutupMenu = document.getElementById("tutup-menu");
-  const main = document.getElementById("main");
-
-  menuPrimer.addEventListener("click", function() {
-    menuSlide.classList.remove("imp-hidden");
-    main.classList.toggle("imp-hidden");
-  });
-
-  tutupMenu.addEventListener("click", function() {
-    menuSlide.classList.toggle("imp-hidden");
-    main.classList.remove("imp-hidden");
-  });
-
-  // Lokasi Slide
-  const slideLokasi = document.getElementById("lokasi-slide");
-  const lokasi = document.getElementById("lokasi");
-  const tutupLokasi = document.getElementById("tutup-lokasi");
-
-  lokasi.addEventListener("click", function() {
-    slideLokasi.classList.remove("imp-hidden");
-    main.classList.toggle("imp-hidden");
-  });
-
-  tutupLokasi.addEventListener("click", function() {
-    slideLokasi.classList.toggle("imp-hidden");
-    main.classList.remove("imp-hidden");
-  });
 function loadProduk(){
 		fetch('https://script.google.com/macros/s/AKfycbxcTsl1YtaNjSK6BVqzruGqw6e4asZYII4qq3LqlBEPGHCCapcnWxIykrPA5kTs6Bvn/exec')
 		  .then(response => response.json())
@@ -596,21 +586,22 @@ function loadProduk(){
               <div class="produk-nama"><h3>${produk.nama}</h3></div>
               <div class="produk-status"><h4>${produk.status2}</h4></div>
 			  <div class="produk-harga"><h5>Mulai dari Rp. ${produk.harga}</h5></div>
-			  <div class="produk-beli container floating-box flex-row flex-align-center flex-justify-center" style="background-color:var(--warna-bg-primer);color:var(--warna-bg-sekunder)"><h6>Pesan ${produk.nama}</h6></div>
+			  <div class="produk-beli"><h6>Pesan ${produk.nama}</h6></div>
             </div>
           `;
 
           const beliProduk = produkItem.querySelector('.produk-beli');
 			beliProduk.onclick = function () {
             const namaProduk = produk.nama;
-            const pesan = `Halo, saya ingin memesan ${encodeURIComponent(namaProduk)}.`;
-            const nomorWa = '6285161517176'; // Ganti nomor WA
+            const pesan = `Halo, saya ingin memesan undangan tema ${encodeURIComponent(namaProduk)}.`;
+            const nomorWa = '6285161517176';
             const waLink = `https://wa.me/${nomorWa}?text=${pesan}`;
 
             showConfirm(
               `Anda akan memesan ${produk.nama}. Lanjutkan?`,
-              function() { window.location.href = waLink; }, // tanpa membuka tab baru
-              function() {} // batal
+              function() { window.open(waLink, '_blank');
+; },
+              function() {}
             );
           };
 
