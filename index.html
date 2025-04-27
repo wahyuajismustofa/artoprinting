@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arto Printing</title>
   <meta name="description" content="Arto Printing adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
-  <link rel="icon" href="https://ik.imagekit.io/mustofa/web/img/favicon.png" type="image/png"> 
+  <link rel="icon" href="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png" type="image/png"> 
   
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,8 +17,9 @@
   --website-tagline: "Mencetak Kebutuhan Anda";
   --website-description: "Jasa percetakan cepat, murah, berkualitas.";
   --website-url: "https://artoprinting.com";
-  --website-logo-url: "https://ik.imagekit.io/mustofa/web/img/logo.png";
-  --website-favicon-url: "https://ik.imagekit.io/mustofa/web/img/favicon.png";
+  --website-logo-url: "https://ik.imagekit.io/mustofa/web/img/logo-artoprinting.png";
+  --website-logo-banner-url: "https://ik.imagekit.io/mustofa/web/img/logo-banner-artoprinting.png";
+  --website-favicon-url: "https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png";
   --address-short: "Karangtalun, Bobotsari, Purbalingga";
   --address-long: "Desa karangtalun 02/04, Dusun III, Karangtalun, Kec. Bobotsari, Kabupaten Purbalingga, Jawa Tengah 53353";
   --contact-whatsapp-name-1: "Miftahul";
@@ -61,7 +62,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  height: 30px;
+  min-height: 30px;
   max-width: var(--max-lebar);
   margin: 0 auto;
   background-color: var(--warna-bg-sekunder);
@@ -69,7 +70,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
+  padding: 0px;
   z-index: 999;
 }
 
@@ -130,13 +131,6 @@ header {
   padding: 10px;
   margin: 10px;
   border-radius: 20px;
-}
-
-/* Text */
-.logo {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: var(--warna-bg-primer);
 }
 
 h1 { font-size: 1.75em; }
@@ -430,7 +424,7 @@ button:hover, .button:hover {
   <main id="main">
   <header>
 	<div class="container flex row flex-align-center flex-justify-center">
-	<div class="logo"><img src="https://ik.imagekit.io/mustofa/web/img/logo.png" alt="Logo Arto Printing" style="height:30px;"></div>
+	<div class="logo"><img src="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting.png" alt="Logo Arto Printing" style="height:50px;"></div>
 	</div>
   </header>
 
@@ -826,7 +820,7 @@ function metaData(){
     const websiteName = getComputedStyle(document.documentElement).getPropertyValue('--website-name').trim();
     const websiteTagline = getComputedStyle(document.documentElement).getPropertyValue('--website-tagline').trim();
     const websiteDescription = getComputedStyle(document.documentElement).getPropertyValue('--website-description').trim();
-    const websiteLogoUrl = getComputedStyle(document.documentElement).getPropertyValue('--website-logo-url').trim();
+    const websiteImgUrl = getComputedStyle(document.documentElement).getPropertyValue('--website-logo-banner-url').trim();
     const websiteUrl = getComputedStyle(document.documentElement).getPropertyValue('--website-url').trim();
 
     const head = document.head;
@@ -850,7 +844,7 @@ function metaData(){
 
     const metaOgImage = document.createElement('meta');
     metaOgImage.setAttribute('property', 'og:image');
-    metaOgImage.content = websiteLogoUrl;
+    metaOgImage.content = websiteImgUrl;
     head.appendChild(metaOgImage);
 
     const metaOgUrl = document.createElement('meta');
@@ -876,7 +870,7 @@ function metaData(){
 
     const metaTwitterImage = document.createElement('meta');
     metaTwitterImage.name = 'twitter:image';
-    metaTwitterImage.content = websiteLogoUrl;
+    metaTwitterImage.content = websiteImgUrl;
     head.appendChild(metaTwitterImage);
 
     const metaTwitterSite = document.createElement('meta');
@@ -886,9 +880,5 @@ function metaData(){
 
 }
 </script>
-
-
-
-
 </body>
 </html>
