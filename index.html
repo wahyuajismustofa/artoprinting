@@ -3,58 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArtoPrinting</title>
-  <meta name="description" content="ArtoPrinting adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
+  <title>Arto Printing</title>
+  <meta name="description" content="Arto Printing adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
+  <link rel="icon" href="https://ik.imagekit.io/mustofa/web/img/favicon.ico" type="image/x-icon"> 
+  
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src='https://widgets.sociablekit.com/google-reviews/widget.js' defer></script>
+  <script src="https://grwapi.net/widget.min.js"></script>
 
   <style>
-    :root {
-      --warna-teks-primer: #000000;
-      --warna-teks-sekunder: #3E3636;
-	  --warna-teks-trasparant: #00000088;
-	  --warna-teks-whatsapp: #25D366;
-      --warna-bg-primer: #D72323;
-      --warna-bg-sekunder: #FFFFFF;
-	  --warna-bg-tersier: #e1e1e1;
-	  --max-lebar: 430px;
-    }
-	.imp-hidden{
-	display:none !important;
-	}
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--warna-bg-sekunder);
-      color: var(--warna-teks-primer);
-      max-width: var(--max-lebar);
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      font-size: 16px;
-      overflow-x: hidden;
-	  font-family: 'Montserrat', sans-serif;
-    }
-	
+:root {
+  --website-name: "Arto Printing";
+  --website-tagline: "Mencetak Kebutuhan Anda";
+  --website-description: "Jasa percetakan cepat, murah, berkualitas.";
+  --website-url: "https://artoprinting.com";
+  --website-logo-url: "https://ik.imagekit.io/mustofa/web/img/logo.png";
+  --website-favicon-url: "https://ik.imagekit.io/mustofa/web/img/favicon.ico";
+  --address-short: "Karangtalun, Bobotsari, Purbalingga";
+  --address-long: "Desa karangtalun 02/04, Dusun III, Karangtalun, Kec. Bobotsari, Kabupaten Purbalingga, Jawa Tengah 53353";
+  --contact-whatsapp-name-1: "Miftahul";
+  --contact-whatsapp-name-2: "Fina";
+  --contact-whatsapp-no-1: "6285712110870";
+  --contact-whatsapp-no-2: "6285540287362";
+  --social-facebook: "https://facebook.com/";
+  --social-instagram: "https://instagram.com/";
+  --warna-teks-primer: #000000;
+  --warna-teks-sekunder: #3E3636;
+  --warna-teks-trasparant: #00000088;
+  --warna-teks-whatsapp: #25D366;
+  --warna-bg-primer: #D72323;
+  --warna-bg-sekunder: #FFFFFF;
+  --warna-bg-tersier: #e1e1e1;
+  --max-lebar: 430px;
+}
 
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-		height:30px;
-        max-width: var(--max-lebar);
-        margin: 0 auto;
-        background-color: var(--warna-bg-sekunder);
-        color: var(--warna-bg-primer);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 0;
-        z-index: 999;
-    }
+.imp-hidden {
+  display: none !important;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--warna-bg-sekunder);
+  color: var(--warna-teks-primer);
+  max-width: var(--max-lebar);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgb(0 0 0 / .2);
+  font-size: 16px;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  max-width: var(--max-lebar);
+  margin: 0 auto;
+  background-color: var(--warna-bg-sekunder);
+  color: var(--warna-bg-primer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 999;
+}
+
 .container {
   max-width: var(--max-lebar);
   width: 100%;
@@ -73,299 +91,217 @@
 .container-70p { width: 70%; }
 .container-80p { width: 80%; }
 .container-90p { width: 90%; }
+.container-auto { auto; }
 
 .container * {
   max-width: 100%;
   box-sizing: border-box;
 }
-.scroll-y{
-overflow-y: auto;
-overscroll-behavior: contain;
-}
-.scroll-x{
-overflow-x: auto;
-overscroll-behavior: contain;
-}
-.hide-scrollbar {
-  overflow: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-}
 
-.hide-scrollbar::-webkit-scrollbar { /* Chrome, Safari, Opera */
-  display: none;
-}
+/* Scroll */
+.scroll-y { overflow-y: auto; overscroll-behavior: contain; }
+.scroll-x { overflow-x: auto; overscroll-behavior: contain; }
+.hide-scrollbar { overflow: auto; scrollbar-width: none; -ms-overflow-style: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
 
-.separator{
-background-color: #333333;
-}
-.flex-row {
+/* Layout */
+.separator { background-color: #333; }
+
+.flex { display: flex; }
+.flex.row { flex-direction: row; }
+.flex.column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-align-center { align-items: center; }
+.flex-justify-center { justify-content: center; }
+.flex-justify-space-evenly { justify-content: space-evenly; }
+
+.floating-box {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 0 10px rgb(0 0 0 / .2);
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
+.border-box {
+  border: 1px solid var(--warna-teks-trasparant);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
 }
 
-.flex-align-center {
+/* Text */
+.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--warna-bg-primer);
+}
+
+h1 { font-size: 1.75em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.125em; }
+h5 { font-size: 1em; }
+h6 { font-size: .875em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  color: var(--warna-teks-sekunder);
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  display: inline;
+  margin: 0;
+}
+
+.teks-trasparant {
+  color: var(--warna-teks-trasparant);
+}
+
+/* Main */
+main {
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.flex-justify-center {
-  justify-content: center;
-}
-.flex-justify-space-evenly {
-justify-content: space-evenly;
-}
-.floating-box{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 15px;
-	padding: 15px;
-    border-radius: 20px;
-}
-.border-box{
-    border: 1px solid var(--warna-teks-trasparant);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
-}
-    .logo {
-        font-size: 1.5em;
-        font-weight: bold;
-	color: var(--warna-bg-primer);
-    }
-
-    /* Side Menu */
-   .slide-menu {
-        width: 100%;
-        max-width: var(--max-lebar);
-        min-height: 100vh;
-        background-color: var(--warna-bg-sekunder);
-        color: var(--warna-teks-primer);
-        box-sizing: border-box;
-    }
-
-    .close-button {
-        background: none;
-        border: none;
-        font-size: 2em;
-        cursor: pointer;
-        color: var(--warna-teks-primer);
-    }
-	
-	nav.menu-list {
-    width: 100%;
-	}
-
-    .menu-list ul {
-         list-style: none;
-        padding: 0;
-        margin-top: 20px;
-    }
-
-    .menu-list ul li {
-        padding: 10px 15px;
-        font-size: 1.2em;
-        border-bottom: 1px solid var(--warna-teks-trasparant);
-        color: var(--warna-teks-primer);
-    }
-
-    .menu-list ul li:hover {
-        background-color: var(--warna-bg-primer);
-        color: var(--warna-bg-sekunder);
-        cursor: pointer;
-    }
-
-	h1 {
-	  font-size: 1.75em;
-	  
-	}
-
-    h2 {
-      font-size: 1.5em;
-    }
-
-    h3 {
-      font-size: 1.25em;
-    }
-    h4 {
-      font-size: 1.125em;
-    }
-    h5 {
-      font-size: 1em;
-    }	
-    h6 {
-      font-size: 0.875em;
-    }
-	h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
-	}
-	p {
-	  color: var(--warna-teks-sekunder);
-	  font-size: 1em;
-	  line-height: 1.5;
-	}
-	h1, h2, h3, h4, h5, h6, p{
-	display: inline;
-    margin: 0;
-	}
-	.teks-trasparant{
-	color: var(--warna-teks-trasparant);
-	}
-
-main {
-    text-align: center;
-    min-height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+/* Buttons */
+button {
+  background-color: var(--warna-bg-primer);
+  color: var(--warna-bg-sekunder);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
-    button {
-      background-color: var(--warna-bg-primer);
-      color: var(--warna-bg-sekunder);
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 10px;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }
-    button.whatsapp {
-      background-color: var(--warna-bg-sekunder);
-      color: var(--warna-teks-whatsapp);
-      border: 1px solid var(--warna-teks-whatsapp);
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 10px;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }
-    button.whatsapp:hover {
-      background-color: var(--warna-teks-whatsapp);
-      color: var(--warna-bg-sekunder);
-    }	
-    .button {
-      background-color: var(--warna-bg-primer);
-      color: var(--warna-bg-sekunder);
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }	
+button.whatsapp {
+  background-color: var(--warna-bg-sekunder);
+  color: var(--warna-teks-whatsapp);
+  border: 1px solid var(--warna-teks-whatsapp);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
 
-    button:hover, .button:hover{
-      background-color: var(--warna-bg-sekunder);
-      color: var(--warna-bg-primer);
-    }
-    .produk-container {
-	display: flex;
-	gap: 15px;
-	margin: 10px;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	min-height:50vh;
-    }
+button.whatsapp:hover {
+  background-color: var(--warna-teks-whatsapp);
+  color: var(--warna-bg-sekunder);
+  border: 1px solid var(--warna-teks-whatsapp);
+}
 
-    .produk-item {
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
+.button {
+  background-color: var(--warna-bg-primer);
+  color: var(--warna-bg-sekunder);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
 
-    .produk-item img {
-      width: 100%;
-      object-fit: cover;
-    }
+button:hover, .button:hover {
+  background-color: var(--warna-bg-sekunder);
+  color: var(--warna-bg-primer);
+  border: 1px solid var(--warna-bg-primer);
+}
 
-    .produk-info {
-      display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    }
+/* List */
+.list-garis li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  list-style-type: none;
+}
+.list-garis li:last-child { border-bottom: none; }
 
-    .produk-nama {
-      font-size: 1em;
-      color: var(--warna-teks-primer);
-	  font-weight: bold;
-      margin: 5px 0;
-    }
+/* Produk */
+.produk-container {
+  display: flex;
+  gap: 15px;
+  margin: 10px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 50vh;
+}
 
-    .produk-harga {
-      font-size: 0.8em;
-      color: var(--warna-teks-sekunder);
-      margin-top: 5px;
-    }
+.produk-item {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--warna-bg-tersier);
+}
+
+.produk-item img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.produk-nama {
+  font-size: 1em;
+  color: var(--warna-teks-primer);
+  font-weight: 700;
+  margin: 5px 0;
+}
 
 .produk-filter-button {
-	white-space: nowrap;
-    padding: 10px;
-    margin: 10px;
-    background-color: var(--warna-bg-tersier);
-    border-radius: 15px;
-    color: var(--warna-teks-primer);
+  white-space: nowrap;
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--warna-bg-tersier);
+  border-radius: 15px;
+  color: var(--warna-teks-primer);
 }
-.produk-filter-button.active{
-    color: var(--warna-bg-primer);
-    background-color: var(--warna-bg-sekunder);
-	border:1px solid var(--warna-bg-primer);
+
+.produk-filter-button.active {
+  color: var(--warna-bg-primer);
+  background-color: var(--warna-bg-sekunder);
+  border: 1px solid var(--warna-bg-primer);
 }
-.produk-beli{
-	white-space: nowrap;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 15px;
-	color: var(--warna-bg-primer);
-    background-color: var(--warna-bg-sekunder);
-	border:1px solid var(--warna-bg-primer);
-}	
-.icon {
+
+.produk-beli {
+  white-space: nowrap;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  color: var(--warna-bg-primer);
+  background-color: var(--warna-bg-sekunder);
+  border: 1px solid var(--warna-bg-primer);
+}
+
+/* Icons */
+.icon-small, .icon-medium, .icon-large, .icon-xlarge {
   display: inline-block;
   vertical-align: middle;
   object-fit: contain;
 }
 
-/* Default size (optional) */
-.icon {
-  width: 24px;
-  height: 24px;
-}
+.icon-small { width: 16px; height: 16px; }
+.icon-medium { width: 32px; height: 32px; }
+.icon-large { width: 48px; height: 48px; }
+.icon-xlarge { width: 64px; height: 64px; }
 
-/* Ukuran khusus */
-.icon-small {
-  width: 16px;
-  height: 16px;
-}
-
-.icon-medium {
-  width: 32px;
-  height: 32px;
-}
-
-.icon-large {
-  width: 48px;
-  height: 48px;
-}
-
-.icon-xlarge {
-  width: 64px;
-  height: 64px;
-}
+/* Modal */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Latar belakang semi transparan */
+  background: rgb(0 0 0 / .5);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -403,256 +339,428 @@ main {
   background-color: var(--warna-teks-sekunder);
   color: var(--warna-bg-sekunder);
 }
-	
+
+/* Slide menu */
+.slide-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / .4);
+  display: none;
+  justify-content: flex-end;
+  z-index: 9999;
+}
+
+.slide-menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: var(--max-lebar);
+  height: 70vh;
+  background: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: transform 0.5s ease;
+  transform: translateX(-50%) translateY(100%);
+}
+
+.slide-menu-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.slide-overlay.active {
+  display: flex;
+}
+
+.slide-menu.active {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* WA Popup */
+#pop-wa {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  right: 0;
+  width: 100%;
+  max-width: var(--max-lebar);
+  margin: 0 auto;
+  display: flex;
+  padding: 0;
+  z-index: 999;
+}
+
+/* Loading */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-lebar);
+  height: 100%;
+  background-color: #fffe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 4px solid rgb(255 255 255 / .3);
+  border-top: 4px solid #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
   </style>
 </head>
 <body>
-  <!-- Side Menu -->
-<div class="slide-menu imp-hidden" id="menu-slide">
-<div class="container" style="padding:20px">
-<div class="container flex-row flex-align-center flex-justify-center">
-<div class="container-20p"></div><div class="container-60p  flex-row flex-align-center flex-justify-center"><h4>Menu</h4></div><div class="container-20p flex-row flex-align-center flex-justify-center"><button id="tutup-menu" class="close-button">&times;</button></div>
-</div>
-	<div class="container">
-    <nav class="menu-list">
-        <ul>
-            <li><div class="container flex-row"><div class="container-10p flex-row flex-align-center flex-justify-center"><img src="https://i.imgur.com/2fXR0Oh.png" class="icon-medium"></div><div class="container-80p flex-row flex-align-center">Instagram</div><div class="container-10p flex-row flex-align-center flex-justify-center"><i class="fa fa-chevron-right"></i></div></div></li>
-            <li><div class="container flex-row"><div class="container-10p flex-row flex-align-center flex-justify-center"><img src="https://i.imgur.com/P6nLPT2.png" class="icon-medium"></div><div class="container-80p flex-row flex-align-center">Facebook</div><div class="container-10p flex-row flex-align-center flex-justify-center"><i class="fa fa-chevron-right"></i></div></div></li>
-        </ul>
-    </nav>
-	</div>
-	<br><br>
-	<h5>Butuh Bantuan? </h5> <p>Text Only</p>
-	<div class="container flex-wrap">
-		<div class="border-box">
-		<div class="container  flex-row"><div class="container-20p flex-row flex-align-center flex-justify-center"><img src="https://i.imgur.com/TbQiYDS.png" class="icon-large"></div><div class="container-70p"><p>Admin</p><br><p style="color:var(--warna-teks-whatsapp)">+6285161517176</p></div><div class="container-10p flex-row flex-align-center flex-justify-center"><i class="fa fa-chevron-right"></i></div></div>
-		</div>
-		<div class="border-box">
-		<div class="container  flex-row"><div class="container-20p flex-row flex-align-center flex-justify-center"><img src="https://i.imgur.com/TbQiYDS.png" class="icon-large"></div><div class="container-70p"><p>Admin</p><br><p style="color:var(--warna-teks-whatsapp)">+6285161517176</p></div><div class="container-10p flex-row flex-align-center flex-justify-center"><i class="fa fa-chevron-right"></i></div></div>
-		</div>
-	</div>
-	</div>
-</div>
-<div class="slide-menu imp-hidden" id="lokasi-slide">
-<div class="container scroll-y" style="padding:20px">
-	<div class="container flex-row">
-	<div class="container-20p"></div><div class="container-60p  flex-row flex-align-center flex-justify-center"><h4>Lokasi</h4></div><div class="container-20p flex-row flex-align-center flex-justify-center"><button id="tutup-lokasi" class="close-button">&times;</button></div>
-	</div>
-<div class="container flex-row flex-align-center flex-justify-center">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.597605034394!2d109.3636053483319!3d-7.286540166439086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ff7f68a2223eb%3A0xde8cd61b06219d8e!2sArto%20Printing!5e0!3m2!1sen!2sid!4v1745371986989!5m2!1sen!2sid" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-<div class="container flex-row" style="padding-top:20px">
-<div class="container-50p flex-wrap flex-align-center flex-justify-center">
-<div class="container flex-row flex-align-center flex-justify-center"><img src="https://i.imgur.com/JBbTsHP.png" class="icon-large"></img></div>
-<div class="container flex-row flex-align-center flex-justify-center"><p style="text-align:center;font-size:12px">Desa Karangtalun, Kec. Bobotsari, Kab. Purbalingga</p></div>
-</div>
-<div class="container-50p flex-wrap flex-align-center flex-justify-center">
-<div class="container flex-row flex-align-center flex-justify-center"><img src="https://i.imgur.com/EfVHPzK.png" class="icon-large"></img></div>
-<div class="container flex-row flex-align-center flex-justify-center"><p style="text-align:center;font-size:12px">Senin-Kamis : 09:00-19:00<br>Jumat-Sabtu : 13:00-19:00</p></div>
-</div>
-</div>
-<div class="container flex-row flex-align-center flex-justify-center">
-<div class="container-40p floating-box flex-row flex-align-center flex-justify-center" style="background-color:var(--warna-bg-primer)" onclick="share('Lokasi Arto Printing Bobotsari', 'Yuk kunjungi Arto Printing sekarang!, nih lokasinya', 'https://maps.app.goo.gl/p6UWc3YzXkCtAohs8')">
-<img src="https://i.imgur.com/wdqHMAX.png" class="icon-medium" ></img>
-</div>
-<a href="https://maps.app.goo.gl/p6UWc3YzXkCtAohs8" target="_blank" rel="noopener noreferrer" class="container-40p floating-box flex-row flex-align-center flex-justify-center" style="background-color:var(--warna-bg-primer)">
-<img src="https://i.imgur.com/Cyt2yh2.png" class="icon-medium"></img>
-</a>
-</div>
-<br><br>
-</div>
-<div class="container flex-wrap flex-align-center flex-justify-center scroll-y hide-scrollbar" style="height:100vh;text-align:center">
-<h3>Ulasan Google Maps</h3>
-<div class='sk-ww-google-reviews' data-embed-id='25549418'></div>
-
-</div>
-</div>
-<div id="confirmModal" class="modal">
-  <div class="modal-content">
-    <p id="confirmText">Apakah Anda yakin?</p>
-    <div class="modal-buttons">
-      <button id="confirmYes">Oke</button>
-      <button id="confirmNo">Batal</button>
-    </div>
-  </div>
-</div>
-
   <main id="main">
   <header>
-	<div class="container flex-row flex-align-center flex-justify-center">
-	<div class="logo"><h1>ArtoPrinting</h1></div>
+	<div class="container flex row flex-align-center flex-justify-center">
+	<div class="logo"><img src="https://ik.imagekit.io/mustofa/web/img/logo.png" alt="Logo Arto Printing" style="height:30px;"></div>
 	</div>
   </header>
 
 <div class="container" style="padding-top:50px">
- <img src="https://i.imgur.com/8iA5U6N.jpeg" alt="Banner">
+ <img src="https://ik.imagekit.io/mustofa/web/img/banner-undangan.png" alt="Banner">
 </div>
-<div class="container  flex-row">
+<div class="container  flex row">
 <div class="floating-box" id="lokasi">
-<div class="container-20p flex-row flex-align-center flex-justify-center">
+<div class="container-20p flex row flex-align-center flex-justify-center">
 <img src="https://i.imgur.com/KxsmSaJ.png" class="icon-medium"></img>
 </div>
 <div class="container-60p flex-wrap flex-justify-center">
-<h3>ArtoPrinting</h3><br>
+<h3>Arto Printing</h3><br>
 <p class="teks-trasparant">Bobotsari, Purbalingga</p>
 </div>
-<div class="container-20p flex-row flex-align-center flex-justify-center">
+<div class="container-20p flex row flex-align-center flex-justify-center">
 <img src="https://i.imgur.com/TDWwmAw.png" class="icon-medium"></img>
 </div>
 </div>
 </div>
-<div class="container  flex-row flex-justify-space-evenly">
-<Button class="whatsapp">Hubungi Kami</Button>
-<Button>Cek Antrian</Button>
+<div class="container  flex row flex-justify-space-evenly">
+<Button class="whatsapp" onclick="chatWa('6285712110870','Hallo kak, saya ingin bertanya tentang produk arto printing')"><img src="https://ik.imagekit.io/mustofa/web/img/icon-wa.png" class="icon-small"></img></i>Hubungi Kami</Button>
+<Button onclick="openSlideMenu()">Cek Antrian</Button>
 </div>
 <br><br>
-<div class="container">
+<div class="container" style="padding:10px;">
 <h1>Katalog</h1><br>
 <p>Temukan undangan cetak eksklusif untuk membuat momen spesialmu lebih berkesan. Pilih tema favoritmu dan pesan sekarang untuk desain unik berkualitas tinggi!
 
 </p>
 </div>
-	<div class="container scroll-x hide-scrollbar flex-row flex-align-center">
-	<div class="produk-filter-button active" id="filter-produk1">Ready</div>
-	<div class="produk-filter-button" id="filter-produk2">Avis</div>
-	<div class="produk-filter-button" id="filter-produk3">Byar</div>
-	<div class="produk-filter-button" id="filter-produk4">Cantik</div>
-	<div class="produk-filter-button" id="filter-produk5">Fadhil</div>
-	<div class="produk-filter-button" id="filter-produk6">Falah</div>
-	<div class="produk-filter-button" id="filter-produk7">Hc</div>
-	<div class="produk-filter-button" id="filter-produk2">Hepi</div>
-	<div class="produk-filter-button" id="filter-produk3">Jago</div>
-	<div class="produk-filter-button" id="filter-produk4">Lintang</div>
-	<div class="produk-filter-button" id="filter-produk5">Maliq</div>
-	<div class="produk-filter-button" id="filter-produk6">Rizki</div>
-	<div class="produk-filter-button" id="filter-produk7">Salma</div>	
+	<div class="container scroll-x flex row flex-align-center" id="filterKatalog">	
 	</div>
     <div class="container flex-wrap flex-align-center flex-justify-center">
       <div class="produk-container" id="produk-container"></div>
     </div>
   </main>
-<footer style="padding:20px;min-height:20vh;background-color: var(--warna-bg-primer);color:var(--warna-bg-sekunder);">
-<div class="container" style="text-align:center;">
-<h3>IKUTI KAMI</h3><br>
-<img src="https://ik.imagekit.io/mustofa/web/img/icon-fb.png" class="icon-medium"></img>
-<img src="https://ik.imagekit.io/mustofa/web/img/icon-ig.png" class="icon-medium"></img><br>
+<footer>
+<div class="container flex column" style="padding-top:20px;min-height:20vh;background-color: var(--warna-bg-primer);color:var(--warna-bg-sekunder);text-align:center;">
+<h3>IKUTI KAMI</h3>
+<div class="container flex row flex-align-center flex-justify-center">
+<a href="https://www.facebook.com/tahulmamaz.salachy" target="_blank" rel="noopener noreferrer"><img src="https://ik.imagekit.io/mustofa/web/img/icon-fb.png" class="icon-medium"></img></a>
+<a href="https://www.instagram.com/artoprinting_pbg/" target="_blank" rel="noopener noreferrer"><img src="https://ik.imagekit.io/mustofa/web/img/icon-ig.png" class="icon-medium"></img></a>
+<a href="https://www.tiktok.com/@artoprinting.pbg" target="_blank" rel="noopener noreferrer"><img src="https://ik.imagekit.io/mustofa/web/img/icon-tiktok.png?updatedAt=1745731620043" class="icon-medium"></img></a><br>
 </div>
-<div class="container flex-row">
-<div class="container-50p"><h3>KONTAK</h3>
-<ul style="list-style-type: none;padding:0px">
-<li><h6>Miftahul <a>+628XXX</a><h6></li>
-<li><h6>Fina <a>+628XXX</a></h6></li>
+<div class="container" style="padding-top:10px;padding-bottom:10px;">
+<h3>KONTAK</h3>
+<ul style="list-style-type: none;padding:0px;margin:0px">
+<li onclick="chatWa('6285712110870','Hallo kak, saya ingin bertanya tentang produk arto printing')"><h6>Miftahul +6285712110870<h6></li>
+<li onclick="chatWa('6285540287362','Hallo kak, saya ingin bertanya tentang produk arto printing')"><h6>Fina +6285540287362</h6></li>
 </ul>
 </div>
-<div class="container-50p"><h3>ALAMAT</h3></div>
+<h3>LOKASI</h3><br>
+<div class="container" style="background-color:white;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.600429206858!2d109.363888275!3d-7.286220392721134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ff7f68a2223eb%3A0xde8cd61b06219d8e!2sArto%20Printing!5e0!3m2!1sen!2sid!4v1745694252567!5m2!1sen!2sid" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="review-widget_net" data-uuid="9ec4eb61-8de4-472f-9a93-27ebdc8f4ed0" data-template="10" data-lang="en" data-theme="light"></div>
+</div>
+</div>
+<div class="container flex flex-align-center flex-justify-center" style="background-color:var(--warna-teks-primer);color:var(--warna-bg-sekunder);text-align:center;padding:10px;">
+<h6><span id="time-year"></span> Arto Printing</h6>
+</div>
+</footer>
+<!-- Modal Konfirmasi -->
+<div id="confirmModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+  <div style="background: white; padding: 20px; border-radius: 8px; max-width: 300px; text-align: center;">
+    <p id="confirmText" style="margin-bottom: 20px;">Apakah anda yakin?</p>
+    <div style="display: flex; justify-content: space-around;">
+      <button id="confirmYes" style="padding: 10px 20px;">Ya</button>
+      <button id="confirmNo" style="padding: 10px 20px;">Tidak</button>
+    </div>
+  </div>
 </div>
 
-</footer>
+<!-- Slide Menu -->
+<div id="slideOverlay" class="slide-overlay">
+  <div id="slideMenu" class="slide-menu" onclick="event.stopPropagation()">
+    <div class="slide-menu-content">
+	<div class="container flex column">
+      <h2>Antrian</h2>
+		<div class="container scroll-y" style="height:50vh;" id="antrian">
+		<ul class="list-garis" style="list-style-type: none; padding:0px; text-align:left;" id="list-antrian">
+		</ul>
+		</div>
+      <button onclick="closeSlideMenu()">Tutup</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- whatsapp pop up -->
+<div class="imp-hidden" id="pop-wa">
+<div class="container-auto column">
+<img src="https://ik.imagekit.io/mustofa/web/img/icon-wa.png" class="icon-xlarge" onclick="chatWa('6285712110870','Hallo kak, saya ingin bertanya tentang produk arto printing')"></img>
+<div class="container-auto flex flex-align-center flex-justify-center" style="background-color:white;border-radius:20px 20px 20px 0px ;padding:10px;height:20px;">
+<h6 onclick="chatWa('6285712110870','Hallo kak, saya ingin bertanya tentang produk arto printing')">Butuh Bantuan?</h6>
+</div>
+</div>
+</div>
+<!--Loading screen-->
+<div class="container flex column" id="loading-screen">
+  <div class="spinner"></div>
+  <h6>Memuat halaman...</h6>
+</div>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll("img");
-    images.forEach(img => {
-      if (!img.hasAttribute("loading")) {
-        img.setAttribute("loading", "lazy");
-      }
-    });
+// ====================
+// Event DOM Loaded
+// ====================
+document.addEventListener("DOMContentLoaded", function () {
+const loadingScreen = document.getElementById('loading-screen');
+metaData();
+	fetchData(function() {
+    setupFilterButtons();
+    generateFilterButtons();
+    renderProduct();
+	tampilkanAntrian();
+	statusWarna();
+	loadingScreen.style.display = 'none';
   });
-</script>
+window.addEventListener('scroll', resetTimerPopWa);
+resetTimerPopWa();	
+statusWarna();
+lazyLoadImg();
+});
 
+// ====================
+// Fetch Data
+// ====================
+function fetchData(callback) {
+  fetch('https://script.google.com/macros/s/AKfycbyVe0trm2_cfbtwuo6CCjK8-I-VWoj4v0I0Z-KWF5OcW3hyEfggO50lClwA_FNcIs9Y/exec') 
+    .then(response => response.json())
+    .then(data => {
+      // Membuat skrip baru untuk menuliskan data JSON ke dalam variabel global dengan awalan 'data-'
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      
+      // Menuliskan JSON data untuk setiap sheet yang ada, dengan menambahkan 'data-' di awal nama sheet
+      Object.keys(data).forEach(sheetName => {
+        const globalVariableName = 'data_' + sheetName;
+        script.text += `const ${globalVariableName} = ${JSON.stringify(data[sheetName])};\n`;
+		console.log(`Data untuk ${globalVariableName}:`, data[sheetName]);
+      });
+      
+      // Menambahkan skrip ke dalam body
+      document.body.appendChild(script);
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-function loadProduk(){
-		fetch('https://script.google.com/macros/s/AKfycbxcTsl1YtaNjSK6BVqzruGqw6e4asZYII4qq3LqlBEPGHCCapcnWxIykrPA5kTs6Bvn/exec')
-		  .then(response => response.json())
-		  .then(data => {
-			const produkContainer = document.getElementById('produk-container');
-			produkContainer.innerHTML = '';
-
-			const activeFilter = document.querySelector('.produk-filter-button.active');
-			const filter = activeFilter ? activeFilter.textContent.trim() : '';
-
-			// Filter data berdasarkan kategori
-			const filteredData = filter ? data.filter(produk => produk.kategori === filter || produk.status1 === filter) : data;
-
-
-			filteredData.forEach(produk => {
-			  const produkItem = document.createElement('div');
-			  produkItem.classList.add('produk-item');
-
-          produkItem.innerHTML = `
-            <img src="${produk.url_gambar}" alt="${produk.nama}">
-            <div class="produk-info">
-              <div class="produk-nama"><h3>${produk.nama}</h3></div>
-              <div class="produk-status"><h4>${produk.status2}</h4></div>
-			  <div class="produk-harga"><h5>Mulai dari Rp. ${produk.harga}</h5></div>
-			  <div class="produk-beli"><h6>Pesan ${produk.nama}</h6></div>
-            </div>
-          `;
-
-          const beliProduk = produkItem.querySelector('.produk-beli');
-			beliProduk.onclick = function () {
-            const namaProduk = produk.nama;
-            const pesan = `Halo, saya ingin memesan undangan tema ${encodeURIComponent(namaProduk)}.`;
-            const nomorWa = '6285161517176';
-            const waLink = `https://wa.me/${nomorWa}?text=${pesan}`;
-
-            showConfirm(
-              `Anda akan memesan ${produk.nama}. Lanjutkan?`,
-              function() { window.open(waLink, '_blank');
-; },
-              function() {}
-            );
-          };
-
-          produkContainer.appendChild(produkItem);
-        });
-      })
-      .catch(error => console.error('Error loading the product data:', error));
+      // Memanggil callback jika ada
+      if (callback) callback();
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
 }
 
 
-  // Filter Produk Button
-  const filterButtons = document.querySelectorAll('.produk-filter-button');
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-	  loadProduk();
-    });
+// ====================
+// Generate Filter Buttons
+// ====================
+function generateFilterButtons() {
+  const filterContainer = document.getElementById('filterKatalog');
+  filterContainer.innerHTML = '';
+
+  const kategoriSet = new Set();
+  data_produk.forEach(produk => {
+    if (produk.kategori) {
+      kategoriSet.add(produk.kategori.trim());
+    }
   });
-  loadProduk();
-});
 
-  // Show Confirm Pop Up
-  function showConfirm(message, onYes, onNo) {
-    const modal = document.getElementById('confirmModal');
-    const text = document.getElementById('confirmText');
-    const yesBtn = document.getElementById('confirmYes');
-    const noBtn = document.getElementById('confirmNo');
+  const allButton = document.createElement('div');
+  allButton.className = 'produk-filter-button active';
+  allButton.textContent = 'Ready';
+  filterContainer.appendChild(allButton);
 
-    text.innerText = message;
-    modal.style.display = 'flex';
+  kategoriSet.forEach(kategori => {
+    const button = document.createElement('div');
+    button.className = 'produk-filter-button';
+    button.textContent = kategori;
+    filterContainer.appendChild(button);
+  });
+}
 
-    yesBtn.onclick = function() {
-      modal.style.display = 'none';
-      if (onYes) onYes();
-    };
-
-    noBtn.onclick = function() {
-      modal.style.display = 'none';
-      if (onNo) onNo();
-    };
+// ====================
+// Render Data
+// ====================
+//Katalog
+function renderProduct() {
+  if (typeof data_produk === 'undefined') {
+    console.error('Data katalog belum tersedia!');
+    return;
   }
 
+  const produkContainer = document.getElementById('produk-container');
+  produkContainer.innerHTML = '';
+
+  const activeFilter = document.querySelector('.produk-filter-button.active');
+  const filter = activeFilter ? activeFilter.textContent.trim() : '';
+
+  const filteredData = filter ? data_produk.filter(produk => produk.kategori === filter || produk.status1 === filter) : data_produk;
+
+  filteredData.forEach(produk => {
+    const produkItem = document.createElement('div');
+    produkItem.classList.add('produk-item');
+
+    produkItem.innerHTML = `
+      <img src="https://ik.imagekit.io/mustofa/web/katalog-undangan/${produk.url_gambar}" alt="${produk.nama}" loading="lazy">
+      <div class="container flex row flex-align-center flex-justify-space-evenly">
+        <div class="produk-nama"><h5>${produk.nama}</h5></div>
+        <div class="produk-status"><h5>${produk.status2}</h5></div>
+        <div class="produk-beli"><h5>Pesan</h5></div>
+      </div>
+    `;
+
+    const beliProduk = produkItem.querySelector('.produk-beli');
+    beliProduk.onclick = function () {
+      const namaProduk = produk.nama;
+      const pesan = `Halo, saya ingin memesan undangan tema ${encodeURIComponent(namaProduk)}.`;
+      const nomorWa = '6285712110870';
+      const waLink = `https://wa.me/${nomorWa}?text=${pesan}`;
+
+      showConfirm(
+        `Anda akan memesan ${produk.nama}. Lanjutkan?`,
+        function() { window.open(waLink, '_blank'); },
+        function() {}
+      );
+    };
+
+    produkContainer.appendChild(produkItem);
+  });
+}
+// Antrian
+function tampilkanAntrian() {
+  if (typeof data_antrian === 'undefined') {
+    console.error('Data katalog belum tersedia!');
+    return;
+  }
+  const listContainer = document.getElementById('list-antrian');
+  listContainer.innerHTML = '';
+
+  data_antrian.forEach(item => {
+    const li = document.createElement('li');
+    li.innerHTML = `Pesanan a/n ${item.nama}<br>jenis pesanan: ${item.jenis_pesanan}<br>Status: <i class="status-warna">${item.status}</i>`;
+    listContainer.appendChild(li);
+  });
+}
+
+// ====================
+// Setup Filter Buttons
+// ====================
+function setupFilterButtons() {
+  const filterContainer = document.getElementById('filterKatalog');
+  filterContainer.addEventListener('click', function(event) {
+    if (event.target.classList.contains('produk-filter-button')) {
+      const buttons = filterContainer.querySelectorAll('.produk-filter-button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderProduct();
+    }
+  });
+}
+
+// ====================
+// Status Warna
+// ====================
+function statusWarna() {
+  const statusElements = document.querySelectorAll('i.status-warna');
+  statusElements.forEach(function(el) {
+    const text = el.innerText.trim();
+    if (text === 'Dalam antrian') {
+      el.style.color = 'gray';
+    } else if (text === 'Dalam Pengerjaan') {
+      el.style.color = 'red';
+    } else if (text === 'Siap diambil/diantar') {
+      el.style.color = 'blue';
+    } else if (text === 'Selesai') {
+      el.style.color = 'green';
+    }
+  });
+}
+
+// ====================
+// Lazy Load Images
+// ====================
+function lazyLoadImg() {
+  const images = document.querySelectorAll("img");
+  images.forEach(img => {
+    if (!img.hasAttribute("loading")) {
+      img.setAttribute("loading", "lazy");
+    }
+  });
+}
+
+// ====================
+// Show Confirm Pop Up
+// ====================
+function showConfirm(message, onYes, onNo) {
+  const modal = document.getElementById('confirmModal');
+  const text = document.getElementById('confirmText');
+  const yesBtn = document.getElementById('confirmYes');
+  const noBtn = document.getElementById('confirmNo');
+
+  if (!modal || !text || !yesBtn || !noBtn) {
+    console.error('Modal elements not found!');
+    return;
+  }
+
+  text.innerText = message;
+  modal.style.display = 'flex';
+
+  yesBtn.onclick = function() {
+    modal.style.display = 'none';
+    if (onYes) onYes();
+  };
+
+  noBtn.onclick = function() {
+    modal.style.display = 'none';
+    if (onNo) onNo();
+  };
+}
+
+// ====================
+// Share Function
+// ====================
 function share(title, text, customLink) {
-  const combinedMessage = `${text}\n${customLink}`; // gabungkan text + link, kasih newline
-  const encodedMessage = encodeURIComponent(combinedMessage); // encode semuanya
+  const combinedMessage = `${text}\n${customLink}`;
+  const encodedMessage = encodeURIComponent(combinedMessage);
 
   if (navigator.share) {
     navigator.share({
       title: title,
-      text: combinedMessage, // gabungan text + link
+      text: combinedMessage,
       url: customLink,
     }).then(() => {
       console.log('Berhasil dibagikan');
@@ -660,18 +768,125 @@ function share(title, text, customLink) {
       console.error('Gagal membagikan', error);
     });
   } else {
-    const shareOptions = `
-      <div style="text-align:center;">
-        <a href="https://wa.me/?text=${encodedMessage}" target="_blank" rel="noopener noreferrer">Bagikan ke WhatsApp</a><br>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(customLink)}" target="_blank" rel="noopener noreferrer">Bagikan ke Facebook</a><br>
-        <button onclick="navigator.clipboard.writeText('${customLink}').then(() => alert('Link disalin ke clipboard'));">Salin Link</button>
-      </div>
-    `;
-    showConfirm('Bagikan', null, null, shareOptions);
+    alert(`Bagikan link ini ke temanmu:\n\n${customLink}`);
   }
 }
 
+// ====================
+// Slide Menu
+// ====================
+function openSlideMenu() {
+  document.getElementById('slideOverlay').classList.add('active');
+  document.getElementById('slideMenu').classList.add('active');
+}
+
+function closeSlideMenu() {
+  document.getElementById('slideOverlay').classList.remove('active');
+  document.getElementById('slideMenu').classList.remove('active');
+}
+
+document.getElementById('slideOverlay').addEventListener('click', function() {
+  closeSlideMenu();
+});
+// ====================
+// Popup WhatsApp
+// ====================
+  let timerPopWa;
+  let popWa = document.getElementById('pop-wa');
+
+  function showPopWa() {
+    if (popWa) popWa.classList.remove('imp-hidden');
+  }
+
+  function hidePopWa() {
+    if (popWa && !popWa.classList.contains('imp-hidden')) {
+      popWa.classList.add('imp-hidden');
+    }
+  }
+
+  function resetTimerPopWa() {
+    clearTimeout(timerPopWa);
+    hidePopWa();
+    timerPopWa = setTimeout(showPopWa, 5000);
+  }
+// ====================
+// Tahun
+// ====================
+document.getElementById('time-year').textContent = new Date().getFullYear();
+
+// ====================
+// openLink
+// ====================
+function chatWa(no,pesan) {
+  const enPesan = encodeURIComponent(pesan);
+  const url = `https://wa.me/${no}?text=${enPesan}`;
+  window.open(url, "_blank");
+}
+function metaData(){
+    const websiteName = getComputedStyle(document.documentElement).getPropertyValue('--website-name').trim();
+    const websiteTagline = getComputedStyle(document.documentElement).getPropertyValue('--website-tagline').trim();
+    const websiteDescription = getComputedStyle(document.documentElement).getPropertyValue('--website-description').trim();
+    const websiteLogoUrl = getComputedStyle(document.documentElement).getPropertyValue('--website-logo-url').trim();
+    const websiteUrl = getComputedStyle(document.documentElement).getPropertyValue('--website-url').trim();
+
+    const head = document.head;
+
+    // Meta Description
+    const metaDesc = document.createElement('meta');
+    metaDesc.name = 'description';
+    metaDesc.content = websiteDescription;
+    head.appendChild(metaDesc);
+
+    // Open Graph Tags
+    const metaOgTitle = document.createElement('meta');
+    metaOgTitle.setAttribute('property', 'og:title');
+    metaOgTitle.content = `${websiteName} - ${websiteTagline}`;
+    head.appendChild(metaOgTitle);
+
+    const metaOgDesc = document.createElement('meta');
+    metaOgDesc.setAttribute('property', 'og:description');
+    metaOgDesc.content = websiteDescription;
+    head.appendChild(metaOgDesc);
+
+    const metaOgImage = document.createElement('meta');
+    metaOgImage.setAttribute('property', 'og:image');
+    metaOgImage.content = websiteLogoUrl;
+    head.appendChild(metaOgImage);
+
+    const metaOgUrl = document.createElement('meta');
+    metaOgUrl.setAttribute('property', 'og:url');
+    metaOgUrl.content = websiteUrl;
+    head.appendChild(metaOgUrl);
+
+    // Twitter Card Tags
+    const metaTwitterCard = document.createElement('meta');
+    metaTwitterCard.name = 'twitter:card';
+    metaTwitterCard.content = 'summary_large_image';
+    head.appendChild(metaTwitterCard);
+
+    const metaTwitterTitle = document.createElement('meta');
+    metaTwitterTitle.name = 'twitter:title';
+    metaTwitterTitle.content = `${websiteName} - ${websiteTagline}`;
+    head.appendChild(metaTwitterTitle);
+
+    const metaTwitterDesc = document.createElement('meta');
+    metaTwitterDesc.name = 'twitter:description';
+    metaTwitterDesc.content = websiteDescription;
+    head.appendChild(metaTwitterDesc);
+
+    const metaTwitterImage = document.createElement('meta');
+    metaTwitterImage.name = 'twitter:image';
+    metaTwitterImage.content = websiteLogoUrl;
+    head.appendChild(metaTwitterImage);
+
+    const metaTwitterSite = document.createElement('meta');
+    metaTwitterSite.name = 'twitter:site';
+    metaTwitterSite.content = '@ArtoPrinting';
+    head.appendChild(metaTwitterSite);
+
+}
 </script>
+
 
 
 
