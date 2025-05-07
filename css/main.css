@@ -31,7 +31,6 @@ transform: translateY(-20px);
 
 html, body {
   margin: 0;
-  padding: 0;
   background-color: var(--warna-bg-sekunder);
   color: var(--warna-teks-primer);
   max-width: var(--max-lebar);
@@ -41,6 +40,8 @@ html, body {
   font-size: 16px;
   overflow-x: hidden;
   font-family: var(--font-Poppins);
+  padding-bottom: env(safe-area-inset-bottom); /* untuk menghindari tertabrak navigation bar */
+  padding-top: env(safe-area-inset-top);       /* untuk menghindari notch */
 }
 
 header {
