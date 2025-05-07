@@ -1,5 +1,5 @@
 //redirect www khusus github page
-(function redirectToWWW() {
+/*(function redirectToWWW() {
   const hostname = window.location.hostname;
   
   if (!hostname.startsWith('www.') && !/^localhost$|^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
@@ -8,7 +8,7 @@
     window.location.replace(newUrl);
   }
 })();
-
+*/
 function insertGtagScript() {
   const head = document.head;
   if (!head) return;
