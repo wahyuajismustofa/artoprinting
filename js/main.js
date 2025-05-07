@@ -98,7 +98,7 @@ function navBottom() {
     }
 	navBottom.innerHTML = `
       <a href="/" class="nav-link" data-page="/"><i class="fa-solid fa-house fa-xl"></i><br>Katalog</a>
-	  <a href="/all.html" class="nav-link" data-page="katalog.html"><i class="fa-solid fa-images fa-xl"></i><br>Layanan</a>
+	  <a href="/all.html" class="nav-link" data-page="all.html"><i class="fa-solid fa-images fa-xl"></i><br>Layanan</a>
       <a href="/antrian.html" class="nav-link" data-page="antrian.html"><i class="fa-solid fa-list fa-xl"></i><br>Antrian</a>	
 	`;
 
