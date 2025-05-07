@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Produk - Arto Printing</title>
+	<meta name="description" content="Arto Printing adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
+	<meta name="keywords" content="Arto Printing percetakan, jasa cetak terpercaya, solusi percetakan terbaik, percetakan berkualitas, percetakan murah, cepat">
+	<meta name="author" content="Arto Printing">
+	<meta name="robots" content="index, follow">
+	<meta property="og:title" content="Produk - Arto Printing">
+	<meta property="og:description" content="Arto Printing adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://karyaion.my.id/produk.html">
+	<meta property="og:image" content="https://ik.imagekit.io/mustofa/web/img/logo-banner-artoprinting.png?updatedAt=1745737746904">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Produk - Arto Printing">
+	<meta name="twitter:description" content="Arto Printing adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
+	<meta name="twitter:image" content="https://ik.imagekit.io/mustofa/web/img/logo-banner-artoprinting.png?updatedAt=1745737746904">
+	<link rel="icon" href="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png" type="image/png">
+	<link rel="apple-touch-icon" href="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
+	
+	<script src="js/main.js" defer></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!-- Loading Screen-->
+<div class="container flex column" id="loading-screen">
+	<img src="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png"/ style="width:100px;">
+</div>
+<main id="main">
+  <header>
+    <div class="container flex row flex-align-center flex-justify-center">
+      <div><img src="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting.png" alt="Logo Arto Printing" style="height:30px;"></div>
+    </div>
+  </header>
+
+  <div class="single_produk container flex column flex-align-center flex-justify-center" id="produkContainer">
+  </div>
+
+  <div id="nav-bottom"></div>
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const urlParams = new URLSearchParams(window.location.search);
+  if (!urlParams.has('id')) {
+    window.location.href = '/index.html';
+	}
+(async () => {
+  const produk = await getDataSingleProduct();
+  renderSingleProduk(produk[0]);
+  window.addEventListener('scroll', resetTimerPopWa);
+  resetTimerPopWa();
+  loadingScreen.classList.add('imp-hidden');
+})();
+});
+</script>
+</body>
+</html>
