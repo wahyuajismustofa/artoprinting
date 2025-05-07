@@ -97,9 +97,9 @@ function navBottom() {
         return;
     }
 	navBottom.innerHTML = `
-      <a href="/artoprinting/" class="nav-link" data-page="/"><i class="fa-solid fa-house fa-xl"></i><br>Beranda</a>
-	  <a href="/artoprinting/katalog.html" class="nav-link" data-page="katalog.html"><i class="fa-solid fa-images fa-xl"></i><br>Katalog</a>
-      <a href="/artoprinting/antrian.html" class="nav-link" data-page="antrian.html"><i class="fa-solid fa-list fa-xl"></i><br>Antrian</a>	
+      <a href="/" class="nav-link" data-page="/"><i class="fa-solid fa-house fa-xl"></i><br>Beranda</a>
+	  <a href="/katalog.html" class="nav-link" data-page="katalog.html"><i class="fa-solid fa-images fa-xl"></i><br>Katalog</a>
+      <a href="/antrian.html" class="nav-link" data-page="antrian.html"><i class="fa-solid fa-list fa-xl"></i><br>Antrian</a>	
 	`;
 
 	const links = document.querySelectorAll('.nav-link');
