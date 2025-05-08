@@ -15,18 +15,18 @@ function insertGtagScript() {
   const head = document.head;
   if (!head) return;
 
-  if (document.querySelector('script[src*="gtag/js?id=G-7D0RLQEEQD"]')) return;
+  if (document.querySelector('script[src*="gtag/js?id=G-BCNGZJ030Z"]')) return;
 
   const gtagScript = document.createElement('script');
   gtagScript.async = true;
-  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7D0RLQEEQD';
+  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-BCNGZJ030Z';
 
   const gtagConfigScript = document.createElement('script');
   gtagConfigScript.text = `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7D0RLQEEQD');
+    gtag('config', 'G-BCNGZJ030Z');
   `;
   head.appendChild(gtagScript);
   head.appendChild(gtagConfigScript);
