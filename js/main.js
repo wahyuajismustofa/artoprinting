@@ -1,4 +1,5 @@
 //redirect www khusus github page
+
 (function redirectToWWW() {
   const hostname = window.location.hostname;
   
@@ -8,30 +9,123 @@
     window.location.replace(newUrl);
   }
 })();
+if (location.protocol === 'http:') {
+  location.href = 'https://' + location.hostname + location.pathname + location.search + location.hash;
+}
 
 function insertGtagScript() {
   const head = document.head;
   if (!head) return;
 
-  if (document.querySelector('script[src*="gtag/js?id=G-7D0RLQEEQD"]')) return;
+  if (document.querySelector('script[src*="gtag/js?id=${varConfig.google_tag}"]')) return;
 
   const gtagScript = document.createElement('script');
   gtagScript.async = true;
-  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7D0RLQEEQD';
+  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${varConfig.google_tag}`;
 
   const gtagConfigScript = document.createElement('script');
   gtagConfigScript.text = `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7D0RLQEEQD');
+    gtag('config', '${varConfig.google_tag}');
   `;
   head.appendChild(gtagScript);
   head.appendChild(gtagConfigScript);
 }
-/*Variabel*/
-const dirImg = 'https://ik.imagekit.io/mustofa/web/img/';
 
+/*Variabel*/
+let dirImg = 'https://ik.imagekit.io/mustofa/web/img/';
+let timerPopWa;
+let popWa;
+let root, dataProduk, pageConfig, varConfig;
+
+const burger = document.getElementById('burger');
+const dropdown = document.getElementById('dropdownMenu');
+const loadingScreen = document.getElementById('loading-screen');
+burger.addEventListener('click', () => {
+  dropdown.classList.toggle('imp-hidden');
+});
+
+const fungsiMap = {
+  productRendering,
+  productRenderingWithFilters,
+  insertGtagScript,
+  addElementAfterBody,
+  lazyLoadImg,
+  addElement,
+  scrollWa
+};
+async function init() {
+	root = await getRoot();
+	dataProduk = await getData('produk');
+	setting = await getData('setting');
+	const currentPath = window.location.pathname + window.location.search;
+    pageConfig = setting.katalog.find(p => p.path === currentPath);
+	varConfig = setting.variabel[0];
+
+	if (!pageConfig) {
+	  window.location.href = "/";
+	  return;
+	}
+
+    if (dataProduk[pageConfig.data]) {
+      fungsiMap[pageConfig.rendering]();
+    } else {
+      console.warn("Data untuk halaman ini tidak ditemukan.");
+    }
+
+	if (pageConfig.fungsi && pageConfig.fungsi.trim() !== "") {
+	  pageConfig.fungsi.split(",").forEach(nama => {
+		if (fungsiMap[nama]) {
+		  fungsiMap[nama]();
+		} else {
+		  console.warn(`Fungsi "${nama}" tidak ditemukan di fungsiMap`);
+		}
+	  });
+	}
+
+	fungsiDefault();
+}
+async function fungsiDefault() {
+	await insertGtagScript();
+	await loadMenu();
+	await addElementAfterBody();
+	await addElement();
+	await scrollWa();
+	await lazyLoadImg();
+	await loadingScreen.classList.add('imp-hidden');
+	await cekDanSync();
+}
+async function getRoot() {
+	try {
+		const response = await fetch("/root.json");
+		if (!response.ok) throw new Error("Gagal mengambil data");
+		return await response.json();
+	} catch (err) {
+		console.error("Error:", err.message);
+		return {};
+	}
+}
+async function getData(data) {
+	try {
+		const response = await fetch(`/data/${data}.json`);
+		if (!response.ok) throw new Error("Gagal mengambil data");
+		return await response.json();
+	} catch (err) {
+		console.error("Error:", err.message);
+		return {};
+	}
+}
+function loadMenu() {
+	setting["menu"].forEach(item => {
+	  const link = document.createElement('a');
+	  link.href = item.url;
+	  link.textContent = item.label;
+	  dropdown.appendChild(link);
+	});
+      
+}
 function addElementAfterBody (){
     const htmlString = `
       <!-- Modal Konfirmasi -->
@@ -48,9 +142,9 @@ function addElementAfterBody (){
       <!-- WhatsApp Pop Up -->
       <div class="imp-hidden" id="pop-wa">
         <div class="container-auto column">
-          <img src="${dirImg}icon-wa.png" class="icon-xlarge" onclick="chatAdmin('Hallo kak, saya ingin bertanya tentang produk Kryon')">
+          <img src="https://ik.imagekit.io/mustofa/web/img/icon-wa.png" class="icon-xlarge" onclick="chatAdmin('Hallo kak, saya ingin bertanya tentang produk Arto Printing')">
           <div class="container-auto flex flex-align-center flex-justify-center" style="background-color:white;border-radius:20px 20px 20px 0px ;padding:10px;height:20px;">
-            <h6 onclick="chatAdmin('Hallo kak, saya ingin bertanya tentang produk Kryon')">Butuh Bantuan?</h6>
+            <h6 onclick="chatAdmin('Hallo kak, saya ingin bertanya tentang produk Arto Printing')">Butuh Bantuan?</h6>
           </div>
         </div>
       </div>
@@ -58,69 +152,7 @@ function addElementAfterBody (){
 
     document.body.insertAdjacentHTML('afterbegin', htmlString);	
 }
-function addFooter(){
-const footer = document.getElementById("footer");
-if (!footer){
-	return
-}
-else{
-	footer.innerHTML += `
-		<div class="foot-main container flex column">
-		  <h3>IKUTI KAMI</h3>
-		  <div class="container flex row flex-align-center flex-justify-center">
-			<a href="https://www.facebook.com/tahulmamaz.salachy" target="_blank" rel="noopener noreferrer"><img src="${dirImg}icon-fb.png" class="icon-medium"></a>
-			<a href="https://www.instagram.com/artoprinting_pbg/" target="_blank" rel="noopener noreferrer"><img src="${dirImg}icon-ig.png" class="icon-medium"></a>
-			<a href="https://www.tiktok.com/@artoprinting.pbg" target="_blank" rel="noopener noreferrer"><img src="${dirImg}icon-tiktok.png?updatedAt=1745731620043" class="icon-medium"></a><br>
-		  </div>
-		  <div class="foot-kontak container">
-			<h3>KONTAK</h3>
-			<ul class="foot-kontak-list">
-			  <li onclick="chatWa('6285712110870','Hallo kak, saya ingin bertanya tentang produk arto printing')"><h6>Miftahul +6285712110870</h6></li>
-			  <li onclick="chatWa('6285540287362','Hallo kak, saya ingin bertanya tentang produk arto printing')"><h6>Fina +6285540287362</h6></li>
-			</ul>
-		  </div>
-		  <h3>LOKASI</h3><br>
-		  <div class="foot-lokasi container">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.600429206858!2d109.363888275!3d-7.286220392721134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ff7f68a2223eb%3A0xde8cd61b06219d8e!2sArto%20Printing!5e0!3m2!1sen!2sid!4v1745694252567!5m2!1sen!2sid" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			<div class="review-widget_net" data-uuid="9ec4eb61-8de4-472f-9a93-27ebdc8f4ed0" data-template="10" data-lang="en" data-theme="light"></div>
-		  </div>
-		</div>
-		<div class="foot-label container flex flex-align-center flex-justify-center">
-		  <h6>Arto Printing</h6>
-		</div>
-	  `;
-}	
-}
-function navBottom() {
-	const navBottom = document.getElementById("nav-bottom");
-	if (!navBottom) {
-        return;
-    }
-	navBottom.innerHTML = `
-      <a href="/" class="nav-link" data-page="/"><i class="fa-solid fa-house fa-xl"></i><br>Katalog</a>
-	  <a href="/all.html" class="nav-link" data-page="all.html"><i class="fa-solid fa-images fa-xl"></i><br>Layanan</a>
-      <a href="/antrian.html" class="nav-link" data-page="antrian.html"><i class="fa-solid fa-list fa-xl"></i><br>Antrian</a>	
-	`;
 
-	const links = document.querySelectorAll('.nav-link');
-	const path = window.location.pathname;
-	const currentPage = path === '/' ? '/' : path.split('/').pop();
-
-	links.forEach(link => {
-		const targetPage = link.getAttribute('data-page');
-		if (targetPage === currentPage) {
-			link.classList.add('active');
-		}
-	});
-}
-
-const loadingScreen = document.getElementById('loading-screen');
-/*add element*/
-insertGtagScript();
-addElementAfterBody ();
-addFooter();
-navBottom();
-// Lazy Load Images
 function lazyLoadImg() {
   const images = document.querySelectorAll("img");
   images.forEach(img => {
@@ -129,8 +161,12 @@ function lazyLoadImg() {
     }
   });
 }
-lazyLoadImg();
-// Share Function
+
+function addElement(){
+	document.getElementById('judul').innerHTML = pageConfig.judul;
+	document.getElementById('deskripsi').innerHTML = pageConfig.deskripsi;
+}
+
 function share(title, text, customLink) {
   const combinedMessage = `${text}\n${customLink}`;
   const encodedMessage = encodeURIComponent(combinedMessage);
@@ -166,7 +202,7 @@ function sharePage(title, text) {
     alert(`Bagikan link ini ke temanmu:\n\n${currentUrl}`);
   }
 }
-// Show Confirm Pop Up
+
 function showConfirm(message, onYes, onNo) {
   const modal = document.getElementById('confirmModal');
   const text = document.getElementById('confirmText');
@@ -187,7 +223,7 @@ function showConfirm(message, onYes, onNo) {
     if (onNo) onNo();
   };
 }
-// WA
+
 function chatWa(no,pesan) {
   const enPesan = encodeURIComponent(pesan);
   const url = `https://wa.me/${no}?text=${enPesan}`;
@@ -195,133 +231,66 @@ function chatWa(no,pesan) {
 }
 function chatAdmin(pesan) {
   const enPesan = encodeURIComponent(pesan);
-  const url = `https://wa.me/6285712110870?text=${enPesan}`;
+  const url = `https://wa.me/${varConfig.wa_admin}?text=${enPesan}`;
   window.open(url, "_blank");
 }
-// Popup WhatsApp
-  let timerPopWa;
-  let popWa = document.getElementById('pop-wa');
-  function showPopWa() {
-    if (popWa) popWa.classList.remove('imp-hidden');
-  }
-  function hidePopWa() {
-    if (popWa && !popWa.classList.contains('imp-hidden')) {
-      popWa.classList.add('imp-hidden');
-    }
-  }
-  function resetTimerPopWa() {
-    clearTimeout(timerPopWa);
-    hidePopWa();
-    timerPopWa = setTimeout(showPopWa, 5000);
-  }
-//GAPS
-function getDataGaps(database, query) {
-    const baseUrl = "https://wam-kryon-api.vercel.app/api/get-data";
-    const encodedQuery = encodeURIComponent(query);
-    const encodedDatabase = encodeURIComponent(database);
-    const fullUrl = `${baseUrl}?conn=DATABASE=${encodedDatabase}&data=${encodedQuery}`;
-    return fetch(fullUrl, {
-        method: 'GET',
-        redirect: 'follow'
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`Gagal mengambil data: ${response.statusText}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (!Array.isArray(data.data)) {
-            throw new Error('Data tidak valid atau gagal decode JSON.');
-        }
-        return data;
-    })
-    .catch(error => {
-        console.error("Gagal mengambil data dari Google Apps Script. Error:", error);
-        return null;
-    });
+
+function scrollWa(){
+	window.addEventListener('scroll', resetTimerPopWa);
 }
-async function getDataMainProduct() {
-  const result = await getDataGaps(
-    'kryon',
-    'SELECT id,jenis_produk,nama,img,kategori1,kategori2,status,keterangan FROM produk WHERE jenis_produk=utama'
-  );
-  return result?.data ?? [];
+function showPopWa() {
+if (popWa) popWa.classList.remove('imp-hidden');
 }
-async function getDataProductUc() {
-  const result = await getDataGaps(
-    'kryon',
-    'SELECT id,nama,img,kategori1,kategori2,status,keterangan FROM produk WHERE nama=Undangan-Pernikahan'
-  );
-  return result?.data ?? [];
+function hidePopWa() {
+popWa = document.getElementById('pop-wa');
+if (popWa && !popWa.classList.contains('imp-hidden')) {
+  popWa.classList.add('imp-hidden');
 }
-async function getDataAntrian() {
-    const result = await getDataGaps('kryon', 'SELECT * FROM antrian');
-	return result?.data?? [];
 }
-async function getDataSingleProduct() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id_produk = urlParams.get('id');
-    const result = await getDataGaps('kryon', `SELECT * FROM produk WHERE id=${id_produk}`);
-    return result?.data ?? [];
+function resetTimerPopWa() {
+clearTimeout(timerPopWa);
+hidePopWa();
+timerPopWa = setTimeout(showPopWa, 5000);
 }
-function productRenderingWithFilters({
-  containerId,
-  dataProduk,
-  filterButtonClass,
-  kategori1Key,
-  kategori2Key,
-  defaultFilterLabel,
-  filterContainerId
-}) {
-/*how to use
-productRenderingWithFilters({
-  containerId: 'produk-container',
-  dataProduk: data_produk,
-  filterButtonClass: 'produk-uc-filter-button',
-  kategori1Key: 'kategori1',
-  kategori2Key: 'status',
-  defaultFilterLabel: 'Ready',
-  filterContainerId: 'filterKatalog'
-});
-*/
-  const filterContainer = document.getElementById(filterContainerId);
-  const produkContainer = document.getElementById(containerId);
+
+function productRenderingWithFilters() {
+  const filterContainer = document.getElementById('produk-filter');
+  const produkContainer = document.getElementById('produk-container');
   // Reset konten
   filterContainer.innerHTML = '';
   produkContainer.innerHTML = '';
   // Ambil semua kategori unik berdasarkan kategori1Key
   const kategoriSet = new Set();
-  dataProduk.forEach(produk => {
-    if (produk[kategori1Key]) {
-      kategoriSet.add(produk[kategori1Key].trim());
+  dataProduk[pageConfig.data].forEach(produk => {
+    if (produk[pageConfig.rendering_filter1]) {
+      kategoriSet.add(produk[pageConfig.rendering_filter1].trim());
     }
   });
   // Tambah tombol default
   const allButton = document.createElement('button');
-  allButton.className = filterButtonClass + ' active';
-  allButton.textContent = defaultFilterLabel;
+  allButton.className = 'produk-filter-button' + ' active';
+  allButton.textContent = pageConfig.rendering_def_filter;
   filterContainer.appendChild(allButton);
   // Tambah tombol kategori lainnya
   kategoriSet.forEach(kategori => {
     const button = document.createElement('button');
-    button.className = filterButtonClass;
+    button.className = 'produk-filter-button';
     button.textContent = kategori;
     filterContainer.appendChild(button);
   });
   // Fungsi render berdasarkan filter aktif
   function renderFilteredProducts() {
     produkContainer.innerHTML = '';
-    const activeFilter = document.querySelector(`.${filterButtonClass}.active`);
+    const activeFilter = document.querySelector(`.produk-filter-button.active`);
     const filter = activeFilter ? activeFilter.textContent.trim() : '';
     const filteredData = filter
-      ? dataProduk.filter(produk => 
-          produk[kategori1Key] === filter || produk[kategori2Key] === filter)
-      : dataProduk;
+      ? dataProduk[pageConfig.data].filter(produk => 
+          produk[pageConfig.rendering_filter1] === filter || produk[pageConfig.rendering_filter2] === filter)
+      : dataProduk[pageConfig.data];
     filteredData.forEach(produk => {
       const produkItem = document.createElement('a');
       produkItem.classList.add('produk-item');
-      produkItem.href = `/produk.html?id=${produk.id}`;
+      produkItem.href = `/produk.html?p=${pageConfig.data}&id=${produk.id}`;
       produkItem.style.textDecoration = 'none';
       produkItem.style.color = 'inherit';
       produkItem.style.cursor = 'pointer';
@@ -339,8 +308,8 @@ productRenderingWithFilters({
   }
   // Event listener
   filterContainer.addEventListener('click', function (event) {
-    if (event.target.classList.contains(filterButtonClass)) {
-      const buttons = filterContainer.querySelectorAll(`.${filterButtonClass}`);
+    if (event.target.classList.contains('produk-filter-button')) {
+      const buttons = filterContainer.querySelectorAll(`.produk-filter-button`);
       buttons.forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
       renderFilteredProducts();
@@ -350,34 +319,15 @@ productRenderingWithFilters({
   renderFilteredProducts();
 }
 
-function productRendering({
-  containerId,
-  dataProduk,
-  filterKey,
-  filterValue
-}) {
-/* How to use:
-productRendering({
-  containerId: 'produk-container',
-  dataProduk: data_produk,
-  filterKey: 'status',
-  filterValue: 'Ready'
-});
-*/
+function productRendering() {
 
-  const produkContainer = document.getElementById(containerId);
-  if (!produkContainer || !dataProduk) return;
-
-  produkContainer.innerHTML = '';
-
-  const filteredData = filterValue
-    ? dataProduk.filter(produk => produk[filterKey] === filterValue)
-    : dataProduk;
-
-  filteredData.forEach(produk => {
+  const produkContainer = document.getElementById('produk-container');
+  if (!produkContainer || !dataProduk[pageConfig.data]) return;
+	produkContainer.innerHTML = '';
+	dataProduk[pageConfig.data].forEach(produk => {
     const produkItem = document.createElement('a');
     produkItem.classList.add('produk-item');
-    produkItem.href = `/produk.html?id=${produk.id}`;
+    produkItem.href = `/produk.html?p=${pageConfig.data}&id=${produk.id}`;
     produkItem.style.textDecoration = 'none';
     produkItem.style.color = 'inherit';
     produkItem.style.cursor = 'pointer';
@@ -432,7 +382,7 @@ function renderSingleProduk(produk){
 
   produkContainer.innerHTML = `
     <div class="single_produk_img container flex column flex-align-center flex-justify-center">
-      <img src="${img}" alt="${cleanNama} - Kryon" style="padding:30px;">
+      <img src="${img}" alt="${cleanNama} - Arto Printing" style="padding:30px;">
       <div class="single_produk_fitur container flex row flex-align-center flex-justify-center" style="padding-bottom:20px;">
         <div class="container-30p flex column flex-align-center flex-justify-center">
           <img src="${dirImg}Badge.svg" class="icon-medium">
@@ -466,6 +416,53 @@ function renderSingleProduk(produk){
   `;
 }
 
+function cekDanSync() {
+  if (!setting.update){
+	syncData();
+	return
+  };
+  
+  const [tanggal, waktu] = setting.update.split(', ');
+  const [hari, bulan, tahun] = tanggal.split('/').map(Number);
+  const [jam, menit, detik] = waktu.split('.').map(Number);
+
+  const lastUpdate = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+  const now = new Date();
+
+  const satuHari = 24 * 60 * 60 * 1000;
+
+  if (now - lastUpdate > satuHari) {
+    syncData();
+  }
+}
+async function syncData() {
+  try {
+	document.getElementById("status").innerText = "Memproses...";
+    const res1 = await fetch("https://wam-kryon-api.vercel.app/api/gaps-v1", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ db: 'produk',repo:root.repo })
+    });
+	const res2 = await fetch("https://wam-kryon-api.vercel.app/api/gaps-v1", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ db: 'setting',repo:root.repo })
+    });
+	
+
+    const data1 = await res1.json();
+	const data2 = await res2.json();
+
+    if (res1.ok && res2.ok) {
+      console.log("Data Setting dan Produk berhasil diperbarui.");
+	} else {
+      console.log("Gagal memperbarui data: " + data.error);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 function replaceChar(text, targetChar, replacementChar) {
   if (text.includes(targetChar)) {
     return text.replaceAll(targetChar, replacementChar);
@@ -473,3 +470,4 @@ function replaceChar(text, targetChar, replacementChar) {
   return text;
 }
 
+init();

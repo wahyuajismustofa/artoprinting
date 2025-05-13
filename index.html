@@ -29,70 +29,37 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<!-- Loading Screen-->
 <div class="container flex column" id="loading-screen">
-	<img src="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png"/ style="width:100px;">
+	<div class="spinner"></div>
 </div>
   <main id="main">
-    <header>
+	    <header>
       <div class="container flex row flex-align-center flex-justify-center">
-        <div>
-          <img src="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting.png" alt="Logo Arto Printing" style="height:30px;">
-        </div>
+			<div id="nav">
+			<div class="container-20p"><span class="menu-toggle" id="burger">☰</span></div>
+			<div class="container-60p"><img src="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting.png" alt="Logo Arto Printing" style="height:30px;"/></div>
+			<div class="container-20p"></div>
+			</div>
+			<div class="dropdown imp-hidden" id="dropdownMenu"></div>
       </div>
     </header>
 
     <div class="container">
       <img src="https://ik.imagekit.io/mustofa/web/img/banner-undangan.png" alt="Banner">
     </div>
-
     <div class="container flex row flex-justify-space-evenly" style="padding:20px;">
       <button class="whatsapp" onclick="chatAdmin('Hallo kak, saya ingin bertanya tentang produk Arto Printing')">
         <img src="https://ik.imagekit.io/mustofa/web/img/icon-wa.png" class="icon-small"> Hubungi Kami
       </button>
-      <button onclick="window.location.href='/all.html'">
-        Semua Layanan
-      </button>	  
     </div>
 
     <div class="container" style="padding:10px;">
-      <h1 class="nama_layanan">Katalog Undangan Pernikahan</h1><br>
-      <p class="keterangan_layanan">Temukan undangan cetak eksklusif untuk membuat momen spesialmu lebih berkesan. Pilih tema favoritmu dan pesan sekarang untuk desain unik berkualitas tinggi!</p>
+      <h1 class="nama_layanan" id="judul"></h1><br>
+      <p class="keterangan_layanan" id="deskripsi"></p>
     </div>
-
-    <div class="container scroll-x flex row flex-align-center" id="filterKatalog">
-    </div>
-
+	<div class="container scroll-x flex row flex-align-center" id="produk-filter"></div>
     <div class="container flex-wrap flex-align-center flex-justify-center">
       <div class="produk-container" id="produk-container"></div>
     </div>
-
-    <div id="nav-bottom"></div>
-	<div id="footer"></div>
   </main>
-<script>
-// Event DOM Loaded
-document.addEventListener("DOMContentLoaded", function () {
-const loadingScreen = document.getElementById('loading-screen');
-
-(async () => {
-  const data = await getDataProductUc();
-  data_produk = data;
-  productRenderingWithFilters({
-  containerId: 'produk-container',
-  dataProduk: data_produk,
-  filterButtonClass: 'produk-uc-filter-button',
-  kategori1Key: 'kategori1',
-  kategori2Key: 'status',
-  defaultFilterLabel: 'Ready',
-  filterContainerId: 'filterKatalog'
-});
-  window.addEventListener('scroll', resetTimerPopWa);
-  resetTimerPopWa();
-  loadingScreen.classList.add('imp-hidden');
-})();
-});
-</script>
-
-</body>
 </html>
