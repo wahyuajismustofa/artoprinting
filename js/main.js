@@ -12,38 +12,23 @@
 if (location.protocol === 'http:') {
   location.href = 'https://' + location.hostname + location.pathname + location.search + location.hash;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 51d213f34f3848183c6315da0c6c46c659ea86c9
 function insertGtagScript() {
   const head = document.head;
   if (!head) return;
 
-<<<<<<< HEAD
   if (document.querySelector('script[src*="gtag/js?id=${varConfig.google_tag}"]')) return;
 
   const gtagScript = document.createElement('script');
   gtagScript.async = true;
   gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${varConfig.google_tag}`;
-=======
-  if (document.querySelector('script[src*="gtag/js?id=G-BCNGZJ030Z"]')) return;
-
-  const gtagScript = document.createElement('script');
-  gtagScript.async = true;
-  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-BCNGZJ030Z';
->>>>>>> 51d213f34f3848183c6315da0c6c46c659ea86c9
 
   const gtagConfigScript = document.createElement('script');
   gtagConfigScript.text = `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-<<<<<<< HEAD
     gtag('config', '${varConfig.google_tag}');
-=======
-    gtag('config', 'G-BCNGZJ030Z');
->>>>>>> 51d213f34f3848183c6315da0c6c46c659ea86c9
   `;
   head.appendChild(gtagScript);
   head.appendChild(gtagConfigScript);
