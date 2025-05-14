@@ -17,18 +17,18 @@ function insertGtagScript() {
   const head = document.head;
   if (!head) return;
 
-  if (document.querySelector('script[src*="gtag/js?id=G-7D0RLQEEQD"]')) return;
+  if (document.querySelector(`script[src*="gtag/js?id=${varConfig.google_tag}"]`)) return;
 
   const gtagScript = document.createElement('script');
   gtagScript.async = true;
-  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7D0RLQEEQD';
+  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${varConfig.google_tag}`;
 
   const gtagConfigScript = document.createElement('script');
   gtagConfigScript.text = `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7D0RLQEEQD');
+    gtag('config', '${varConfig.google_tag}');
   `;
   head.appendChild(gtagScript);
   head.appendChild(gtagConfigScript);
@@ -38,7 +38,7 @@ function insertGtagScript() {
 let dirImg = 'https://ik.imagekit.io/mustofa/web/img/';
 let timerPopWa;
 let popWa;
-let root, dataProduk, pageConfig;
+let root, dataProduk, pageConfig,varConfig;
 
 const loadingScreen = document.getElementById('loading-screen');
 
@@ -59,6 +59,7 @@ async function init() {
 	dataProduk = await getData('produk');
 	setting = await getData('setting');
 	const currentPath = window.location.pathname;
+	varConfig = setting.variabel[0];
     
 	
 	getDataSingleProduct();
@@ -151,7 +152,7 @@ function chatWa(no,pesan) {
 }
 function chatAdmin(pesan) {
   const enPesan = encodeURIComponent(pesan);
-  const url = `https://wa.me/6285161517176?text=${enPesan}`;
+  const url = `https://wa.me/${varConfig.wa_admin}?text=${enPesan}`;
   window.open(url, "_blank");
 }
 
