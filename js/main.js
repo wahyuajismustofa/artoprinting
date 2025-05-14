@@ -17,7 +17,7 @@ function insertGtagScript() {
   const head = document.head;
   if (!head) return;
 
-  if (document.querySelector('script[src*="gtag/js?id=${varConfig.google_tag}"]')) return;
+  if (document.querySelector(`script[src*="gtag/js?id=${varConfig.google_tag}"]`)) return;
 
   const gtagScript = document.createElement('script');
   gtagScript.async = true;
