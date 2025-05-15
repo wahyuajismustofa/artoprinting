@@ -6329,5 +6329,39 @@
       "description": "Undangan pernikahan elegan dan eksklusif dengan berbagai pilihan tema dan desain, siap mencerminkan momen spesial Anda dalam setiap detail."
     }
   ],
-  "update": "15/5/2025, 04.09.02"
+  "galeri": [
+    {
+      "id": 1,
+      "nama": "Undangan Pernikahan",
+      "kategori1": "Avis",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog-undangan/avis100.jpeg",
+      "keterangan": "",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "nama": "Undangan Pernikahan",
+      "kategori1": "Avis",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog-undangan/avis101.jpeg",
+      "keterangan": "",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "nama": "Undangan Pernikahan",
+      "kategori1": "Avis",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog-undangan/avis102.jpeg",
+      "keterangan": "",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "nama": "Undangan Pernikahan",
+      "kategori1": "Avis",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog-undangan/avis103.jpeg",
+      "keterangan": "",
+      "description": ""
+    }
+  ],
+  "update": "15/5/2025, 04.25.33"
 }
