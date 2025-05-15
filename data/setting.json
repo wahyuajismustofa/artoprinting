@@ -21,6 +21,17 @@
       "rendering_filter1": "kategori1",
       "rendering_filter2": "status",
       "rendering_def_filter": "Ready"
+    },
+    {
+      "path": "/?p=galeri",
+      "judul": "Galeri Produk",
+      "deskripsi": "Beberapa produk yang telah kami kerjakan untuk berbagai keperluan pelanggan.",
+      "fungsi": "",
+      "data": "galeri",
+      "rendering": "productRenderingWithFilters",
+      "rendering_filter1": "kategori1",
+      "rendering_filter2": "",
+      "rendering_def_filter": ""
     }
   ],
   "menu": [
@@ -31,6 +42,10 @@
     {
       "label": "Layanan",
       "url": "/?p=layanan"
+    },
+    {
+      "label": "Galeri Produk",
+      "url": "/?p=galeri"
     }
   ],
   "variabel": [
@@ -39,5 +54,5 @@
       "wa_admin": 6285712110870
     }
   ],
-  "update": "15/5/2025, 04.02.01"
+  "update": "15/5/2025, 04.25.38"
 }
