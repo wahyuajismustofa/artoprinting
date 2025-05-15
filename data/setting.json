@@ -42,10 +42,6 @@
     {
       "label": "Layanan",
       "url": "/?p=layanan"
-    },
-    {
-      "label": "Galeri Produk",
-      "url": "/?p=galeri"
     }
   ],
   "variabel": [
@@ -54,5 +50,5 @@
       "wa_admin": 6285712110870
     }
   ],
-  "update": "15/5/2025, 04.29.39"
+  "update": "15/5/2025, 05.12.02"
 }
