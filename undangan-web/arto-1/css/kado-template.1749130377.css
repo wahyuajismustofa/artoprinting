@@ -1,0 +1,524 @@
+.wedding-gifts-wrap{
+  padding: 40px 24px;
+}
+.wedding-gifts-head {
+  padding-bottom: 24px;
+  text-align: center;
+}
+.wedding-gift-address-wrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inner-address-wrap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.btn-hadiah-copy{
+  border: 1px solid;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items:center;
+}
+.btn-hadiah-copy-2 {
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 999px;
+  background: #fff;
+}
+.wedding-gifts-body {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  position: relative;
+}
+.wedding-gifts-body .hadiah-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.wedding-gifts-body .hadiah-wrap .hadiah-card{
+  width: calc(50% - 6px); 
+  position: relative;
+  /* text-align: center; */
+}
+
+.hadiah-card.sold-out::before {
+  content: attr(data-text);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(167 167 167 / 63%);
+  position: absolute;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.wedding-gifts-body .hadiah-wrap .hadiah-card-wrap {
+  position: relative;
+}
+
+.hadiah-card-wrap.sold-out::after {
+  content: attr(data-text);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(167 167 167 / 63%);
+  position: absolute;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+
+.hadiah-wrap .hadiah-card{
+  border-radius: 8px;
+  background-color: #fff;  
+  padding-bottom: 8px;
+  
+}
+
+.img-wrap .hadiah-img {
+  border-radius: 8px 8px 0px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* min-height: 160px; */
+  width: 100%;
+  height: 100%; 
+}
+
+.hadia-card-inner{
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title-wrap {
+  width: 100%;
+  padding: 4px;
+  /* min-height: 50px; */
+}
+
+
+.hadiah-card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
+  min-width: 140px;
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+
+.hadiah-card-price{
+  font-size: 14px;
+  color: #CB3A31;
+  padding: 4px;  
+  font-weight: 600;
+}
+
+.hadiah-card-amount{
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.wedding-gift-button-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.hadiah-card-footer {
+  padding-top: 14px;
+}
+
+.hadiah-card-button{
+  padding: 8px 16px;
+  font-size: 12px;
+  border-radius: 12px;
+  background-color: var(--primary-clr);
+  border: unset;
+  color: #000;
+  cursor: pointer;
+}
+
+.hadiah-card-footer{
+  text-align: center;
+}
+
+
+button.wedding-gift-confirm-btn {
+  padding: 8px 12px;
+  border: unset;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: var(--secondary-clr);
+  color: #fff;
+}
+
+.kat__cropper-modal.kado {
+  background-color: #fff;
+  width: 100%;
+  max-width: 425px;
+  padding: 24px 16px;
+  border-radius: 16px;
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: slideDown 1.5s forwards;
+  transition: top 1.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  to {
+    top: 50%; /* Slide down to the middle of the screen */
+  }
+}
+
+
+.kat__cropper-modal.kado span, .kat__cropper-modal.kado p {
+  font-family: var(--roboto);
+  
+}
+.modal-kado-header{
+  padding-bottom: 16px;
+  border-bottom: 1px solid #EDEDED;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.modal-kado-header .title {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 16px;
+}
+
+.modal-kado-header .caption {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: initial;
+}
+
+.modal-kado-header .address{
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.modal-kado-body {
+  padding: 16px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width:359px) {
+  .modal-kado-body {
+    height: 200px;
+    overflow: auto;
+  }
+}
+.kado-img-wrap{
+  border-radius: 8px;
+  /* min-height: 240px; */
+  width: 100%;
+}
+.kado-img-wrap .kado-img{
+  border-radius: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.modal-kado-body .kado-description {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.kado-description .kado-name{
+  font-size: 20px;
+  font-weight: 500;
+  
+}
+.kado-description .kado-ket{
+  color: #404040;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.kado-description .price-amount-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.price-amount-wrap .price-wrap, .price-amount-wrap .amount-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-wrap .price-cap, .amount-wrap .amount-cap{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.price-wrap .price-field, .amount-wrap .amount-field{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.price-field{
+  color: #CB3A31;
+}
+
+.modal-kado-note .note-kado{
+  color: #9E9E9E;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.modal-kado-footer{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.buying-kado-btn{
+  border-radius: 12px;
+  background-color: var(--secondary-clr);
+  border: none;
+  padding: 8px 16px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+.buying-kado-btn:hover{
+  background-color: var(--primary-clr);
+  color: #000;
+}
+
+.confirm-kado-btn{
+  border: none;
+  background-color: unset;
+  padding: 8px 16px;
+  width: fit-content;
+  border-bottom: 1px solid var(--secondary-clr);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--secondary-clr);
+  cursor: pointer;
+}
+
+.confirm-kado-btn:hover{
+  color: var(--primary-clr);
+  border-bottom: 1px solid var(--primary-clr);
+}
+
+.modal-confirm-header{
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EDEDED;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.modal-confirm-header .title{
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.popup-img-wrap{
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+  padding-bottom: 8px;
+  width: 100%;
+}
+.modal-confirm-body{
+  max-height: 65vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-popup-img{
+  padding-top: 24px;
+}
+.popup-img-wrap .img-confirm{
+  border-radius: 8px 8px 0px 0px;
+  width: 100%;
+}
+.caption-wrap{
+  padding: 8px;
+}
+.img-caption{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+.kado-form-wrap .kado-input-wrap{
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0px 12px 0px;
+}
+
+.kado-form-wrap:last-of-type{
+  padding: 12px 0px 40px 0px !important;
+}
+.kado-input-wrap .input-label{
+  color: #616161;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 8px 0px;
+}
+.kado-form-wrap .input-field{
+  border: unset;
+  background-color: unset;
+  border-bottom: 1px solid #9E9E9E;
+  padding: 8px 0px;
+  padding-top: 8px;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  color: #0a0a0a;
+}
+
+.kado-form-wrap .input-field:focus{
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+.kado-form-wrap .input-field::placeholder{
+  color: #9E9E9E;
+}
+
+.modal-confirm-footer .kado-form-btn{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  /* padding: 12px 0px; */
+  
+}
+
+.kado-form-btn .kado-send-btn{
+  border: none;
+  border-radius: 25px;
+  border: 1px solid #0A0A0A;
+  background: var(--secondary-clr);
+  color: #FFF;
+  padding: 12px 16px;
+  
+}
+
+.modal-confirm-header .right-side-header{
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+button.close-kado-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+i.ph.ph-x{
+  font-size: 24px;
+  color:#000;
+}
+.inner-address-info{
+  max-width: 80%;
+}
+@media (min-width:1440px) {
+    /* .wedding-gifts-body .hadiah-wrap .hadiah-card{
+      width: 50%; 
+    } */
+}
+
+
+
+/* ----------------------------------------
+        Template : template_1
+---------------------------------------- */
+.template_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.template_1 .inner-address-wrap {
+  display: block;
+}
+.template_1 .inner-address-info {
+  max-width: 100%;
+}
+.template_1 .wedding-gifts-body-title {
+  text-align: center;
+}
+.template_1 .wedding-gifts-body {
+  gap: 18px;
+}
+.template_1 .hadiah-card-item-wrapper {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  border-radius: 12px;
+  background: #fefefc;
+}
+.template_1 .hadiah-wrap .hadiah-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: transparent;
+}
+.template_1 .img-wrap .hadiah-img{
+  border-radius: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 150px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.template_1 .gift-title-wrap{
+  padding: 0 20px;
+}
