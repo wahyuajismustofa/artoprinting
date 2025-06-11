@@ -102,7 +102,7 @@
   ],
   "menu": [
     {
-      "label": "Undangan Cetak Pernikahan",
+      "label": "Undangan",
       "url": "/"
     },
     {
@@ -141,5 +141,5 @@
       "nama_admin": "Miftahul"
     }
   ],
-  "updated": "12/6/2025, 03.49.22"
+  "updated": "12/6/2025, 03.52.12"
 }
