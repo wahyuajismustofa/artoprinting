@@ -43,6 +43,61 @@
       "rendering_filter1": "",
       "rendering_filter2": "",
       "rendering_def_filter": ""
+    },
+    {
+      "path": "/?p=aqiqah",
+      "judul": "Aqiqah",
+      "deskripsi": "Kami menyediakan layanan desain & cetak undangan aqiqah sesuai permintaan Anda. Bisa tema bunga, islami klasik, ilustrasi bayi, hingga gaya minimalis modern. Bisa kirim desain ke seluruh Indonesia.",
+      "fungsi": "",
+      "data": "aqiqah",
+      "rendering": "productRendering",
+      "rendering_filter1": "",
+      "rendering_filter2": "",
+      "rendering_def_filter": ""
+    },
+    {
+      "path": "/?p=kartu-ucapan",
+      "judul": "Kartu Ucapan",
+      "deskripsi": "Butuh kartu ucapan yang unik dan sesuai karakter brand Anda? Kami melayani desain & cetak kartu ucapan full custom: dari desain, ukuran, jenis kertas, hingga cetakan spesial seperti emboss dan hotprint.",
+      "fungsi": "",
+      "data": "kartu-ucapan",
+      "rendering": "productRenderingWithFilters",
+      "rendering_filter1": "kategori1",
+      "rendering_filter2": "",
+      "rendering_def_filter": ""
+    },
+    {
+      "path": "/?p=pigura",
+      "judul": "Pigura",
+      "deskripsi": "Melayani pembuatan pigura custom sesuai kebutuhan Anda ? baik dari ukuran, bahan, warna, hingga cetakan isi. Cocok untuk seniman, desainer, toko foto, dan proyek kreatif.",
+      "fungsi": "",
+      "data": "pigura",
+      "rendering": "productRenderingWithFilters",
+      "rendering_filter1": "kategori1",
+      "rendering_filter2": "",
+      "rendering_def_filter": ""
+    },
+    {
+      "path": "/?p=kartu-nama",
+      "judul": "Kartu Nama",
+      "deskripsi": "Ingin tampil beda? Kami cetak kartu nama dengan desain kreatif dan bentuk fleksibel. Cocok untuk pekerja kreatif, desainer, fotografer, atau siapa pun yang ingin tampil unik. Bisa full color, potongan custom, atau konsep tematik.",
+      "fungsi": "",
+      "data": "kartu-nama",
+      "rendering": "productRendering",
+      "rendering_filter1": "",
+      "rendering_filter2": "",
+      "rendering_def_filter": ""
+    },
+    {
+      "path": "/?p=cover",
+      "judul": "Cover",
+      "deskripsi": "Cover elegan untuk kitab Yasin, doa harian, atau buku amalan. Cocok untuk dibawa ke pengajian, tahlil, atau sebagai bingkisan. Tersedia juga versi custom nama/judul dan motif emboss Islami.",
+      "fungsi": "",
+      "data": "cover",
+      "rendering": "productRenderingWithFilters",
+      "rendering_filter1": "kategori1",
+      "rendering_filter2": "",
+      "rendering_def_filter": ""
     }
   ],
   "menu": [
@@ -57,6 +112,26 @@
     {
       "label": "Mug",
       "url": "/?p=mug"
+    },
+    {
+      "label": "Aqiqah",
+      "url": "/?p=aqiqah"
+    },
+    {
+      "label": "Kartu Ucapan",
+      "url": "/?p=kartu-ucapan"
+    },
+    {
+      "label": "Pigura",
+      "url": "/?p=pigura"
+    },
+    {
+      "label": "Kartu Nama",
+      "url": "/?p=kartu-nama"
+    },
+    {
+      "label": "Cover",
+      "url": "/?p=cover"
     }
   ],
   "variabel": [
@@ -66,5 +141,5 @@
       "nama_admin": "Miftahul"
     }
   ],
-  "updated": "12/6/2025, 02.29.33"
+  "updated": "12/6/2025, 03.38.07"
 }
