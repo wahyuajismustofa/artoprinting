@@ -9093,7 +9093,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 1,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-1.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-01.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -9105,7 +9105,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 2,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-2.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-02.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -9117,7 +9117,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 3,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-3.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-03.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -9129,7 +9129,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 4,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-4.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-04.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -9141,7 +9141,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 5,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-5.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-05.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -9153,7 +9153,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 6,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-6.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-06.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -9165,7 +9165,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 7,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-7.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-07.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -9177,7 +9177,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 8,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-8.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-08.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -9189,7 +9189,7 @@
       "nama": "pigura",
       "kategori1": "wendy",
       "kategori2": 9,
-      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-9.webp",
+      "img": "https://ik.imagekit.io/mustofa/web/katalog/pigura/pigura-wendy-09.webp",
       "stok": "",
       "status": "Pre Order",
       "keterangan": "Pre Order",
@@ -10318,7 +10318,7 @@
   "cover": [
     {
       "id": 1,
-      "nama": "Cover Iqro 1",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 1,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-1.webp",
@@ -10330,7 +10330,7 @@
     },
     {
       "id": 2,
-      "nama": "Cover Iqro 2",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 2,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-2.webp",
@@ -10342,7 +10342,7 @@
     },
     {
       "id": 3,
-      "nama": "Cover Iqro 3",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 3,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-3.webp",
@@ -10354,7 +10354,7 @@
     },
     {
       "id": 4,
-      "nama": "Cover Iqro 4",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 4,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-4.webp",
@@ -10366,7 +10366,7 @@
     },
     {
       "id": 5,
-      "nama": "Cover Iqro 5",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 5,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-5.webp",
@@ -10378,7 +10378,7 @@
     },
     {
       "id": 6,
-      "nama": "Cover Iqro 6",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 6,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-6.webp",
@@ -10390,7 +10390,7 @@
     },
     {
       "id": 7,
-      "nama": "Cover Iqro 7",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 7,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-7.webp",
@@ -10402,7 +10402,7 @@
     },
     {
       "id": 8,
-      "nama": "Cover Iqro 8",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 8,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-8.webp",
@@ -10414,7 +10414,7 @@
     },
     {
       "id": 9,
-      "nama": "Cover Iqro 9",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 9,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-9.webp",
@@ -10426,7 +10426,7 @@
     },
     {
       "id": 10,
-      "nama": "Cover Iqro 10",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 10,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-10.webp",
@@ -10438,7 +10438,7 @@
     },
     {
       "id": 11,
-      "nama": "Cover Iqro 11",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 11,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-11.webp",
@@ -10450,7 +10450,7 @@
     },
     {
       "id": 12,
-      "nama": "Cover Iqro 12",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 12,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-12.webp",
@@ -10462,7 +10462,7 @@
     },
     {
       "id": 13,
-      "nama": "Cover Iqro 13",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 13,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-13.webp",
@@ -10474,7 +10474,7 @@
     },
     {
       "id": 14,
-      "nama": "Cover Iqro 14",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 14,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-14.webp",
@@ -10486,7 +10486,7 @@
     },
     {
       "id": 15,
-      "nama": "Cover Iqro 15",
+      "nama": "Cover",
       "kategori1": "Iqro",
       "kategori2": 15,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-iqro-15.webp",
@@ -10498,7 +10498,7 @@
     },
     {
       "id": 16,
-      "nama": "Cover Al-Qur'an 1",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 1,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-1.webp",
@@ -10510,7 +10510,7 @@
     },
     {
       "id": 17,
-      "nama": "Cover Al-Qur'an 2",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 2,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-2.webp",
@@ -10522,7 +10522,7 @@
     },
     {
       "id": 18,
-      "nama": "Cover Al-Qur'an 3",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 3,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-3.webp",
@@ -10534,7 +10534,7 @@
     },
     {
       "id": 19,
-      "nama": "Cover Al-Qur'an 4",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 4,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-4.webp",
@@ -10546,7 +10546,7 @@
     },
     {
       "id": 20,
-      "nama": "Cover Al-Qur'an 5",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 5,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-5.webp",
@@ -10558,7 +10558,7 @@
     },
     {
       "id": 21,
-      "nama": "Cover Al-Qur'an 6",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 6,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-6.webp",
@@ -10570,7 +10570,7 @@
     },
     {
       "id": 22,
-      "nama": "Cover Al-Qur'an 7",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 7,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-7.webp",
@@ -10582,7 +10582,7 @@
     },
     {
       "id": 23,
-      "nama": "Cover Al-Qur'an 8",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 8,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-8.webp",
@@ -10594,7 +10594,7 @@
     },
     {
       "id": 24,
-      "nama": "Cover Al-Qur'an 9",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 9,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-9.webp",
@@ -10606,7 +10606,7 @@
     },
     {
       "id": 25,
-      "nama": "Cover Al-Qur'an 10",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 10,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-10.webp",
@@ -10618,7 +10618,7 @@
     },
     {
       "id": 26,
-      "nama": "Cover Al-Qur'an 11",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 11,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-11.webp",
@@ -10630,7 +10630,7 @@
     },
     {
       "id": 27,
-      "nama": "Cover Al-Qur'an 12",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 12,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-12.webp",
@@ -10642,7 +10642,7 @@
     },
     {
       "id": 28,
-      "nama": "Cover Al-Qur'an 13",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 13,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-13.webp",
@@ -10654,7 +10654,7 @@
     },
     {
       "id": 29,
-      "nama": "Cover Al-Qur'an 14",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 14,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-14.webp",
@@ -10666,7 +10666,7 @@
     },
     {
       "id": 30,
-      "nama": "Cover Al-Qur'an 15",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 15,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-15.webp",
@@ -10678,7 +10678,7 @@
     },
     {
       "id": 31,
-      "nama": "Cover Al-Qur'an 16",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 16,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-16.webp",
@@ -10690,7 +10690,7 @@
     },
     {
       "id": 32,
-      "nama": "Cover Al-Qur'an 17",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 17,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-17.webp",
@@ -10702,7 +10702,7 @@
     },
     {
       "id": 33,
-      "nama": "Cover Al-Qur'an 18",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 18,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-18.webp",
@@ -10714,7 +10714,7 @@
     },
     {
       "id": 34,
-      "nama": "Cover Al-Qur'an 19",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 19,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-19.webp",
@@ -10726,7 +10726,7 @@
     },
     {
       "id": 35,
-      "nama": "Cover Al-Qur'an 20",
+      "nama": "Cover",
       "kategori1": "Al-Qur'an",
       "kategori2": 20,
       "img": "https://ik.imagekit.io/mustofa/web/katalog/cover/cover-quran-20.webp",
@@ -10771,5 +10771,5 @@
       "description": ""
     }
   ],
-  "updated": "12/6/2025, 03.45.01"
+  "updated": "12/6/2025, 03.49.15"
 }
