@@ -548,9 +548,9 @@
       "kategori1": "Avis",
       "kategori2": "136",
       "img": "https://ik.imagekit.io/mustofa/web/katalog-undangan/avis136.jpeg",
-      "stok": 300,
-      "status": "Ready",
-      "keterangan": "Ready 300 pcs",
+      "stok": "",
+      "status": "Pre Order",
+      "keterangan": "Pre Order",
       "description": "Undangan pernikahan elegan dan eksklusif dengan berbagai pilihan tema dan desain, siap mencerminkan momen spesial Anda dalam setiap detail."
     },
     {
@@ -867,9 +867,9 @@
       "kategori1": "Byar",
       "kategori2": "88",
       "img": "https://ik.imagekit.io/mustofa/web/katalog-undangan/byar88.jpeg",
-      "stok": 300,
+      "stok": 100,
       "status": "Ready",
-      "keterangan": "Ready 300 pcs",
+      "keterangan": "Ready 100 pcs",
       "description": "Undangan pernikahan elegan dan eksklusif dengan berbagai pilihan tema dan desain, siap mencerminkan momen spesial Anda dalam setiap detail."
     },
     {
@@ -3221,9 +3221,9 @@
       "kategori1": "Jago",
       "kategori2": "69",
       "img": "https://ik.imagekit.io/mustofa/web/katalog-undangan/jago69.jpg",
-      "stok": 300,
+      "stok": 200,
       "status": "Ready",
-      "keterangan": "Ready 300 pcs",
+      "keterangan": "Ready 200 pcs",
       "description": "Undangan pernikahan elegan dan eksklusif dengan berbagai pilihan tema dan desain, siap mencerminkan momen spesial Anda dalam setiap detail."
     },
     {
@@ -3375,9 +3375,9 @@
       "kategori1": "Lintang",
       "kategori2": "102",
       "img": "https://ik.imagekit.io/mustofa/web/katalog-undangan/lintang102.jpg",
-      "stok": 500,
+      "stok": 300,
       "status": "Ready",
-      "keterangan": "Ready 500 pcs",
+      "keterangan": "Ready 300 pcs",
       "description": "Undangan pernikahan elegan dan eksklusif dengan berbagai pilihan tema dan desain, siap mencerminkan momen spesial Anda dalam setiap detail."
     },
     {
@@ -6363,5 +6363,5 @@
       "description": ""
     }
   ],
-  "update": "15/5/2025, 07.43.34"
+  "updated": "11/6/2025, 20.33.52"
 }
