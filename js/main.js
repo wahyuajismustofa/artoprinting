@@ -299,7 +299,7 @@ function productRenderingWithFilters() {
     filteredData.forEach(produk => {
       const produkItem = document.createElement('a');
       produkItem.classList.add('produk-item');
-      produkItem.href = `/produk.html?p=${pageConfig.data}&id=${produk.id}`;
+      produkItem.href = `${produk.link_produk}`;
       produkItem.style.textDecoration = 'none';
       produkItem.style.color = 'inherit';
       produkItem.style.cursor = 'pointer';
@@ -336,7 +336,7 @@ function productRendering() {
 	dataProduk[pageConfig.data].forEach(produk => {
     const produkItem = document.createElement('a');
     produkItem.classList.add('produk-item');
-    produkItem.href = `/produk.html?p=${pageConfig.data}&id=${produk.id}`;
+    produkItem.href = `${produk.link_produk}`;
     produkItem.style.textDecoration = 'none';
     produkItem.style.color = 'inherit';
     produkItem.style.cursor = 'pointer';
