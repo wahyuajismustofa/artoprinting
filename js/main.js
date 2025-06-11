@@ -276,11 +276,12 @@ function productRenderingWithFilters() {
     }
   });
   // Tambah tombol default
+  if (pageConfig.rendering_def_filter !== "") {
   const allButton = document.createElement('button');
-  if (pageConfig.rendering_def_filter) {
   allButton.className = 'produk-filter-button active';
-  allButton.textContent = pageConfig.rendering_def_filter;}
+  allButton.textContent = pageConfig.rendering_def_filter;
   filterContainer.appendChild(allButton);
+  }
   // Tambah tombol kategori lainnya
   kategoriSet.forEach(kategori => {
     const button = document.createElement('button');
