@@ -277,8 +277,9 @@ function productRenderingWithFilters() {
   });
   // Tambah tombol default
   const allButton = document.createElement('button');
-  allButton.className = 'produk-filter-button' + ' active';
-  allButton.textContent = pageConfig.rendering_def_filter;
+  if (pageConfig.rendering_def_filter) {
+  allButton.className = 'produk-filter-button active';
+  allButton.textContent = pageConfig.rendering_def_filter;}
   filterContainer.appendChild(allButton);
   // Tambah tombol kategori lainnya
   kategoriSet.forEach(kategori => {
