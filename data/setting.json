@@ -13,7 +13,7 @@
     },
     {
       "path": "/",
-      "judul": "Katalog Undangan Pernikahan",
+      "judul": "Katalog Undangan",
       "deskripsi": "Temukan undangan cetak eksklusif untuk membuat momen spesialmu lebih berkesan. Pilih tema favoritmu dan pesan sekarang untuk desain unik berkualitas tinggi!",
       "fungsi": "",
       "data": "undangan-cetak",
@@ -32,16 +32,31 @@
       "rendering_filter1": "kategori1",
       "rendering_filter2": "",
       "rendering_def_filter": ""
+    },
+    {
+      "path": "/?p=mug",
+      "judul": "Mug",
+      "deskripsi": "Abadikan momen spesial dengan mug custom eksklusif berisi foto dan nama pilihanmu! Cocok sebagai hadiah ulang tahun, anniversary, atau kejutan kecil penuh makna. Dicetak dengan teknik sublimasi tahan lama dan warna tajam.",
+      "fungsi": "",
+      "data": "mug",
+      "rendering": "productRendering",
+      "rendering_filter1": "",
+      "rendering_filter2": "",
+      "rendering_def_filter": ""
     }
   ],
   "menu": [
     {
-      "label": "Undangan Cetak",
+      "label": "Undangan Cetak Pernikahan",
       "url": "/"
     },
     {
       "label": "Layanan",
       "url": "/?p=layanan"
+    },
+    {
+      "label": "Mug",
+      "url": "/?p=mug"
     }
   ],
   "variabel": [
@@ -51,5 +66,5 @@
       "nama_admin": "Miftahul"
     }
   ],
-  "updated": "11/6/2025, 20.47.12"
+  "updated": "12/6/2025, 02.21.14"
 }
