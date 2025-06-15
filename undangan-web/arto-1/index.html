@@ -236,7 +236,6 @@
 
         <!-- Secondary Pane -->
         <section class="secondary-pane">
-
             <!-- TOP COVER -->
             <section class="top-cover">
                 <div class="top-cover-inner">
@@ -383,7 +382,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- COVER -->
             <section class="cover-wrap">
                 <div class="ornaments-wrapper">
@@ -519,7 +517,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- STORY -->
             <section class="love-story">
 
@@ -661,9 +658,7 @@
                 </div>
 
             </section>
-
             <!-- QUOTE  -->
-
             <section class="quote-wrap">
                 <div class="quote">
                     <div class="quotes-frame">
@@ -766,7 +761,6 @@
 
                 </div>
             </section>
-
             <!-- COUPLE -->
             <section class="couple-wrap">
                 <div class="couple">
@@ -973,7 +967,6 @@
 
                 </div>
             </section>
-
             <!-- SAVE THE DATE -->
             <section class="save-date-wrap">
                 <div class="save-date-inner">
@@ -1089,8 +1082,6 @@
                 </div>
 
             </section>
-
-
             <!-- AGENDA -->
             <section class="agenda-wrap">
                 <div class="agenda-inner">
@@ -1413,7 +1404,6 @@
 
                 </div>
             </section>
-
             <!-- Reservation -->
             <section class="rsvp-wrap" id="toRsvp">
                 <div class="orn-rsvp--top tc-1">
@@ -1483,25 +1473,84 @@
                         </div>
                     </div>
                 </div>
-                <div class="rsvp-inner">
+				
+				<div class="rsvp-inner">
+					<div class="rsvp-head">
+						<h1 class="rsvp-title aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500">Konfirmasi Kehadiran</h1>
 
-                    <div class="rsvp-head">
-                        <h1 class="rsvp-title" data-aos="zoom-in" data-aos-duration="1500">Konfirmasi Kehadiran</h1>
+						<div class="rsvp-info">
+							<p class="info-text">Harap konfirmasikan kehadiran Anda sebelum,</p>
+							<p class="info-date aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">15 Feb 2025</p>                                </div>
+					</div>
 
-                        <div class="rsvp-info">
-                            <p class="info-text">Harap konfirmasikan kehadiran Anda sebelum,</p>
-                            <p class="info-date" data-aos="fade-up" data-aos-duration="1000">15 Feb 2025</p>
+					<div class="rsvp-body">
+					<form action="" method="POST" id="RSVPForm">
+					<!-- Status -->
+					<div class="rsvp-status-wrap">
+						<div class="rsvp-status-head aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
+							<p class="rsvp-status-caption">Apakah kamu datang?</p>
+						</div>
+						<div class="rsvp-status-body">
+							<div class="rsvp-confirm-wrap">
+								<label data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
+									<input type="radio" name="rsvp_status" value="going">
+									<div class="rsvp-confirm-btn going">
+										Hadir
+									</div>
+								</label>
+								<label data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
+									<input type="radio" name="rsvp_status" value="not_going">
+									<div class="rsvp-confirm-btn not-going">
+										Tidak Hadir
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- Amount -->
+					<div class="rsvp-amount-wrap" id="rsvpAmountWrap">
+					<div class="rsvp-session-wrap"><div class="session-caption-wrap"><p class="caption aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">Acara mana yang akan Anda hadiri?</p></div><div class="session-btn-wrap"><label data-aos="fade-up" data-aos-duration="1200" style="" class="aos-init aos-animate">
+						<input type="checkbox" name="selected_event[]" value="86554">
+						<div class="rsvp-session-btn">Akad Nikah</div>
+					</label><label data-aos="fade-up" data-aos-duration="1200" style="" class="aos-init aos-animate">
+						<input type="checkbox" name="selected_event[]" value="86555">
+						<div class="rsvp-session-btn">Resepsi</div>
+					</label><label data-aos="fade-up" data-aos-duration="1200" style="" class="aos-init aos-animate">
+					<input type="checkbox" name="selected_event_all" value="check_all" id="check-all">
+					<div class="rsvp-session-btn">Hadir Semua</div>
+				</label></div>
+							</div>
+							</div>
+							
+							<div>
+								<input type="hidden" name="post" value="rsvp_request">
+								<input type="hidden" name="request" value="update_rsvp">
+								<input type="hidden" name="template" value="default_v2_rsvp">
+							</div>
+							
+							<div class="rsvp-confirm-wrap aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
+								<button class="rsvp-confirm-btn confirm submit">Konfirmasi</button>
+							</div>
+							
+							<script>
+								// JavaScript to handle the "Check All" functionality
+								const checkAll = document.getElementById("check-all");
+
+								if (checkAll) {
+									checkAll.addEventListener("change", function() {
+										var checkboxes = document.getElementsByName("selected_event[]");
+										for (var i = 0; i < checkboxes.length; i++) {
+											checkboxes[i].checked = this.checked;
+										}
+									});
+								}
+							</script>
+							
+							</form></div>
+
                         </div>
-                    </div>
-
-                    <div class="rsvp-body">
-
-                    </div>
-
-                </div>
             </section>
-
-
             <!-- Photo Wrap -->
             <section class="photo-wrap">
                 <div class="photo-inner">
@@ -1859,7 +1908,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- VIDEO -->
             <section class="video-gallery ">
                 <div class="inner">
@@ -1906,7 +1954,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- WEDDING GIFT -->
             <section class="wedding-gift-wrap ">
                 <div class="wedding-gift-inner">
@@ -1932,17 +1979,17 @@
                                             <div class="wedding-gift-bank-wrap">
                                                 <div class="bank-item show" id="savingBook13513">
                                                     <div class="bank-detail">
-                                                        <h3 class="bank-name">BANK BCA (014)</h3>
+                                                        <h3 class="bank-name">GOPAY</h3>
                                                         <p class="bank-account-number-label">
                                                             No. Rekening
                                                             <span class="bank-account-number">
-                                                                        8375180797
+                                                                        085161517176
                                                                     </span>
                                                             <p data-copy="8375180797">Salin</p>
                                                                 </p>
                                                                 <p class="bank-account-name-label ">
                                                                     Pemilik Rekening
-                                                                    <span class="bank-account-name ">Muhammad Fanny Al farizzy</span>
+                                                                    <span class="bank-account-name ">Wahyu Ajis Mustofa</span>
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -2030,7 +2077,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- HADIAH KADO -->
             <section class="gift-section-wrap">
                         
@@ -2044,20 +2090,20 @@
                             <div class="wedding-gift-info-wrap">
                                 <p class="wedding-gift-address-label">Nama Penerima</p>
                                 <span class="inner-address-info">
-                                Kinanti
+                                Wahyu Ajis Mustofa
                                 </span>
                             </div>
                             <div class="wedding-gift-info-wrap">
                                 <p class="wedding-gift-address-label">Nomor Handphone</p>
                                 <span class="inner-address-info">
-                                    082154626320
+                                    085161517176
                                 </span>
                             </div>
                             <div class="inner-address-wrap">
                                 <div class="wedding-gift-info-wrap">
                                     <p class="wedding-gift-address-label">Alamat Pengiriman:</p>  
                                     <span class="inner-address-info">
-                                        Jl. kenari
+                                        Jl. Raya Bersama
                                     </span>
                                 </div>
                                 <a href="#" data-toggle="modal" class="btn-hadiah-copy" data-copy="Jl. kenari">
@@ -2082,8 +2128,6 @@
                             </div>
                         </div>
                     </section>
-
-
             <!-- LIVE STREAMING -->
             <section class="live-streaming">
                 <div class="inner">
@@ -2131,7 +2175,6 @@
                     </div>
                 </div>
             </section>
-
            <!-- WEDDING WISH -->
             <section class="wedding-wish-wrap" data-template="">
 
@@ -2210,7 +2253,6 @@
 
                 </div>
             </section>
-
             <!-- Footnote -->
             <section class="footnote-wrap">
                 <div class="footnote-inner">
@@ -2351,7 +2393,6 @@
 
                 </div>
             </section>
-
             <!-- FOOTER -->
             <section class="footer">
                 <div class="footer-inner  flex-column ">
