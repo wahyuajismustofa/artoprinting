@@ -5,31 +5,31 @@
       "nama": "artoprinting 1",
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "test",
-      "kehadiran": "",
-      "waktu kehadiran": ""
+      "kehadiran": "Hadir",
+      "waktu kehadiran": "Akad Nikah"
     },
     {
       "id": 2,
       "nama": "artoprinting 2",
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "test",
-      "kehadiran": "",
-      "waktu kehadiran": ""
+      "kehadiran": "Hadir",
+      "waktu kehadiran": "Resepsi"
     },
     {
       "id": 3,
       "nama": "artoprinting 3",
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "test",
-      "kehadiran": "",
-      "waktu kehadiran": ""
+      "kehadiran": "Hadir",
+      "waktu kehadiran": "Hadir Semua"
     },
     {
       "id": 4,
       "nama": "artoprinting 4",
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "",
-      "kehadiran": "",
+      "kehadiran": "Tidak Hadir",
       "waktu kehadiran": ""
     },
     {
@@ -65,5 +65,5 @@
       "waktu kehadiran": ""
     }
   ],
-  "updated": "16/6/2025, 03.17.37"
+  "updated": "16/6/2025, 04.40.11"
 }
