@@ -53,8 +53,8 @@
       "nama": "artoprinting 7",
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "",
-      "kehadiran": "Test",
-      "acara": "Test"
+      "kehadiran": "Hadir",
+      "acara": "Tidak"
     },
     {
       "id": 8,
@@ -65,5 +65,5 @@
       "acara": ""
     }
   ],
-  "updated": "16/6/2025, 05.26.18"
+  "updated": "16/6/2025, 06.58.49"
 }
