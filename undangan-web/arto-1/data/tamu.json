@@ -6,7 +6,7 @@
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "test",
       "kehadiran": "Hadir",
-      "waktu kehadiran": "Akad Nikah"
+      "acara": "Akad Nikah"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "test",
       "kehadiran": "Hadir",
-      "waktu kehadiran": "Resepsi"
+      "acara": "Resepsi"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "test",
       "kehadiran": "Hadir",
-      "waktu kehadiran": "Hadir Semua"
+      "acara": "Hadir Semua"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "",
       "kehadiran": "Tidak Hadir",
-      "waktu kehadiran": ""
+      "acara": ""
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "",
       "kehadiran": "",
-      "waktu kehadiran": ""
+      "acara": ""
     },
     {
       "id": 6,
@@ -46,15 +46,15 @@
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "",
       "kehadiran": "",
-      "waktu kehadiran": ""
+      "acara": ""
     },
     {
       "id": 7,
       "nama": "artoprinting 7",
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "",
-      "kehadiran": "",
-      "waktu kehadiran": ""
+      "kehadiran": "Test",
+      "acara": "Test"
     },
     {
       "id": 8,
@@ -62,8 +62,8 @@
       "waktu-pesan": "2025-06-15T17:26:51.961Z",
       "pesan": "test",
       "kehadiran": "",
-      "waktu kehadiran": ""
+      "acara": ""
     }
   ],
-  "updated": "16/6/2025, 05.17.48"
+  "updated": "16/6/2025, 05.26.18"
 }
