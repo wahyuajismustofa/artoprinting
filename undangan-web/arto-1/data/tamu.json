@@ -51,7 +51,7 @@
     {
       "id": 7,
       "nama": "artoprinting 7",
-      "waktu-pesan": "2025-06-15T17:26:51.961Z",
+      "waktu-pesan": "Mon",
       "pesan": "Testing Testing Testing \nTesting Testing Testing \nTesting Testing Testing",
       "kehadiran": "Hadir",
       "acara": "Akad Nikah"
@@ -65,5 +65,5 @@
       "acara": ""
     }
   ],
-  "updated": "16/6/2025, 08.57.34"
+  "updated": "16/6/2025, 09.08.26"
 }
