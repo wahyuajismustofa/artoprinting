@@ -202,26 +202,26 @@ body.nanda-special {
     --rgb-font-clr: 70, 70, 70;
 
     /* ORNAMENT */
-    --orn-01: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-01.png");
-    --orn-02: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-02.png");
-    --orn-03: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-03.png");
-    --orn-04: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-04.png");
-    --orn-05: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-05.png");
-    --orn-06: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-06.png");
-    --orn-07: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-07.png");
-    --orn-08: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-08.png");
+    --orn-01: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-01.png");
+    --orn-02: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-02.png");
+    --orn-03: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-03.png");
+    --orn-04: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-04.png");
+    --orn-05: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-05.png");
+    --orn-06: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-06.png");
+    --orn-07: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-07.png");
+    --orn-08: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-08.png");
 
-    --orn-cover-desktop: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-cover-desktop.png");
-    --orn-cover-tablet: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-cover-tablet.png");
-    --orn-cover-mobile: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/orn-cover-mobile.png");
+    --orn-cover-desktop: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-cover-desktop.png");
+    --orn-cover-tablet: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-cover-tablet.png");
+    --orn-cover-mobile: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/orn-cover-mobile.png");
 
     /* BACKGROUND IMAGE */
-    --bg-cover: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/bg-cover.png");
-    --bg-cover-mobile: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/bg-cover-mobile.png");
-    --bg-countdown: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/bg-countdown.png");
-    --bg-groom: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/bg-groom.png");
-    --bg-bride: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/bg-bride.png");
-    --bg-palace: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/palace.png");
+    --bg-cover: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/bg-cover.png");
+    --bg-cover-mobile: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/bg-cover-mobile.png");
+    --bg-countdown: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/bg-countdown.png");
+    --bg-groom: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/bg-groom.png");
+    --bg-bride: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/bg-bride.png");
+    --bg-palace: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/palace.png");
 
 }
 
@@ -2178,7 +2178,7 @@ section.protocol-04 .protocol-item-wrap .protocol-item .text-wrap .text {
     height: 60px;
     cursor: pointer;
 
-    background-image: url("https://ik.imagekit.io/mustofa/web/undangan-web/arto-1/images/music.png");
+    background-image: url("https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/music.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
