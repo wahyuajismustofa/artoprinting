@@ -3,8 +3,8 @@
     {
       "id": 1,
       "nama": "artoprinting 1",
-      "waktu-pesan": "2025-06-18T17:10:00.000Z",
-      "pesan": "hallo",
+      "waktu-pesan": "2025-06-18T18:22:00.000Z",
+      "pesan": "Hallo",
       "kehadiran": "Hadir",
       "acara": "Akad Nikah"
     },
@@ -65,5 +65,9 @@
       "acara": ""
     }
   ],
+<<<<<<< HEAD
   "updated": "19/6/2025, 00.56.12"
+=======
+  "updated": "19/6/2025, 01.22.58"
+>>>>>>> d8c2f3242f5ea7f201f1fea8fdcfecc6ba724bc9
 }
