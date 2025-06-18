@@ -1,56 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Butler */
-@font-face {
-    font-family: "Butler Bold";
-    src: url('../fonts/Butler_Bold.otf') format('opentype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Butler Light";
-    src: url('../fonts/Butler_Light.otf') format('opentype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Butler Regular";
-    src: url('../fonts/Butler_Regular.otf') format('opentype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-
-/* Bebas Neue */
-@font-face {
-    font-family: "Bebas Neue";
-    src: url('../fonts/BebasNeue_Regular.otf') format('opentype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-
-/* Raleway */
-@font-face {
-    font-family: "Raleway Regular";
-    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Raleway Bold";
-    src: url('../fonts/Raleway-Bold.ttf') format('truetype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-
-
-
 :root {
     /* Hex Colour */
     --primary-clr: #452812;
@@ -105,26 +52,6 @@
     --error-dark-rgb: 216, 33, 33;
     --error-light-rgb: 246, 189, 192;
 
-
-
-    /* Font Family */
-    --montserrat: 'Montserrat', sans-serif;
-    --roboto: 'Roboto', sans-serif;
-
-    --butler: 'Butler Regular', sans-serif;
-    --butler-bold: 'Butler Bold', sans-serif;
-    --butler-light: 'Butler Light', sans-serif;
-    --bebas-neue: 'Bebas Neue', sans-serif;
-
-    --raleway: 'Raleway Regular', sans-serif;
-    --raleway-bold: 'Raleway Bold', sans-serif;
-
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #eee;
-    text-rendering: optimizeLegibility;
 }
 
 body font {
@@ -165,7 +92,6 @@ textarea::-webkit-scrollbar-thumb {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: var(--roboto);
 }
 
 *::after,
@@ -449,7 +375,6 @@ img {
     justify-content: center;
     background-color: var(--white-clr);
     text-decoration: none;
-    font-family: "Bebas Neue";
     font-size: 22px;
     letter-spacing: 1px;
     border-radius: 7px;
@@ -580,7 +505,6 @@ img {
     text-decoration: none;
     color: var(--primary-clr);
     font-size: 20px;
-    font-family: "Bebas Neue";
     letter-spacing: 1px;
     line-height: 20px;
     cursor: pointer;
@@ -628,7 +552,6 @@ img {
     font-size: 22px;
     text-decoration: none;
     color: var(--primary-clr);
-    font-family: "Bebas Neue";
     font-weight: 500;
     letter-spacing: 2px;
     display: flex;
@@ -936,7 +859,6 @@ img {
 
 .footer .footer-inner .ft-nav .ft-link h1,
 .footer .footer-inner .ft-nav .ft-link h2 {
-    font-family: "Butler Bold";
     color: #1c1c1c;
     font-size: 40px;
     line-height: 1;
@@ -1398,7 +1320,6 @@ textarea.form-control {
     color: var(--primary-clr);
     font-weight: 500;
     background: #fff;
-    font-family: sans-serif;
     border: 1px solid rgba(0, 0, 0, 0.2);
     cursor: text;
     /* transition: 0.2s ease-in-out; */
@@ -1464,7 +1385,6 @@ textarea.form-control {
     color: var(--primary-clr);
     font-weight: 500;
     background: #fff;
-    font-family: sans-serif;
     border: 1px solid rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -2147,7 +2067,6 @@ input[type=number] {
     letter-spacing: 1px;
     color: var(--primary-clr);
     font-weight: 500;
-    font-family: "Bebas Neue";
     display: block;
     margin: 0;
     margin-bottom: -2px;
@@ -2307,7 +2226,6 @@ input[type=number] {
     font-size: 28px;
     margin: 10px auto;
     text-transform: uppercase;
-    font-family: "Bebas Neue";
     letter-spacing: 2px;
     font-weight: 500;
     position: relative;
@@ -3049,7 +2967,6 @@ input[type=number] {
 .modal-finish .finish-caption h2 {
     margin-bottom: 0.25em;
     font-size: 27px;
-    font-family: "Butler Bold";
 }
 
 .modal-finish .finish-caption p {
@@ -3065,7 +2982,6 @@ input[type=number] {
 .modal-finish .finish-caption .finish-countdown {
     font-size: 20px;
     margin: 10px 0;
-    font-family: "Butler Light";
 }
 
 
@@ -3434,7 +3350,6 @@ input[type=number] {
 }
 
 .modal-add-ons .head h1 {
-    font-family: "Bebas Neue";
     font-size: 36px;
     line-height: 36px;
     transform: scaleY(1.1);
@@ -3581,7 +3496,6 @@ input[type=number] {
 }
 
 .modal-preview-design .preview-design .details .title .category {
-    font-family: "Bebas Neue";
     font-size: 22px;
     padding: 5px 10px;
     letter-spacing: 1px;
@@ -3596,7 +3510,6 @@ input[type=number] {
 }
 
 .modal-preview-design .preview-design .details .title .design {
-    font-family: "Bebas Neue";
     display: block;
     font-size: 25px;
     letter-spacing: 1px;
@@ -4018,7 +3931,6 @@ input[type=number] {
     color: #000;
     font-weight: 500;
     background: #fff;
-    font-family: sans-serif;
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -4208,7 +4120,6 @@ input[type=number] {
     padding: 0.45em 1.25em 0.35em 1.25em;
     border-radius: 0.4em;
     text-decoration: none;
-    font-family: "Bebas Neue";
     letter-spacing: 1px;
     font-size: 20px;
     transition: all 0.25s ease-in-out;
@@ -5027,7 +4938,6 @@ button[disabled]:hover,
     color: #000;
     font-weight: 500;
     background: #fff;
-    font-family: sans-serif;
 }
 .selectize-control.single .selectize-input.input-active {
     display: block;
@@ -5556,79 +5466,10 @@ div.blob.blob-green {
     }
 }
 
-
-
-/* montserrat-400 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/montserrat-400.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/montserrat-400.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/montserrat-400.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/montserrat-400.woff') format('woff'), /* Modern Browsers */
-        url('../images/montserrat-400.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-/* montserrat-300 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/montserrat-300.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/montserrat-300.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/montserrat-300.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/montserrat-300.woff') format('woff'), /* Modern Browsers */
-        url('../images/montserrat-300.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-/* montserrat-500 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../fonts/montserrat-500.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/montserrat-500.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/montserrat-500.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/montserrat-500.woff') format('woff'), /* Modern Browsers */
-        url('../images/montserrat-500.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-/* montserrat-700 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/montserrat-700.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/montserrat-700.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/montserrat-700.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/montserrat-700.woff') format('woff'), /* Modern Browsers */
-        url('../images/montserrat-700.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-/* montserrat-800 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 800;
-    src: url('../fonts/montserrat-800.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('../fonts/montserrat-800.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../fonts/montserrat-800.woff2') format('woff2'), /* Super Modern Browsers */
-        url('../fonts/montserrat-800.woff') format('woff'), /* Modern Browsers */
-        url('../images/montserrat-800.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}    
-
 /* =======================================================
     GUEST CARD
 ======================================================= */
 body.ei__body * { 
-    font-family: 'Montserrat', sans-serif;
     padding:0;
     margin:0;
 }
@@ -5999,7 +5840,6 @@ body.ei__body {
 }
 .contact .contact-header .caption {
     color: var(--clr-03);
-    font-family: var(--roboto);
     font-weight: 500;
 }
 
@@ -6056,7 +5896,6 @@ body.ei__body {
     font-weight: 600;
     font-size: 18px;
     line-height: 2.8;
-    font-family: var(--roboto);
     display: block;
     text-align: center;    
 }
@@ -6152,7 +5991,6 @@ body.ei__body {
     text-align: center;
     
     /* Headline XL/Medium */
-    font-family: Montserrat;
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
@@ -6168,7 +6006,6 @@ body.ei__body {
     padding: 20px;
     
     /* Body Text L/Regular */
-    font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -6236,7 +6073,6 @@ body.ei__body {
     z-index: 1;
     background: var(--secondary-main, #F4D24C);
 
-    font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -6558,7 +6394,6 @@ body.ei__body {
     text-align: center;
     color: #fff;
     background: var(--primary-clr);
-    font-family: var(--roboto);
     font-size: 13px;
     position: absolute;
     z-index: 10000;
@@ -7117,5 +6952,6 @@ body.ei__body {
     gap: 12px;
 }
 
-
-
+.imp-hidden{
+    display: none !important;
+}

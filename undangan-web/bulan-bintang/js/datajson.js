@@ -7,12 +7,15 @@ function getParam(variabel) {
 const idTamu = getParam("id");
 const SCRIPT_BASE_URL = "https://script.google.com/macros/s/AKfycbzdeDedxGQdwzjw52mLupTxqY8bT4AcnOFBvbW4qbFU3EQ6Jpxy68JZbTHPHDlDlCSJ/exec";
 const DATABASE_NAME = "test-undangan-web";
+let data_update;
 
 async function init() {
   const data = await getData('tamu');
+  data_update = data.updated;
   if (data && Array.isArray(data.tamu)) {
-    gantiDataDariId(data.tamu);
+  gantiDataDariId(data.tamu);
 	buatKomentarDariData();
+  document.body.classList.remove("imp-hidden");
 	tampilkanRSVP();
 	initGiftFormHandler();
 	initCommentFormHandler();
@@ -21,7 +24,8 @@ async function init() {
 
 async function getData(namaFile) {
   try {
-    const response = await fetch(`./data/${namaFile}.json`);
+    const timestamp = new Date().getTime();
+    const response = await fetch(`./data/${namaFile}.json?t=${timestamp}`);
     if (!response.ok) throw new Error("Gagal mengambil data");
     return await response.json();
   } catch (err) {
@@ -29,6 +33,19 @@ async function getData(namaFile) {
     return {};
   }
 }
+
+async function updateData() {
+  try {
+    const dataBaru = await getData('tamu');
+    if (dataBaru.updated && dataBaru.updated != data_update) {
+      showAlert("info", "Perubahan data terdeteksi. Memuat ulang halaman...");
+      window.location.reload();
+    }
+  } catch (err) {
+    console.error("Gagal memeriksa pembaruan data:", err.message);
+  }
+}
+
 
 function gantiDataDariId(dataTamu) {
   if (isNaN(idTamu)) {
@@ -57,6 +74,7 @@ function gantiDataDariId(dataTamu) {
 function buatFormRSVP() {
   return `
     <form action="" method="POST" id="RSVPForm">
+      <!-- Status -->
       <div class="rsvp-status-wrap">
         <div class="rsvp-status-head" data-aos="fade-up" data-aos-duration="1200">
           <p class="rsvp-status-caption">Apakah kamu datang?</p>
@@ -64,19 +82,19 @@ function buatFormRSVP() {
         <div class="rsvp-status-body">
           <div class="rsvp-confirm-wrap">
             <label data-aos="fade-up" data-aos-duration="1200">
-              <input type="radio" name="rsvp_status" value="going">
+              <input type="radio" name="rsvp_status" value="Hadir">
               <div class="rsvp-confirm-btn going">Hadir</div>
             </label>
             <label data-aos="fade-up" data-aos-duration="1200">
-              <input type="radio" name="rsvp_status" value="not_going">
+              <input type="radio" name="rsvp_status" value="Tidak_Hadir">
               <div class="rsvp-confirm-btn not-going">Tidak Hadir</div>
             </label>
           </div>
         </div>
       </div>
 
-      <div class="rsvp-amount-wrap" id="rsvpAmountWrap">
-        <div class="rsvp-session-wrap">
+      <!-- Session -->
+        <div class="rsvp-session-wrap" id="rsvp-session">
           <div class="session-caption-wrap">
             <p class="caption" data-aos="fade-up" data-aos-duration="1200">Acara mana yang akan Anda hadiri?</p>
           </div>
@@ -91,12 +109,8 @@ function buatFormRSVP() {
             </label>
           </div>
         </div>
-      </div>
 
-      <input type="hidden" name="post" value="rsvp_request">
-      <input type="hidden" name="request" value="update_rsvp">
-      <input type="hidden" name="template" value="default_v2_rsvp">
-
+      <!-- Submit -->
       <div class="rsvp-confirm-wrap" data-aos="fade-up" data-aos-duration="1200">
         <button type="submit" class="rsvp-confirm-btn confirm submit">Konfirmasi</button>
       </div>
@@ -155,9 +169,10 @@ async function tampilkanRSVP() {
 	}
 	
   container.addEventListener("click", function (e) {
-    if (e.target && e.target.id === "changeRSVP") {
-      container.innerHTML = buatFormRSVP();
-    }
+  if (e.target && e.target.id === "changeRSVP") {
+    container.innerHTML = buatFormRSVP();
+    initRSVPFormHandler();
+  }
   });
 }
 
@@ -169,6 +184,7 @@ function initRSVPFormHandler() {
   }
 
   form.addEventListener("submit", handleFormRSVP);
+  initAttendanceToggle();
 }
 
 async function handleFormRSVP(event) {
@@ -185,6 +201,7 @@ async function handleFormRSVP(event) {
 	
 	if (result.status){
 		showAlert("success", "RSVP berhasil dikirim!");
+    setInterval(updateData, 5000); 
 	}else{
 		showAlert("error", result.error);
 	}
@@ -196,16 +213,31 @@ async function handleFormRSVP(event) {
 
 function getAttendanceStatus() {
   const selected = document.querySelector('input[name="rsvp_status"]:checked');
-  if (!selected) return null;
+  return selected ? selected.value : null;
+}
 
-  return selected.value === "going" ? "Hadir" : "Tidak_Hadir";
+function initAttendanceToggle() {
+  const radios = document.querySelectorAll('input[name="rsvp_status"]');
+  const acara = document.getElementById('rsvp-session');
+
+  if (!acara || radios.length === 0) return;
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.value === "Tidak_Hadir" && radio.checked) {
+        acara.style.display = "none";
+      } else if (radio.value === "Hadir" && radio.checked) {
+        acara.style.display = "";
+      }
+    });
+  });
 }
 
 
 function getSelectedEvents() {
   const eventCheckboxes = document.querySelectorAll('input[name="selected_event[]"]:checked');
   const values = Array.from(eventCheckboxes).map(cb => cb.value);
-  return values.length > 0 ? values.join(", ") : "Tidak memilih acara";
+  return values.length > 0 ? values.join(", ").replace(/\s+/g, "_") : "Tidak_memilih_acara";
 }
 
 
@@ -238,6 +270,7 @@ async function handleFormGift(event) {
     const result = await response.json();
 	if (result.status){
 		showAlert("success", "Konfirmasi kado berhasil dikirim!");
+    setInterval(updateData, 5000); 
 	}else{
 		showAlert("error", result.error);
 	}
@@ -271,10 +304,11 @@ async function handleFormComment(event) {
     const response = await fetch(url);
     const result = await response.json();
 
-	if (result && result.status === true){
+	if (result.status){
 		showAlert("success", "Pesan berhasil dikirim!");
+    setInterval(updateData, 5000); 
 	}else{
-		showAlert("error", result);
+		showAlert("error", result.error);
 	}
   } catch (err) {
     console.error("Gagal mengirim Pesan:", err);

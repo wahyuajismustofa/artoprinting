@@ -172,8 +172,10 @@ textarea::-webkit-scrollbar-thumb,
     border-color: var(--background-primary);
 }
 
-
-
+/**/
+.person-name{
+    font-family: var(--body-text-family) !important;
+}
 /* ==============================
         Modal
 ============================== */
