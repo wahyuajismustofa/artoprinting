@@ -5,7 +5,7 @@
       "nama": "artoprinting 1",
       "waktu-pesan": "2025-06-18T17:10:00.000Z",
       "pesan": "hallo",
-      "kehadiran": "Tidak Hadir",
+      "kehadiran": "Hadir",
       "acara": "Akad Nikah"
     },
     {
@@ -65,5 +65,5 @@
       "acara": ""
     }
   ],
-  "updated": "19/6/2025, 00.39.22"
+  "updated": "19/6/2025, 00.39.46"
 }
