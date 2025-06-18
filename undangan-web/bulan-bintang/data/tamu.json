@@ -2,72 +2,12 @@
   "tamu": [
     {
       "id": 1,
-      "nama": "artoprinting 1",
+      "nama": "Arto Printing",
       "waktu-pesan": "2025-06-18T18:22:00.000Z",
       "pesan": "Hallo",
       "kehadiran": "Hadir",
       "acara": "Akad Nikah"
-    },
-    {
-      "id": 2,
-      "nama": "artoprinting 2",
-      "waktu-pesan": "2025-06-15T17:26:51.961Z",
-      "pesan": "test",
-      "kehadiran": "Hadir",
-      "acara": "Resepsi"
-    },
-    {
-      "id": 3,
-      "nama": "artoprinting 3",
-      "waktu-pesan": "2025-06-15T17:26:51.961Z",
-      "pesan": "test",
-      "kehadiran": "Hadir",
-      "acara": "Hadir Semua"
-    },
-    {
-      "id": 4,
-      "nama": "artoprinting 4",
-      "waktu-pesan": "2025-06-15T17:26:51.961Z",
-      "pesan": "",
-      "kehadiran": "Tidak Hadir",
-      "acara": ""
-    },
-    {
-      "id": 5,
-      "nama": "artoprinting 5",
-      "waktu-pesan": "2025-06-15T17:26:51.961Z",
-      "pesan": "",
-      "kehadiran": "",
-      "acara": ""
-    },
-    {
-      "id": 6,
-      "nama": "artoprinting 6",
-      "waktu-pesan": "2025-06-15T17:26:51.961Z",
-      "pesan": "",
-      "kehadiran": "",
-      "acara": ""
-    },
-    {
-      "id": 7,
-      "nama": "artoprinting 7",
-      "waktu-pesan": "2025-06-16T04:46:00.000Z",
-      "pesan": "hai",
-      "kehadiran": "Test",
-      "acara": "Test"
-    },
-    {
-      "id": 8,
-      "nama": "artoprinting 8",
-      "waktu-pesan": "2025-06-15T17:26:51.961Z",
-      "pesan": "test",
-      "kehadiran": "",
-      "acara": ""
     }
   ],
-<<<<<<< HEAD
-  "updated": "19/6/2025, 00.56.12"
-=======
-  "updated": "19/6/2025, 01.22.58"
->>>>>>> d8c2f3242f5ea7f201f1fea8fdcfecc6ba724bc9
+  "updated": "19/6/2025, 06.55.43"
 }
