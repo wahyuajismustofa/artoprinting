@@ -5,7 +5,7 @@ function getParam(variabel) {
 }
 // variabel global
 const idTamu = getParam("id");
-const SCRIPT_BASE_URL = "https://script.google.com/macros/s/AKfycbxLKt-nSIyhevMLW5FFtvYh_avKS2LNNoE4HiRgPzpEDY5pfuOmwm6Cjb_emMmfJRel/exec";
+const SCRIPT_BASE_URL = "https://script.google.com/macros/s/AKfycbxhUt_yV_55aSsxlh_d7bHYz8lXzrtDR6C_Bopqk_jg0COTshjbMAXQbB8ynIDrUV9U/exec";
 const DATABASE_NAME = "test-undangan-web";
 let data_update;
 
@@ -260,7 +260,7 @@ async function handleFormGift(event) {
   event.preventDefault();
   const form = document.getElementById("weddingGiftForm");
   const akun = form.querySelector('[name="nama-akun"]').value.trim();
-  const pesan = form.querySelector('[name="pesan"]').value.trim().replace(/ /g, "_").replace(/,/g, "{koma}");
+  const pesan = form.querySelector('[name="pesan"]').value.trim().replace(/ /g, "_").replace(/,/g, "--koma--");
   const nominal = form.querySelector('[name="nominal"]').value.trim();
   if (!akun || !pesan || !nominal) return alert("Silakan lengkapi data kado");
 
@@ -322,7 +322,7 @@ function getComment() {
 
   return komentar.value
     .trim()
-    .replace(/,/g, "{koma}")
+    .replace(/,/g, "--koma--")
     .replace(/ /g, "_");
 }
 
