@@ -104,7 +104,7 @@
       "judul": "Undangan Web",
       "deskripsi": "Melayani pembuatan pigura custom sesuai kebutuhan Anda ? baik dari ukuran, bahan, warna, hingga cetakan isi. Cocok untuk seniman, desainer, toko foto, dan proyek kreatif.",
       "fungsi": "",
-      "data": "pigura",
+      "data": "undangan-web",
       "rendering": "productRenderingWithFilters",
       "rendering_filter1": "kategori1",
       "rendering_filter2": "",
@@ -156,5 +156,5 @@
       "nama_admin": "Miftahul"
     }
   ],
-  "updated": "21/6/2025, 02.34.27"
+  "updated": "21/6/2025, 02.36.50"
 }
