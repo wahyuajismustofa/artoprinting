@@ -118,7 +118,8 @@ async function getRoot() {
 }
 async function getData(data) {
 	try {
-		const response = await fetch(`/data/${data}.json`);
+		const timestamp = new Date().getTime();
+		const response = await fetch(`/data/${data}.json?t=${timestamp}`);
 		if (!response.ok) throw new Error("Gagal mengambil data");
 		return await response.json();
 	} catch (err) {
