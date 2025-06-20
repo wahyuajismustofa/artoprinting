@@ -14,7 +14,7 @@
     {
       "path": "/",
       "judul": "Katalog Undangan",
-      "deskripsi": "Temukan undangan cetak eksklusif untuk membuat momen spesialmu lebih berkesan. Pilih tema favoritmu dan pesan sekarang untuk desain unik berkualitas tinggi!",
+      "deskripsi": "Temukan undangan web eksklusif untuk membuat momen spesialmu lebih berkesan.",
       "fungsi": "",
       "data": "undangan-cetak",
       "rendering": "productRenderingWithFilters",
@@ -98,12 +98,27 @@
       "rendering_filter1": "kategori1",
       "rendering_filter2": "",
       "rendering_def_filter": ""
+    },
+    {
+      "path": "/?p=undangan-web",
+      "judul": "Undangan Web",
+      "deskripsi": "Melayani pembuatan pigura custom sesuai kebutuhan Anda ? baik dari ukuran, bahan, warna, hingga cetakan isi. Cocok untuk seniman, desainer, toko foto, dan proyek kreatif.",
+      "fungsi": "",
+      "data": "pigura",
+      "rendering": "productRenderingWithFilters",
+      "rendering_filter1": "kategori1",
+      "rendering_filter2": "",
+      "rendering_def_filter": ""
     }
   ],
   "menu": [
     {
       "label": "Undangan",
       "url": "/"
+    },
+    {
+      "label": "Undangan Web",
+      "url": "/?p=undangan-web"
     },
     {
       "label": "Layanan",
@@ -141,5 +156,5 @@
       "nama_admin": "Miftahul"
     }
   ],
-  "updated": "21/6/2025, 02.23.45"
+  "updated": "21/6/2025, 02.34.27"
 }
