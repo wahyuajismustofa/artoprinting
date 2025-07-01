@@ -208,10 +208,24 @@ async function syncData() {
     function renderDots() {
         dotsContainer.innerHTML = '';
         const total = Math.ceil(ulasan.length / perView);
-        for (let i = 0; i < total; i++) {
+        const maxDots = 5;
+        let start = 0;
+        // Jika dot lebih dari 5, tampilkan window 5 dot di sekitar current
+        if (total > maxDots) {
+            const currentDot = Math.floor(current / perView);
+            if (currentDot <= 2) {
+                start = 0;
+            } else if (currentDot >= total - 3) {
+                start = total - maxDots;
+            } else {
+                start = currentDot - 2;
+            }
+        }
+        for (let i = 0; i < Math.min(total, maxDots); i++) {
+            const dotIndex = total > maxDots ? start + i : i;
             const dot = document.createElement('button');
-            dot.className = 'w-3 h-3 mx-1 rounded-full ' + (i === Math.floor(current/perView) ? 'bg-blue-500' : 'bg-gray-300');
-            dot.onclick = () => { current = i * perView; renderSlider(); resetAutoSlide(); };
+            dot.className = 'w-3 h-3 mx-1 rounded-full ' + (dotIndex === Math.floor(current/perView) ? 'bg-blue-500' : 'bg-gray-300');
+            dot.onclick = () => { current = dotIndex * perView; renderSlider(); resetAutoSlide(); };
             dotsContainer.appendChild(dot);
         }
     }
