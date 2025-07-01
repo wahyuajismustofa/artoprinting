@@ -149,19 +149,27 @@ async function syncData() {
     // Bangun URL lengkap dengan parameter untuk masing-masing permintaan
     const url1 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_produk`;
     const url2 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_setting`;
+	const url3 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_ulasan`;
 
     // Kirim permintaan GET ke Google Apps Script Web App
     const res1 = await fetch(url1);
     const res2 = await fetch(url2);
+	const res3 = await fetch(url3);
 
     const data1 = await res1.json();
     const data2 = await res2.json();
+	const data3 = await res3.json();
 
-    if (data1.status === true && data2.status === true) {
-      console.log("Data Setting dan Produk berhasil diperbarui.");
-    } else {
-      console.log("Gagal memperbarui data. Status:", data1, data2);
+    if (data1.status === true) {
+      console.log("Data Produk berhasil diperbarui.");
     }
+	if (data2.status === true) {
+      console.log("Data Setting berhasil diperbarui.");
+    }
+	if (data3.status === true) {
+      console.log("Data Ulasan berhasil diperbarui.");
+    }
+	
   } catch (error) {
     console.error("Terjadi kesalahan:", error);
   }
