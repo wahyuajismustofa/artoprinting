@@ -1,237 +1,253 @@
-if (
-  location.hostname === "localhost" ||
-  location.hostname === "127.0.0.1" ||
-  location.hostname.startsWith("192.168.")
-) {
-  console.log("Sedang di localhost, fungsi redirect khusus github page tidak dijalankan");
-} else {
+// nav-produk.js
+// Penyesuaian: produk default 'Undangan_Cetak', kategori dinamis sesuai produk, filter produk, hapus produk statis, dan tombol 'Muat Lebih Banyak' jika > PRODUK_PER_HALAMAN
 
-//redirect khusus github page
-(function redirectToWWW() {
-  const hostname = window.location.hostname;
-  
-  if (!hostname.startsWith('www.') && !/^localhost$|^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
-    const newHostname = 'www.' + hostname;
-    const newUrl = window.location.protocol + '//' + newHostname + window.location.pathname + window.location.search + window.location.hash;
-    window.location.replace(newUrl);
-  }
-})();
-if (location.protocol === 'http:') {
-  location.href = 'https://' + location.hostname + location.pathname + location.search + location.hash;
-}
+const PRODUK_PER_HALAMAN = 20; // Ubah nilai ini untuk mengatur jumlah produk per batch
 
-}
+document.addEventListener('DOMContentLoaded', function() {
+    let allData = {};
+    let produkList = [];
+    let kategoriSet = new Set();
+    let produkSelect = document.getElementById('produk');
+    let kategoriSelect = document.getElementById('kategori');
+    let produkListSection = document.getElementById('produk-list');
+    let loadMoreBtn = document.getElementById('load-more');
+    let currentIndex = 0;
+    let currentList = [];
 
-function insertGtagScript() {
-  const head = document.head;
-  if (!head) return;
+    fetch('data/produk.json')
+        .then(response => response.json())
+        .then(data => {
+            if (data.updated) {
+            window.updated = data.updated;
+            }            
+            allData = data;
+            produkList = Object.keys(data);
+            // Isi select produk
+            if (produkSelect) {
+                produkSelect.innerHTML = produkList.map(p => `<option value="${p}"${p==='Undangan_Cetak'?' selected':''}>${p.replace(/_/g, ' ')}</option>`).join('');
+            }
+            updateKategori();
+            renderProduk(true);
+            cekDanSync();
+        });
 
-  if (document.querySelector(`script[src*="gtag/js?id=${varConfig.google_tag}"]`)) return;
-
-  const gtagScript = document.createElement('script');
-  gtagScript.async = true;
-  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${varConfig.google_tag}`;
-
-  const gtagConfigScript = document.createElement('script');
-  gtagConfigScript.text = `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${varConfig.google_tag}');
-  `;
-  head.appendChild(gtagScript);
-  head.appendChild(gtagConfigScript);
-}
-
-/*Variabel*/
-let dirImg = 'https://ik.imagekit.io/mustofa/web/img/';
-let timerPopWa;
-let popWa;
-let root, dataProduk, pageConfig,varConfig;
-
-const loadingScreen = document.getElementById('loading-screen');
-
-const burger = document.getElementById('burger');
-const dropdown = document.getElementById('dropdownMenu');
-
-burger.addEventListener('click', () => {
-  dropdown.classList.toggle('imp-hidden');
-});
-
-
-const fungsiMap = {
-  insertGtagScript,
-  lazyLoadImg
-};
-async function init() {
-	root = await getRoot();
-	dataProduk = await getData('produk');
-	setting = await getData('setting');
-	const currentPath = window.location.pathname;
-	varConfig = setting.variabel[0];
-    
-	
-	getDataSingleProduct();
-	fungsiDefault();
-}
-async function getRoot() {
-	try {
-		const response = await fetch("/root.json");
-		if (!response.ok) throw new Error("Gagal mengambil data");
-		return await response.json();
-	} catch (err) {
-		console.error("Error:", err.message);
-		return {};
-	}
-}
-async function getData(data) {
-	try {
-		const response = await fetch(`/data/${data}.json`);
-		if (!response.ok) throw new Error("Gagal mengambil data");
-		return await response.json();
-	} catch (err) {
-		console.error("Error:", err.message);
-		return {};
-	}
-}
-async function fungsiDefault() {
-	await insertGtagScript();
-	await loadMenu();
-	await lazyLoadImg();
-	await loadingScreen.classList.add('imp-hidden');
-}
-function loadMenu() {
-	setting["menu"].forEach(item => {
-	  const link = document.createElement('a');
-	  link.href = item.url;
-	  link.textContent = item.label;
-	  dropdown.appendChild(link);
-	});
-      
-}
-function lazyLoadImg() {
-  const images = document.querySelectorAll("img");
-  images.forEach(img => {
-    if (!img.hasAttribute("loading")) {
-      img.setAttribute("loading", "lazy");
+    if (produkSelect) {
+        produkSelect.addEventListener('change', function() {
+            currentIndex = 0;
+            updateKategori();
+            renderProduk(true);
+        });
     }
-  });
+    if (kategoriSelect) {
+        kategoriSelect.addEventListener('change', function() {
+            currentIndex = 0;
+            renderProduk(true);
+        });
+    }
+
+    function updateKategori() {
+        const selectedProduk = produkSelect.value || 'Undangan_Cetak';
+        kategoriSet = new Set();
+        if (allData[selectedProduk]) {
+            allData[selectedProduk].forEach(produk => {
+                if (produk.kategori) kategoriSet.add(produk.kategori);
+            });
+        }
+        if (kategoriSelect) {
+            kategoriSelect.innerHTML = '<option value="">Semua Kategori</option>' +
+                Array.from(kategoriSet).map(k => `<option value="${k}">${k}</option>`).join('');
+        }
+    }
+
+    function renderProduk(reset = false) {
+        // Hapus produk dinamis lama
+        if (produkListSection && reset) {
+            produkListSection.innerHTML = '';
+        }
+        // Sembunyikan tombol muat lebih banyak lama
+        if (loadMoreBtn) loadMoreBtn.classList.add('hidden');
+        const selectedProduk = produkSelect.value || 'Undangan_Cetak';
+        const selectedKategori = kategoriSelect.value;
+        let list = allData[selectedProduk] || [];
+        if (selectedKategori) {
+            list = list.filter(p => p.kategori === selectedKategori);
+        }
+        if (reset) {
+            currentIndex = 0;
+            currentList = list;
+        }
+        // Tampilkan batch berikutnya
+        const nextBatch = currentList.slice(currentIndex, currentIndex + PRODUK_PER_HALAMAN);
+        nextBatch.forEach(produk => {
+            const div = document.createElement('div');
+            div.className = 'w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col produk-item-dinamis';
+            div.innerHTML = `
+                <a href="${produk.link_produk || '#'}">
+                    <img class="hover:grow hover:shadow-lg" src="${produk.img}" alt="${produk.nama}">
+                    <div class="pt-3 flex items-center justify-between">
+                        <p class="nama-produk">${produk.nama}</p>
+                    </div>
+                    <p class="keterangan-produk pt-1 text-gray-900">${produk.keterangan || 'Ready'}</p>
+                </a>
+            `;
+            produkListSection.appendChild(div);
+        });
+        currentIndex += PRODUK_PER_HALAMAN;
+        // Tampilkan tombol muat lebih banyak jika masih ada sisa
+        if (loadMoreBtn) {
+            if (currentIndex < currentList.length) {
+                loadMoreBtn.classList.remove('hidden');
+                loadMoreBtn.onclick = function() {
+                    renderProduk(false);
+                };
+            } else {
+                loadMoreBtn.classList.add('hidden');
+            }
+        }
+    }
+});
+function cekDanSync() {
+  try {
+    if (!window.updated) {
+      console.log("Belum ada data update, memulai sinkronisasi...");
+      syncData();
+      return;
+    }
+
+    // Misal: '11/6/2025, 19.07.54'
+    const [tanggal, waktu] = window.updated.split(', ');
+
+    // Pecah tanggal
+    const [hari, bulan, tahun] = tanggal.split('/').map(Number);
+
+    // Pecah waktu
+    const [jam, menit, detik] = waktu.split('.').map(Number);
+
+    // Buat objek Date
+    const lastUpdate = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+    const now = new Date();
+
+    const satuHari = 24 * 60 * 60 * 1000;
+
+    if (now - lastUpdate > satuHari) {
+      console.log("Data lebih dari 1 hari, melakukan sinkronisasi ulang...");
+      syncData();
+    } else {
+      console.log("Data masih uptodate, tidak perlu sync.");
+    }
+  } catch (error) {
+    console.error("Format window.updated tidak valid:", error);
+    syncData();
+  }
 }
 
-function share(title, text, customLink) {
-  const combinedMessage = `${text}\n${customLink}`;
-  const encodedMessage = encodeURIComponent(combinedMessage);
-  if (navigator.share) {
-    navigator.share({
-      title: title,
-      text: combinedMessage,
-      url: customLink,
-    }).then(() => {
-      console.log('Berhasil dibagikan');
-    }).catch((error) => {
-      console.error('Gagal membagikan', error);
+
+async function syncData() {
+  try {
+    const GAS_BASE_URL = "https://script.google.com/macros/s/AKfycbwYIx89d6ij_YaGIp6b51shXvidJ4lADni5syseXZWM6SRlWAxAOa4i2UlSD03AxXzKpQ/exec";
+
+    // Bangun URL lengkap dengan parameter untuk masing-masing permintaan
+    const url1 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_produk`;
+    const url2 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_setting`;
+
+    // Kirim permintaan GET ke Google Apps Script Web App
+    const res1 = await fetch(url1);
+    const res2 = await fetch(url2);
+
+    const data1 = await res1.json();
+    const data2 = await res2.json();
+
+    if (data1.status === true && data2.status === true) {
+      console.log("Data Setting dan Produk berhasil diperbarui.");
+    } else {
+      console.log("Gagal memperbarui data. Status:", data1, data2);
+    }
+  } catch (error) {
+    console.error("Terjadi kesalahan:", error);
+  }
+}
+
+// === TESTIMONI SLIDER ===
+(function() {
+    const slider = document.getElementById('testimoni-slider');
+    const dotsContainer = document.getElementById('testimoni-dots');
+    const prevBtn = document.getElementById('testi-prev');
+    const nextBtn = document.getElementById('testi-next');
+    let ulasan = [];
+    let current = 0;
+    let perView = 1;
+    let autoSlideInterval;
+
+    function getPerView() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 640) return 2;
+        return 1;
+    }
+
+    function renderSlider() {
+        perView = getPerView();
+        slider.innerHTML = '';
+        const start = current;
+        const end = Math.min(current + perView, ulasan.length);
+        for (let i = start; i < end; i++) {
+            const u = ulasan[i];
+            const card = document.createElement('div');
+            card.className = 'w-full md:w-1/2 lg:w-1/3 px-2';
+            card.innerHTML = `
+                <div class="bg-white rounded-lg shadow p-6 h-full flex flex-col items-center text-center">
+                    <img src="${u.img}" alt="${u.nama}" class="w-16 h-16 rounded-full mb-4 object-cover border-2 border-blue-200">
+                    <p class="text-gray-700 mb-2">"${u.ulasan.replace(/\n/g,'<br>')}"</p>
+                    <span class="font-semibold text-blue-700">${u.nama}</span>
+                </div>
+            `;
+            slider.appendChild(card);
+        }
+        renderDots();
+    }
+
+    function renderDots() {
+        dotsContainer.innerHTML = '';
+        const total = Math.ceil(ulasan.length / perView);
+        for (let i = 0; i < total; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'w-3 h-3 mx-1 rounded-full ' + (i === Math.floor(current/perView) ? 'bg-blue-500' : 'bg-gray-300');
+            dot.onclick = () => { current = i * perView; renderSlider(); resetAutoSlide(); };
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    function next() {
+        if (current + perView < ulasan.length) {
+            current += perView;
+        } else {
+            current = 0;
+        }
+        renderSlider();
+    }
+    function prev() {
+        if (current - perView >= 0) {
+            current -= perView;
+        } else {
+            current = (Math.ceil(ulasan.length/perView)-1)*perView;
+        }
+        renderSlider();
+    }
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(next, 6000);
+    }
+    window.addEventListener('resize', () => {
+        perView = getPerView();
+        current = Math.floor(current/perView)*perView;
+        renderSlider();
     });
-  } else {
-    alert(`Bagikan link ini ke temanmu:\n\n${customLink}`);
-  }
-}
-function sharePage(title, text) {
-  const currentUrl = window.location.href;
-  const combinedMessage = `${text}\n${currentUrl}`;
-  const encodedMessage = encodeURIComponent(combinedMessage);
-  if (navigator.share) {
-    navigator.share({
-      title: title,
-      text: text,
-      url: currentUrl,
-    }).then(() => {
-      console.log('Berhasil dibagikan');
-    }).catch((error) => {
-      console.error('Gagal membagikan', error);
-    });
-  } else {
-    alert(`Bagikan link ini ke temanmu:\n\n${currentUrl}`);
-  }
-}
-
-function chatWa(no,pesan) {
-  const enPesan = encodeURIComponent(pesan);
-  const url = `https://wa.me/${no}?text=${enPesan}`;
-  window.open(url, "_blank");
-}
-function chatAdmin(pesan) {
-  const enPesan = encodeURIComponent(pesan);
-  const url = `https://wa.me/${varConfig.wa_admin}?text=${enPesan}`;
-  window.open(url, "_blank");
-}
-
-async function getDataSingleProduct() {
-    const urlParams = new URLSearchParams(window.location.search);
-	const kodeProduk = urlParams.get('p');
-    const idProduk = urlParams.get('id');
-	const item = getItemById(dataProduk[kodeProduk],idProduk);
-    renderSingleProduk(item);
-	
-}
-function getItemById(dataArray, id) {
-  return dataArray.find(item => item.id == id);
-}
-
-function renderSingleProduk(produk){
-	const {
-	id = '',
-	nama = '',
-	img = '',
-	kategori1 = '',
-	kategori2 = '',
-	keterangan = '',
-	description = ''
-	} = produk;
-
-  const cleanNama = replaceChar(nama,"-"," ");
-  const produkContainer = document.getElementById("produkContainer");
-
-  produkContainer.innerHTML = `
-    <div class="single_produk_img container flex column flex-align-center flex-justify-center">
-      <img src="${img}" alt="${cleanNama} - Arto Printing" style="padding:30px;">
-      <div class="single_produk_fitur container flex row flex-align-center flex-justify-center" style="padding-bottom:20px;">
-        <div class="container-30p flex column flex-align-center flex-justify-center">
-          <img src="${dirImg}Badge.svg" class="icon-medium">
-          <p class="teks-deskripsi-kecil">Kualitas hasil cetak berkualitas</p>
-        </div>
-        <div class="container-30p flex column flex-align-center flex-justify-center">
-          <img src="${dirImg}thunder.svg" class="icon-medium">
-          <p class="teks-deskripsi-kecil">Proses cepat 1-2 hari bergantung antrian</p>
-        </div>
-        <div class="container-30p flex column flex-align-center flex-justify-center">
-          <img src="${dirImg}Shipping.svg" class="icon-medium">
-          <p class="teks-deskripsi-kecil">Siap antar seluruh Indonesia</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="single_produk_detail container flex column">
-      <h1> ${cleanNama} ${kategori1} ${kategori2}</h1>
-      <p>${keterangan}</p>
-    </div>
-
-    <div class="single_produk_deskripsi container flex column">
-      <p>Deskripsi: </p>
-      <p>${description}</p>
-    </div>
-
-    <div class="single_produk_cta container flex row flex-align-center flex-justify-space-evenly" style="background-color: var(--warna-bg-sekunder); padding: 20px;">
-      <button onclick="sharePage('${cleanNama} ${kategori1} ${kategori2}', 'Lihat produk ini')">Bagikan</button>
-<button onclick="chatAdmin('Hallo saya ingin memesan ${cleanNama} ${kategori1} ${kategori2} Link Produk: ${window.location.href}')">Order</button>
-    </div>
-  `;
-}
-
-function replaceChar(text, targetChar, replacementChar) {
-  if (text.includes(targetChar)) {
-    return text.replaceAll(targetChar, replacementChar);
-  }
-  return text;
-}
-
-init();
+    prevBtn && prevBtn.addEventListener('click', () => { prev(); resetAutoSlide(); });
+    nextBtn && nextBtn.addEventListener('click', () => { next(); resetAutoSlide(); });
+    fetch('data/ulasan.json')
+        .then(r => r.json())
+        .then(data => {
+            ulasan = data.ulasan || [];
+            renderSlider();
+            resetAutoSlide();
+        });
+})();

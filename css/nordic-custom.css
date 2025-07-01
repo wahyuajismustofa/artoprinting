@@ -1,0 +1,136 @@
+/* nordic-custom.css */
+:root {
+  --ap-primary: #23234b;
+  --ap-bg: #f8fafc;
+  --ap-white: #fff;
+  --ap-black: #222;
+  --ap-gray: #bfc6d1;
+  --ap-shadow: 0 2px 8px 0 rgba(35,35,75,0.08);
+}
+
+body {
+  background: var(--ap-bg);
+  color: var(--ap-black);
+}
+.work-sans {
+    font-family: 'Work Sans', sans-serif;
+}
+#menu-toggle:checked + #menu {
+    display: block;
+}
+.hover\:grow {
+    transition: all 0.3s;
+    transform: scale(1);
+}
+.hover\:grow:hover {
+    transform: scale(1.02);
+}
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+.carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #000;
+    /*Set to match the Tailwind colour you want the active one to be */
+}
+/* Testimoni slider custom style */
+#testimoni-section {
+  background: var(--ap-bg);
+}
+#testimoni-slider {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+}
+#testimoni-slider > div {
+  min-width: 0;
+  flex: 1 1 0;
+}
+#testimoni-slider > div > div {
+  border: 1.5px solid var(--ap-primary);
+  background: var(--ap-white);
+  color: var(--ap-primary);
+}
+#testimoni-slider > div > div span,
+#testimoni-slider > div > div p {
+  color: var(--ap-primary);
+}
+#testimoni-dots button {
+  transition: background 0.2s;
+}
+#testimoni-dots button.bg-blue-500 {
+  background: var(--ap-primary) !important;
+}
+#testimoni-dots button.bg-gray-300 {
+  background: var(--ap-white) !important;
+  border: 1px solid var(--ap-primary);
+}
+#testi-prev, #testi-next {
+  background: var(--ap-white);
+  color: var(--ap-primary);
+  border: 1px solid var(--ap-primary);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+#testi-prev:hover, #testi-next:hover {
+  background: var(--ap-gray);
+  color: var(--ap-primary);
+}
+/* Konsistensi tombol utama (primary button) */
+.btn-primary, .bg-blue-600, .bg-blue-500 {
+  background: var(--ap-primary);
+  color: var(--ap-white);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: var(--ap-shadow);
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.btn-primary:hover, .bg-blue-600:hover, .bg-blue-500:hover {
+  background: var(--ap-gray);
+  color: var(--ap-primary);
+  box-shadow: 0 4px 16px 0 rgba(35,35,75,0.12);
+}
+.btn-primary:focus, .bg-blue-600:focus, .bg-blue-500:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ap-gray);
+}
+/* Konsistensi tombol sekunder (misal: slider prev/next) */
+.btn-secondary, #testi-prev, #testi-next {
+  background: var(--ap-white);
+  color: var(--ap-primary);
+  border: 1px solid var(--ap-gray);
+  border-radius: 9999px;
+  box-shadow: var(--ap-shadow);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-secondary:hover, #testi-prev:hover, #testi-next:hover {
+  background: var(--ap-gray);
+  color: var(--ap-primary);
+  box-shadow: 0 4px 16px 0 rgba(35,35,75,0.12);
+}
+.btn-secondary:focus, #testi-prev:focus, #testi-next:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ap-gray);
+}
