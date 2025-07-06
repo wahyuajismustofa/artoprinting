@@ -18,13 +18,31 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.updated) {
-            window.updated = data.updated;
-            }            
+                window.updated = data.updated;
+            }
             allData = data;
             produkList = Object.keys(data);
             // Isi select produk
             if (produkSelect) {
                 produkSelect.innerHTML = produkList.map(p => `<option value="${p}"${p==='Undangan_Cetak'?' selected':''}>${p.replace(/_/g, ' ')}</option>`).join('');
+            }
+            // Cek parameter produk di URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramProduk = urlParams.get('produk');
+            if (paramProduk) {
+                // Normalisasi nama produk: huruf kecil dan ganti _ menjadi -
+                const paramNorm = paramProduk.toLowerCase();
+                let foundProduk = null;
+                for (const p of produkList) {
+                    const pNorm = p.toLowerCase().replace(/_/g, '-');
+                    if (paramNorm === pNorm) {
+                        foundProduk = p;
+                        break;
+                    }
+                }
+                if (foundProduk && produkSelect) {
+                    produkSelect.value = foundProduk;
+                }
             }
             updateKategori();
             renderProduk(true);
@@ -149,27 +167,27 @@ async function syncData() {
     // Bangun URL lengkap dengan parameter untuk masing-masing permintaan
     const url1 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_produk`;
     const url2 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_setting`;
-	//const url3 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_ulasan`;
+    //const url3 = `${GAS_BASE_URL}?conn=DATABASE=artoprinting_ulasan`;
 
     // Kirim permintaan GET ke Google Apps Script Web App
     const res1 = await fetch(url1);
     const res2 = await fetch(url2);
-	//const res3 = await fetch(url3);
+    //const res3 = await fetch(url3);
 
     const data1 = await res1.json();
     const data2 = await res2.json();
-	//const data3 = await res3.json();
+    //const data3 = await res3.json();
 
     if (data1.status === true) {
       console.log("Data Produk berhasil diperbarui.");
     }
-	if (data2.status === true) {
+    if (data2.status === true) {
       console.log("Data Setting berhasil diperbarui.");
     }
-	/*if (data3.status === true) {
+    /*if (data3.status === true) {
       console.log("Data Ulasan berhasil diperbarui.");
     }
-	*/
+    */
   } catch (error) {
     console.error("Terjadi kesalahan:", error);
   }
