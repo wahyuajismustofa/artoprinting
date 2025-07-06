@@ -2,11 +2,30 @@
   "Undangan_Web": [
     {
       "id": 1,
+      "kode": "bulan-bintang",
       "nama": "Bulan & Bintang",
-      "kategori": "pernikahan",
-      "img": "https://ik.imagekit.io/mustofa/web/undangan-web/bulan-bintang/images/preview-bulan-bintang.webp",
-      "keterangan": "Undangan Pernikahan tema bulan & bintang",
-      "link_produk": "https://walimah.artoprintingpbg.com/bulan-bintang/?id=1"
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/undangan-web/foto-produk-undangan-web-bulan-bintang.webp",
+      "keterangan": "Undangan Pernikahan tema Bulan & Bintang",
+      "link_produk": "https://walimah.artoprintingpbg.com/bulan-bintang/?to=Teman_Spesial"
+    },
+    {
+      "id": 2,
+      "kode": "zahra-naufal",
+      "nama": "Zahra & Naufal",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/undangan-web/foto-produk-undangan-web-zahra-naufal.webp",
+      "keterangan": "Undangan Pernikahan tema Zahra & Naufal",
+      "link_produk": "https://walimah.artoprintingpbg.com/zahra-naufal/?to=Teman_Spesial"
+    },
+    {
+      "id": 3,
+      "kode": "nadya-fathan",
+      "nama": "Nadya & Fathan",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/undangan-web/foto-produk-undangan-web-nadya-fathan.webp",
+      "keterangan": "Undangan Pernikahan tema Nadya & Fathan",
+      "link_produk": "https://walimah.artoprintingpbg.com/nadya-fathan/?to=Teman_Spesial"
     }
   ],
   "Layanan": [
@@ -7345,5 +7364,5 @@
       "link_produk": "/produk.html?p=Cover&id=35"
     }
   ],
-  "updated": "5/7/2025, 21.57.32"
+  "updated": "7/7/2025, 03.42.16"
 }
