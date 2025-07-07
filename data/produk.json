@@ -1,4 +1,51 @@
 {
+  "Banner": [
+    {
+      "id": 1,
+      "kode": "backdrop-banner",
+      "nama": "Backdrop Banner",
+      "kategori": "Banner",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/backdrop-banner.webp",
+      "keterangan": "Banner jenis Backdrop Banner",
+      "link_produk": "/produk.html?p=Banner&id=1"
+    },
+    {
+      "id": 2,
+      "kode": "banner-gantung",
+      "nama": "Banner Gantung",
+      "kategori": "Banner",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/banner-gantung.webp",
+      "keterangan": "Banner jenis Banner Gantung",
+      "link_produk": "/produk.html?p=Banner&id=2"
+    },
+    {
+      "id": 3,
+      "kode": "banner-vertikal",
+      "nama": "Banner Vertikal",
+      "kategori": "Banner",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/banner-vertikal.webp",
+      "keterangan": "Banner jenis Banner Vertikal",
+      "link_produk": "/produk.html?p=Banner&id=3"
+    },
+    {
+      "id": 4,
+      "kode": "mini-banner",
+      "nama": "Mini Banner",
+      "kategori": "Banner",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/mini-banner.webp",
+      "keterangan": "Banner jenis Mini Banner",
+      "link_produk": "/produk.html?p=Banner&id=4"
+    },
+    {
+      "id": 5,
+      "kode": "x-banner",
+      "nama": "X Banner",
+      "kategori": "Banner",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/x-banner.webp",
+      "keterangan": "Banner jenis X Banner",
+      "link_produk": "/produk.html?p=Banner&id=5"
+    }
+  ],
   "Undangan_Web": [
     {
       "id": 1,
@@ -7364,5 +7411,5 @@
       "link_produk": "/produk.html?p=Cover&id=35"
     }
   ],
-  "updated": "7/7/2025, 07.59.37"
+  "updated": "7/7/2025, 12.57.41"
 }
