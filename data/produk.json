@@ -6,7 +6,7 @@
       "nama": "Backdrop Banner",
       "kategori": "Banner",
       "img": "https://ik.imagekit.io/mustofa/web/img/produk/backdrop-banner.webp",
-      "keterangan": "Banner jenis Backdrop Banner",
+      "keterangan": "Banner (Backdrop Banner)",
       "link_produk": "/produk.html?p=Banner&id=1"
     },
     {
@@ -15,7 +15,7 @@
       "nama": "Banner Gantung",
       "kategori": "Banner",
       "img": "https://ik.imagekit.io/mustofa/web/img/produk/banner-gantung.webp",
-      "keterangan": "Banner jenis Banner Gantung",
+      "keterangan": "Banner (Banner Gantung)",
       "link_produk": "/produk.html?p=Banner&id=2"
     },
     {
@@ -24,7 +24,7 @@
       "nama": "Banner Vertikal",
       "kategori": "Banner",
       "img": "https://ik.imagekit.io/mustofa/web/img/produk/banner-vertikal.webp",
-      "keterangan": "Banner jenis Banner Vertikal",
+      "keterangan": "Banner (Banner Vertikal)",
       "link_produk": "/produk.html?p=Banner&id=3"
     },
     {
@@ -33,7 +33,7 @@
       "nama": "Mini Banner",
       "kategori": "Banner",
       "img": "https://ik.imagekit.io/mustofa/web/img/produk/mini-banner.webp",
-      "keterangan": "Banner jenis Mini Banner",
+      "keterangan": "Banner (Mini Banner)",
       "link_produk": "/produk.html?p=Banner&id=4"
     },
     {
@@ -42,8 +42,417 @@
       "nama": "X Banner",
       "kategori": "Banner",
       "img": "https://ik.imagekit.io/mustofa/web/img/produk/x-banner.webp",
-      "keterangan": "Banner jenis X Banner",
+      "keterangan": "Banner (X Banner)",
       "link_produk": "/produk.html?p=Banner&id=5"
+    }
+  ],
+  "Stiker": [
+    {
+      "id": 1,
+      "kode": "stiker-bontax",
+      "nama": "Stiker Bontax",
+      "kategori": "Stiker",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/stiker-bontax.webp",
+      "keterangan": "Stiker (Stiker Bontax)",
+      "link_produk": "/produk.html?p=Stiker&id=1"
+    },
+    {
+      "id": 2,
+      "kode": "stiker-chromo",
+      "nama": "Stiker Chromo",
+      "kategori": "Stiker",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/stiker-chromo.webp",
+      "keterangan": "Stiker (Stiker Chromo)",
+      "link_produk": "/produk.html?p=Stiker&id=2"
+    },
+    {
+      "id": 3,
+      "kode": "stiker-cutting",
+      "nama": "Stiker Cutting",
+      "kategori": "Stiker",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/stiker-cutting.webp",
+      "keterangan": "Stiker (Stiker Cutting)",
+      "link_produk": "/produk.html?p=Stiker&id=3"
+    },
+    {
+      "id": 4,
+      "kode": "stiker-transparan",
+      "nama": "Stiker Transparan",
+      "kategori": "Stiker",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/stiker-transparan.webp",
+      "keterangan": "Stiker (Stiker Transparan)",
+      "link_produk": "/produk.html?p=Stiker&id=4"
+    },
+    {
+      "id": 5,
+      "kode": "stiker-vinil",
+      "nama": "Stiker Vinil",
+      "kategori": "Stiker",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/stiker-vinil.webp",
+      "keterangan": "Stiker (Stiker Vinil)",
+      "link_produk": "/produk.html?p=Stiker&id=5"
+    }
+  ],
+  "Undangan_Custom": [
+    {
+      "id": 1,
+      "kode": "undangan-custom-1",
+      "nama": "Undangan Custom 1",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-1.webp",
+      "keterangan": "Pernikahan (Undangan Custom 1)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=1"
+    },
+    {
+      "id": 2,
+      "kode": "undangan-custom-2",
+      "nama": "Undangan Custom 2",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-2.webp",
+      "keterangan": "Pernikahan (Undangan Custom 2)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=2"
+    },
+    {
+      "id": 3,
+      "kode": "undangan-custom-3",
+      "nama": "Undangan Custom 3",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-3.webp",
+      "keterangan": "Pernikahan (Undangan Custom 3)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=3"
+    },
+    {
+      "id": 4,
+      "kode": "undangan-custom-4",
+      "nama": "Undangan Custom 4",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-4.webp",
+      "keterangan": "Pernikahan (Undangan Custom 4)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=4"
+    },
+    {
+      "id": 5,
+      "kode": "undangan-custom-5",
+      "nama": "Undangan Custom 5",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-5.webp",
+      "keterangan": "Pernikahan (Undangan Custom 5)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=5"
+    },
+    {
+      "id": 6,
+      "kode": "undangan-custom-6",
+      "nama": "Undangan Custom 6",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-6.webp",
+      "keterangan": "Pernikahan (Undangan Custom 6)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=6"
+    },
+    {
+      "id": 7,
+      "kode": "undangan-custom-7",
+      "nama": "Undangan Custom 7",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-7.webp",
+      "keterangan": "Pernikahan (Undangan Custom 7)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=7"
+    },
+    {
+      "id": 8,
+      "kode": "undangan-custom-8",
+      "nama": "Undangan Custom 8",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-8.webp",
+      "keterangan": "Pernikahan (Undangan Custom 8)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=8"
+    },
+    {
+      "id": 9,
+      "kode": "undangan-custom-9",
+      "nama": "Undangan Custom 9",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-9.webp",
+      "keterangan": "Pernikahan (Undangan Custom 9)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=9"
+    },
+    {
+      "id": 10,
+      "kode": "undangan-custom-10",
+      "nama": "Undangan Custom 10",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-10.webp",
+      "keterangan": "Pernikahan (Undangan Custom 10)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=10"
+    },
+    {
+      "id": 11,
+      "kode": "undangan-custom-11",
+      "nama": "Undangan Custom 11",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-11.webp",
+      "keterangan": "Pernikahan (Undangan Custom 11)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=11"
+    },
+    {
+      "id": 12,
+      "kode": "undangan-custom-12",
+      "nama": "Undangan Custom 12",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-12.webp",
+      "keterangan": "Pernikahan (Undangan Custom 12)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=12"
+    },
+    {
+      "id": 13,
+      "kode": "undangan-custom-13",
+      "nama": "Undangan Custom 13",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-13.webp",
+      "keterangan": "Pernikahan (Undangan Custom 13)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=13"
+    },
+    {
+      "id": 14,
+      "kode": "undangan-custom-14",
+      "nama": "Undangan Custom 14",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-14.webp",
+      "keterangan": "Pernikahan (Undangan Custom 14)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=14"
+    },
+    {
+      "id": 15,
+      "kode": "undangan-custom-15",
+      "nama": "Undangan Custom 15",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-15.webp",
+      "keterangan": "Pernikahan (Undangan Custom 15)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=15"
+    },
+    {
+      "id": 16,
+      "kode": "undangan-custom-16",
+      "nama": "Undangan Custom 16",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-16.webp",
+      "keterangan": "Pernikahan (Undangan Custom 16)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=16"
+    },
+    {
+      "id": 17,
+      "kode": "undangan-custom-17",
+      "nama": "Undangan Custom 17",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-17.webp",
+      "keterangan": "Pernikahan (Undangan Custom 17)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=17"
+    },
+    {
+      "id": 18,
+      "kode": "undangan-custom-18",
+      "nama": "Undangan Custom 18",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-18.webp",
+      "keterangan": "Pernikahan (Undangan Custom 18)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=18"
+    },
+    {
+      "id": 19,
+      "kode": "undangan-custom-19",
+      "nama": "Undangan Custom 19",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-19.webp",
+      "keterangan": "Pernikahan (Undangan Custom 19)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=19"
+    },
+    {
+      "id": 20,
+      "kode": "undangan-custom-20",
+      "nama": "Undangan Custom 20",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-20.webp",
+      "keterangan": "Pernikahan (Undangan Custom 20)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=20"
+    },
+    {
+      "id": 21,
+      "kode": "undangan-custom-21",
+      "nama": "Undangan Custom 21",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-21.webp",
+      "keterangan": "Pernikahan (Undangan Custom 21)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=21"
+    },
+    {
+      "id": 22,
+      "kode": "undangan-custom-22",
+      "nama": "Undangan Custom 22",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-22.webp",
+      "keterangan": "Pernikahan (Undangan Custom 22)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=22"
+    },
+    {
+      "id": 23,
+      "kode": "undangan-custom-23",
+      "nama": "Undangan Custom 23",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-23.webp",
+      "keterangan": "Pernikahan (Undangan Custom 23)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=23"
+    },
+    {
+      "id": 24,
+      "kode": "undangan-custom-24",
+      "nama": "Undangan Custom 24",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-24.webp",
+      "keterangan": "Pernikahan (Undangan Custom 24)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=24"
+    },
+    {
+      "id": 25,
+      "kode": "undangan-custom-25",
+      "nama": "Undangan Custom 25",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-25.webp",
+      "keterangan": "Pernikahan (Undangan Custom 25)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=25"
+    },
+    {
+      "id": 26,
+      "kode": "undangan-custom-26",
+      "nama": "Undangan Custom 26",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-26.webp",
+      "keterangan": "Pernikahan (Undangan Custom 26)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=26"
+    },
+    {
+      "id": 27,
+      "kode": "undangan-custom-27",
+      "nama": "Undangan Custom 27",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-27.webp",
+      "keterangan": "Pernikahan (Undangan Custom 27)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=27"
+    },
+    {
+      "id": 28,
+      "kode": "undangan-custom-28",
+      "nama": "Undangan Custom 28",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-28.webp",
+      "keterangan": "Pernikahan (Undangan Custom 28)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=28"
+    },
+    {
+      "id": 29,
+      "kode": "undangan-custom-29",
+      "nama": "Undangan Custom 29",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-29.webp",
+      "keterangan": "Pernikahan (Undangan Custom 29)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=29"
+    },
+    {
+      "id": 30,
+      "kode": "undangan-custom-30",
+      "nama": "Undangan Custom 30",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-30.webp",
+      "keterangan": "Pernikahan (Undangan Custom 30)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=30"
+    },
+    {
+      "id": 31,
+      "kode": "undangan-custom-31",
+      "nama": "Undangan Custom 31",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-31.webp",
+      "keterangan": "Pernikahan (Undangan Custom 31)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=31"
+    },
+    {
+      "id": 32,
+      "kode": "undangan-custom-32",
+      "nama": "Undangan Custom 32",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-32.webp",
+      "keterangan": "Pernikahan (Undangan Custom 32)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=32"
+    },
+    {
+      "id": 33,
+      "kode": "undangan-custom-33",
+      "nama": "Undangan Custom 33",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-33.webp",
+      "keterangan": "Pernikahan (Undangan Custom 33)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=33"
+    },
+    {
+      "id": 34,
+      "kode": "undangan-custom-34",
+      "nama": "Undangan Custom 34",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-34.webp",
+      "keterangan": "Pernikahan (Undangan Custom 34)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=34"
+    },
+    {
+      "id": 35,
+      "kode": "undangan-custom-35",
+      "nama": "Undangan Custom 35",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-35.webp",
+      "keterangan": "Pernikahan (Undangan Custom 35)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=35"
+    },
+    {
+      "id": 36,
+      "kode": "undangan-custom-36",
+      "nama": "Undangan Custom 36",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-36.webp",
+      "keterangan": "Pernikahan (Undangan Custom 36)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=36"
+    },
+    {
+      "id": 37,
+      "kode": "undangan-custom-37",
+      "nama": "Undangan Custom 37",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-37.webp",
+      "keterangan": "Pernikahan (Undangan Custom 37)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=37"
+    },
+    {
+      "id": 38,
+      "kode": "undangan-custom-38",
+      "nama": "Undangan Custom 38",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-38.webp",
+      "keterangan": "Pernikahan (Undangan Custom 38)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=38"
+    },
+    {
+      "id": 39,
+      "kode": "undangan-custom-39",
+      "nama": "Undangan Custom 39",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-39.webp",
+      "keterangan": "Pernikahan (Undangan Custom 39)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=39"
+    },
+    {
+      "id": 40,
+      "kode": "undangan-custom-40",
+      "nama": "Undangan Custom 40",
+      "kategori": "Pernikahan",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-custom-40.webp",
+      "keterangan": "Pernikahan (Undangan Custom 40)",
+      "link_produk": "/produk.html?p=Undangan_Custom&id=40"
     }
   ],
   "Undangan_Web": [
@@ -78,146 +487,164 @@
   "Layanan": [
     {
       "id": 1,
-      "nama": "Print dokumen",
+      "kode": "print-dokumen",
+      "nama": "Print Dokumen",
       "kategori": "Cetak & Salin Dokumen",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/print.jpg",
-      "keterangan": "warna: hitam putih, warna | ukuran: A4, F4, A3",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/print-dokumen.webp",
+      "keterangan": "Cetak & Salin Dokumen (Print Dokumen)",
       "link_produk": "/produk.html?p=Layanan&id=1"
     },
     {
       "id": 2,
-      "nama": "Fotokopi",
+      "kode": "fotocopy",
+      "nama": "Fotocopy",
       "kategori": "Cetak & Salin Dokumen",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/fotocopy.jpg",
-      "keterangan": "warna: hitam putih, warna | ukuran: A4",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/fotocopy.webp",
+      "keterangan": "Cetak & Salin Dokumen (Fotocopy)",
       "link_produk": "/produk.html?p=Layanan&id=2"
     },
     {
       "id": 3,
-      "nama": "Scan dokumen / gambar",
+      "kode": "scan-dokumen-&-gambar",
+      "nama": "Scan Dokumen & Gambar",
       "kategori": "Cetak & Salin Dokumen",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/scan.jpg",
-      "keterangan": "output: jpg, jpeg, png, dan pdf",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/scan-dokumen-&-gambar.webp",
+      "keterangan": "Cetak & Salin Dokumen (Scan Dokumen & Gambar)",
       "link_produk": "/produk.html?p=Layanan&id=3"
     },
     {
       "id": 4,
+      "kode": "jilid",
       "nama": "Jilid",
       "kategori": "Finishing & Pelengkap Dokumen",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/jilid.jpg",
-      "keterangan": "lakban, soft cover, hard cover",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/jilid.webp",
+      "keterangan": "Finishing & Pelengkap Dokumen (Jilid)",
       "link_produk": "/produk.html?p=Layanan&id=4"
     },
     {
       "id": 5,
-      "nama": "Laminating dan press dokumen",
+      "kode": "laminating-dan-press-dokumen",
+      "nama": "Laminating Dan Press Dokumen",
       "kategori": "Finishing & Pelengkap Dokumen",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/laminating.jpg",
-      "keterangan": "-",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/laminating-dan-press-dokumen.webp",
+      "keterangan": "Finishing & Pelengkap Dokumen (Laminating Dan Press Dokumen)",
       "link_produk": "/produk.html?p=Layanan&id=5"
     },
     {
       "id": 6,
-      "nama": "Desain grafis",
+      "kode": "desain-grafis",
+      "nama": "Desain Grafis",
       "kategori": "Desain & Cetak Grafis",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/desain-grafis.jpg",
-      "keterangan": "jenis: logo, brosur, banner, kartu nama",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/desain-grafis.webp",
+      "keterangan": "Desain & Cetak Grafis (Desain Grafis)",
       "link_produk": "/produk.html?p=Layanan&id=6"
     },
     {
       "id": 7,
-      "nama": "Undangan pernikahan / acara",
+      "kode": "undangan-pernikahan-&-acara",
+      "nama": "Undangan Pernikahan & Acara",
       "kategori": "Desain & Cetak Grafis",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/undangan-pernikahan-&-acara.webp",
+      "keterangan": "Desain & Cetak Grafis (Undangan Pernikahan & Acara)",
       "link_produk": "/produk.html?p=Layanan&id=7"
     },
     {
       "id": 8,
-      "nama": "Sertifikat, piagam",
+      "kode": "sertifikat-&-piagam",
+      "nama": "Sertifikat & Piagam",
       "kategori": "Desain & Cetak Grafis",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/sertifikat.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/sertifikat-&-piagam.webp",
+      "keterangan": "Desain & Cetak Grafis (Sertifikat & Piagam)",
       "link_produk": "/produk.html?p=Layanan&id=8"
     },
     {
       "id": 9,
-      "nama": "Buku Yasin & tahlil",
+      "kode": "buku-yasin-&-tahlil",
+      "nama": "Buku Yasin & Tahlil",
       "kategori": "Desain & Cetak Grafis",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/yasin.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/buku-yasin-&-tahlil.webp",
+      "keterangan": "Desain & Cetak Grafis (Buku Yasin & Tahlil)",
       "link_produk": "/produk.html?p=Layanan&id=9"
     },
     {
       "id": 10,
+      "kode": "banner",
       "nama": "Banner",
       "kategori": "Media Promosi & Branding",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/banner.jpg",
-      "keterangan": "jenis: Banner, X-Banner, Roll Up Banner",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/banner.webp",
+      "keterangan": "Media Promosi & Branding (Banner)",
       "link_produk": "/produk.html?p=Layanan&id=10"
     },
     {
       "id": 11,
+      "kode": "spanduk",
       "nama": "Spanduk",
       "kategori": "Media Promosi & Branding",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/spanduk.jpg",
-      "keterangan": "jenis: Flexi, One Way, Backlit",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/spanduk.webp",
+      "keterangan": "Media Promosi & Branding (Spanduk)",
       "link_produk": "/produk.html?p=Layanan&id=11"
     },
     {
       "id": 12,
-      "nama": "Stiker / label produk",
+      "kode": "stiker",
+      "nama": "Stiker",
       "kategori": "Media Promosi & Branding",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/stiker.jpg",
-      "keterangan": "bahan: vinyl, transparan, chromo",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/stiker.webp",
+      "keterangan": "Media Promosi & Branding (Stiker)",
       "link_produk": "/produk.html?p=Layanan&id=12"
     },
     {
       "id": 13,
-      "nama": "Cetak mug, tumbler, botol custom",
+      "kode": "cetak-mug,-tumbler,-botol-custom",
+      "nama": "Cetak Mug, Tumbler, Botol Custom",
       "kategori": "Produk Custom & Merchandise",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/merchandise.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/cetak-mug,-tumbler,-botol-custom.webp",
+      "keterangan": "Produk Custom & Merchandise (Cetak Mug, Tumbler, Botol Custom)",
       "link_produk": "/produk.html?p=Layanan&id=13"
     },
     {
       "id": 14,
-      "nama": "Sablon kaos",
+      "kode": "sablon-kaos-custom",
+      "nama": "Sablon Kaos Custom",
       "kategori": "Produk Custom & Merchandise",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/sablon.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/sablon-kaos-custom.webp",
+      "keterangan": "Produk Custom & Merchandise (Sablon Kaos Custom)",
       "link_produk": "/produk.html?p=Layanan&id=14"
     },
     {
       "id": 15,
-      "nama": "Pin, gantungan kunci, ID card",
+      "kode": "pin,-gantungan-kunci,-id-card",
+      "nama": "Pin, Gantungan Kunci, Id Card",
       "kategori": "Produk Custom & Merchandise",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/gantungan-kunci.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/pin,-gantungan-kunci,-id-card.webp",
+      "keterangan": "Produk Custom & Merchandise (Pin, Gantungan Kunci, Id Card)",
       "link_produk": "/produk.html?p=Layanan&id=15"
     },
     {
       "id": 16,
+      "kode": "kalender",
       "nama": "Kalender",
       "kategori": "Produk Custom & Merchandise",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/kalender.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/kalender.webp",
+      "keterangan": "Produk Custom & Merchandise (Kalender)",
       "link_produk": "/produk.html?p=Layanan&id=16"
     },
     {
       "id": 17,
-      "nama": "Desain CV profesional",
+      "kode": "desain-cv",
+      "nama": "Desain Cv",
       "kategori": "Layanan Digital & Personal",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/cv.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/desain-cv.webp",
+      "keterangan": "Layanan Digital & Personal (Desain Cv)",
       "link_produk": "/produk.html?p=Layanan&id=17"
     },
     {
       "id": 18,
-      "nama": "Edit foto / pas foto / background",
+      "kode": "pas-foto",
+      "nama": "Pas Foto",
       "kategori": "Layanan Digital & Personal",
-      "img": "https://ik.imagekit.io/mustofa/web/img/produk/edit-foto.jpg",
-      "keterangan": "",
+      "img": "https://ik.imagekit.io/mustofa/web/img/produk/pas-foto.webp",
+      "keterangan": "Layanan Digital & Personal (Pas Foto)",
       "link_produk": "/produk.html?p=Layanan&id=18"
     }
   ],
@@ -7411,5 +7838,5 @@
       "link_produk": "/produk.html?p=Cover&id=35"
     }
   ],
-  "updated": "7/7/2025, 12.57.41"
+  "updated": "7/7/2025, 14.28.51"
 }
