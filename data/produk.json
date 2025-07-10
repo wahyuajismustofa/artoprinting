@@ -35,6 +35,33 @@
       "img": "https://ik.imagekit.io/mustofa/web/undangan-web/foto-produk-undangan-web-anya-jordi.webp",
       "keterangan": "Undangan Pernikahan tema Anya & Jordi",
       "link_produk": "https://walimah.artoprintingpbg.com/anya-jordi/?to=Teman_Spesial"
+    },
+    {
+      "id": 5,
+      "kode": "aisyah-farhan",
+      "nama": "Aisyah & Farhan",
+      "kategori": "",
+      "img": "https://ik.imagekit.io/mustofa/web/undangan-web/foto-produk-undangan-web-aisyah-farhan.webp",
+      "keterangan": "Undangan  tema Aisyah & Farhan",
+      "link_produk": "https://walimah.artoprintingpbg.com/aisyah-farhan/?to=Teman_Spesial"
+    },
+    {
+      "id": 6,
+      "kode": "alia-johan",
+      "nama": "Alia & Johan",
+      "kategori": "",
+      "img": "https://ik.imagekit.io/mustofa/web/undangan-web/foto-produk-undangan-web-alia-johan.webp",
+      "keterangan": "Undangan  tema Alia & Johan",
+      "link_produk": "https://walimah.artoprintingpbg.com/alia-johan/?to=Teman_Spesial"
+    },
+    {
+      "id": 7,
+      "kode": "amira-hilmi",
+      "nama": "Amira & Hilmi",
+      "kategori": "",
+      "img": "https://ik.imagekit.io/mustofa/web/undangan-web/foto-produk-undangan-web-amira-hilmi.webp",
+      "keterangan": "Undangan  tema Amira & Hilmi",
+      "link_produk": "https://walimah.artoprintingpbg.com/amira-hilmi/?to=Teman_Spesial"
     }
   ],
   "Banner": [
@@ -7847,5 +7874,5 @@
       "link_produk": "/produk.html?p=Cover&id=35"
     }
   ],
-  "updated": "9/7/2025, 17.46.12"
+  "updated": "10/7/2025, 08.37.49"
 }
