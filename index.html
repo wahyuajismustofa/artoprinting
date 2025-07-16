@@ -271,11 +271,19 @@
     <script src="/assets/js/github.js"></script>
     
 <script>
-    const currentURL = encodeURIComponent(window.location.href);
-    document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
-    document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?url=${currentURL}`;
-    document.getElementById('whatsapp-share').href = `https://wa.me/?text=${currentURL}`;
-</script>    
+    document.getElementById('facebook-share').addEventListener('click', function (e) {
+        this.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+    });
+
+    document.getElementById('twitter-share').addEventListener('click', function (e) {
+        this.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`;
+    });
+
+    document.getElementById('whatsapp-share').addEventListener('click', function (e) {
+        this.href = `https://wa.me/?text=${encodeURIComponent(window.location.href)}`;
+    });
+</script>
+   
 
 </body>
 
