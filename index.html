@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
 	
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/nordic-custom.css"/>
+    <link rel="stylesheet" href="assets/css/nordic-custom.css"/>
 
-    <script src="js/gtag.js"></script>
+    <script src="/assets/js/gtag.js"></script>
 </head>
 
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
@@ -112,6 +112,33 @@
                     <button id="load-more" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden">Tampilkan Lebih Banyak</button>
                 </div>
             </section>
+        </div>
+
+        <div class="flex items-center justify-center gap-2">
+            <span class="font-semibold">Bagikan:</span>
+            <!-- Facebook -->
+            <a href="#" id="facebook-share" target="_blank" title="Bagikan ke Facebook" class="hover:text-blue-600">
+                <svg width="24" height="24" fill="currentColor">
+                    <path d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 5.02 3.66 9.16 8.44 9.93v-7.03H7.9v-2.9h2.54V9.84c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34v7.03C18.34 21.23 22 17.09 22 12.07z"></path>
+                </svg>
+            </a>
+
+            <!-- Twitter/X -->
+            <a href="#" id="twitter-share" target="_blank" title="Bagikan ke Twitter" class="hover:text-blue-400">
+                <svg width="24" height="24" fill="currentColor">
+                    <path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 11.07 11c0 .34.04.67.1.99C7.69 11.8 4.85 10.13 2.98 7.7c-.37.64-.58 1.39-.58 2.18 0 1.5.76 2.82 1.92 3.6a4.23 4.23 0 0 1-1.94-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.1 2.94 3.95 2.97A8.6 8.6 0 0 1 2 19.54a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.7 8.7 0 0 0 24 4.59a8.48 8.48 0 0 1-2.54.7z"></path>
+                </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="#" id="whatsapp-share" target="_blank" title="Bagikan ke WhatsApp" class="hover:text-green-500">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 32 32">
+                    <path d="M16.02 2.003a13.94 13.94 0 00-11.74 21.758L2 30l6.423-2.248A13.94 13.94 0 1016.02 2.003zm0 25.88a11.9 11.9 0 01-6.078-1.663l-.436-.262-3.814 1.334 1.275-3.925-.284-.453A11.895 11.895 0 1116.02 27.88zm6.625-8.716c-.346-.173-2.045-1.012-2.364-1.128-.319-.115-.552-.173-.785.173-.231.346-.901 1.128-1.105 1.361-.202.231-.404.26-.75.087-.347-.173-1.464-.538-2.79-1.717-1.032-.922-1.727-2.06-1.929-2.406-.202-.346-.022-.533.152-.706.155-.154.347-.404.52-.606.173-.202.231-.346.347-.577.116-.231.058-.433-.029-.606-.087-.173-.784-1.898-1.075-2.608-.283-.68-.573-.587-.785-.598-.202-.01-.433-.01-.664-.01s-.606.087-.923.433c-.318.346-1.213 1.187-1.213 2.899s1.241 3.362 1.413 3.598c.173.231 2.445 3.737 5.926 5.238 3.48 1.501 3.48 1.001 4.108.94.628-.058 2.045-.834 2.33-1.64.285-.806.285-1.498.202-1.64-.084-.144-.318-.231-.664-.404z"/>
+                </svg>
+            </a>
+
+            <!-- Copy Link -->
+            <button onclick="navigator.clipboard.writeText(window.location.href)" class="ml-2 px-2 py-1 border rounded hover:bg-gray-100 text-xs">Copy Link</button>
         </div>
     </section>
 
@@ -240,9 +267,15 @@
         </div>
     </footer>
     </section>
-    <script src="js/produk.js"></script>
-    <script src="js/github.js"></script>
+    <script src="/assets/js/produk.js"></script>
+    <script src="/assets/js/github.js"></script>
     
+<script>
+    const currentURL = encodeURIComponent(window.location.href);
+    document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+    document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?url=${currentURL}`;
+    document.getElementById('whatsapp-share').href = `https://wa.me/?text=${currentURL}`;
+</script>    
 
 </body>
 

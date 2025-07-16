@@ -8,7 +8,7 @@ function getQueryParam(param) {
 
 async function fetchProdukData(sheet) {
     try {
-        const res = await fetch('data/produk.json');
+        const res = await fetch('/assets/data/produk.json');
         const data = await res.json();
         return data[sheet] || [];
     } catch (e) {
