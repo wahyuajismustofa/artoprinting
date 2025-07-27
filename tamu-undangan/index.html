@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generator Undangan</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/gh/wahyuajismustofa/berbagi-koding/js/utils@v1.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1 class="judul">GENERATOR UNDANGAN</h1>
+  </header>
+
+  <main>
+    <div class="form">
+
+      <div class="form-group">
+        <label for="jenis" class="label">Jenis Acara:</label>
+        <select id="jenis" class="input">
+          <option value="khitan">Khitan</option>
+          <option value="pernikahan">Pernikahan</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="nama" class="label">Nama Tamu (pisahkan dengan koma):</label>
+        <input type="text" id="nama" placeholder="Contoh: Bapak Rudi, Ibu Sari" class="input" />
+      </div>
+
+      <div class="form-group">
+        <label for="pengundang" class="label">Pengundang (Hormat Kami):</label>
+        <input type="text" id="pengundang" placeholder="Contoh: Keluarga Besar Bapak H. Sulaiman" class="input" />
+      </div>
+
+      <div class="form-group">
+        <label for="link" class="label">Link Undangan:</label>
+        <input type="text" id="link" placeholder="Contoh: https://aku-kamu.karyaion.my.id" class="input" />
+      </div>
+
+      <button onclick="buatLink()" class="tombol block mx-auto">Buat Link</button>
+    </div>
+
+    <div id="hasil" class="hasil"></div>
+  </main>
+</body>
+</html>

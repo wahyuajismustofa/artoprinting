@@ -7,7 +7,7 @@ let kategoriSet = new Set();
 let currentList = [];
 let currentIndex = 0;
 
-// Elemen DOM
+// Elemen DOM 
 let produkSelect, kategoriSelect, produkListSection, loadMoreBtn;
 
 // Fungsi utama setelah DOM siap
