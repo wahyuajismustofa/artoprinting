@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Generator Tamu undangan - Arto Printing</title>
+    <meta name="description" content="Arto Printing adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
+    <meta name="keywords" content="Arto Printing percetakan, jasa cetak terpercaya, solusi percetakan terbaik, percetakan berkualitas, percetakan murah, cepat">
+    <meta name="author" content="Arto Printing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Generator Tamu undangan - Arto Printing">
+    <meta property="og:description" content="Arto Printing adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.artoprintingpbg.com">
+    <meta property="og:image" content="https://ik.imagekit.io/mustofa/web/img/logo-banner-artoprinting.png?updatedAt=1745737746904">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Generator Tamu undangan - Arto Printing">
+    <meta name="twitter:description" content="Arto Printing adalah solusi percetakan terpercaya untuk semua kebutuhan Anda. Melayani cetak undangan, brosur, spanduk, kartu nama, dan merchandise custom dengan kualitas terbaik dan harga bersahabat.">
+    <meta name="twitter:image" content="https://ik.imagekit.io/mustofa/web/img/logo-banner-artoprinting.png?updatedAt=1745737746904">
+    <link rel="icon" href="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/gh/wahyuajismustofa/berbagi-koding/js/utils@v1.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1 class="judul">GENERATOR UNDANGAN</h1>
+  </header>
+
+  <main>
+    <div class="form">
+
+      <div class="form-group">
+        <label for="jenis" class="label">Jenis Acara:</label>
+        <select id="jenis" class="input">
+          <option value="khitan">Khitan</option>
+          <option value="pernikahan">Pernikahan</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="nama" class="label">Nama Tamu (pisahkan dengan koma):</label>
+        <input type="text" id="nama" placeholder="Contoh: Bapak Rudi, Ibu Sari" class="input" />
+      </div>
+
+      <div class="form-group">
+        <label for="pengundang" class="label">Pengundang (Hormat Kami):</label>
+        <input type="text" id="pengundang" placeholder="Contoh: Keluarga Besar Bapak H. Sulaiman" class="input" />
+      </div>
+
+      <div class="form-group">
+        <label for="link" class="label">Link Undangan:</label>
+        <input type="text" id="link" placeholder="Contoh: https://aku-kamu.karyaion.my.id" class="input" />
+      </div>
+
+      <button onclick="buatLink2()" class="tombol block mx-auto">Buat Link</button>
+    </div>
+
+    <div id="hasil" class="hasil"></div>
+  </main>
+</body>
+</html>
