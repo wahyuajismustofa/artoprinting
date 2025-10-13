@@ -97,7 +97,7 @@ function buatLink2() {
         <tr class="border-t">
         <td class="px-4 py-2">${nama}</td>
         <td class="px-4 py-2">
-            <button onclick="navigator.clipboard.writeText('${linkUndangan}'); showAlert('Link untuk ${nama} berhasil disalin','success','3000')" class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded">Salin</button>
+            <button onclick="navigator.clipboard.writeText(\`${decodeURI(pesanWA).replace(/`/g, '\\`')}\`); showAlert('Link untuk ${nama} berhasil disalin','success','3000')" class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded">Salin</button>
         </td>
         <td class="px-4 py-2">
             <a href="https://wa.me/?text=${pesanWA}" target="_blank">
