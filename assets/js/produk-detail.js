@@ -24,7 +24,7 @@ function renderProdukDetail(produk) {
     }
     container.innerHTML = `
         <div class="w-full md:w-1/2 flex-shrink-0 flex justify-center items-center">
-            <img src="${produk.img || 'https://ik.imagekit.io/mustofa/web/img/logo-artoprinting%201x1.png'}" alt="${produk.nama || ''}" class="rounded-lg shadow max-h-72 object-contain bg-gray-100 w-full max-w-xs">
+            <img src="${produk.img || 'https://ik.imagekit.io/mustofa/web/img/logo-artoprinting-1x1.jpeg'}" alt="${produk.nama || ''}" class="rounded-lg shadow max-h-72 object-contain bg-gray-100 w-full max-w-xs">
         </div>
         <div class="w-full md:w-1/2 flex flex-col gap-4">
             <h1 class="text-2xl font-bold text-gray-900 mb-2">${produk.nama || '-'}</h1>
